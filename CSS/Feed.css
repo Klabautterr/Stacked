@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.full-side {
+    display: flex;
+    height: 100%;
+}
+
+.left-side {
+    width: 25%;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle {
+    width: 50%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Postfeld{
+	width: 80%;
+	height: 30%;
+	margin-top: 5%;
+	resize: none;
+}
+.button-container{
+	display: flex;
+	
+}
+.picture-button{
+	margin-left: 4px;
+	border: none;
+}
+.text-button {
+	margin-left: 4px;
+	border: none; 
+	
+}
+
+.right-side {
+    width: 25%;
+    background: lightgrey;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
