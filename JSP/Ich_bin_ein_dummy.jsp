@@ -7,6 +7,9 @@
 <title>real</title>
 </head>
 <body>
-
+<p>is hier was ???</p>
+<b>Id: ${form.id}</b>
+			<br>
+			<b>Text: ${form.nachricht}</b>
 </body>
 </html>
