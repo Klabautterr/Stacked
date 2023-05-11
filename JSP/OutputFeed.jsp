@@ -16,7 +16,7 @@
 		<div class="left-side">
 			<img class="Profielfeld" src="../images/default-profile.jpg"
 				width="100" height="100" alt="DefaultPB"> <br> <a
-				href="../html/Profil.html"> Profil </a>
+				href="../JSP/Profil.jsp"> Profil </a>
 
 		</div>
 		<div class="middle">
