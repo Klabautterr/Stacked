@@ -18,8 +18,8 @@
 	<a href="./Profil.jsp"> Zurück zum Profil </a>
 	
 	
-	</div>
-	<form method="post" action="../../ProfilBearbeitenServlet"
+	
+	<form method="post" action="../../../ProfilBearbeitenServlet"
 		enctype="multipart/form-data">
 		<fieldset>
 			<legend>ProfilBearbeiten</legend>
@@ -40,10 +40,11 @@
 			<label for="NewImage">Neues Bild:</label> <input type="file"
 					name="NewImage" id="NewImage" accept="images/*"/>
 			</div>
+			</fieldset>
 			<div>
 				<button type="submit" id="button">Änderungen speichern</button>
 			</div>
-			
+			</form>
 	<!-- Jonathan Vielwerth -->
 
 </body>
