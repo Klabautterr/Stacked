@@ -19,7 +19,7 @@
 	
 	
 	
-	<form method="post" action="../../../ProfilBearbeitenServlet"
+	<form method="post" action="../../ProfilBearbeitenServlet"
 		enctype="multipart/form-data">
 		<fieldset>
 			<legend>ProfilBearbeiten</legend>
