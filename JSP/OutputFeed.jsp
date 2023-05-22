@@ -14,10 +14,13 @@
 
 
 		<div class="left-side">
-			<img class="Profielfeld" src="../images/default-profile.jpg"
-				width="100" height="100" alt="DefaultPB"> <br> <a
-				href="../JSP/Profil.jsp"> Profil </a>
-
+			<table>
+			<tr>
+				<td rowspan="2"><img src="../../ProfilbildAuslesen?username=${Login.username}"
+					width="100" height="100"></td>
+				<td>${Login.username}</td>
+			</tr>
+		</table>
 		</div>
 		<div class="middle">
 
@@ -39,6 +42,7 @@
 			<br>
 			<!--  <b>bildname: ${form.bildname} </b><br>	-->
 			<b> <img src="../../PostAuslesen?id=${form.id}" width= "400" height="150" ></b>
+			<b> username = ${form.username}</b>
 			<b>Woah der ${form.id} Post</b>
 			<br>
 			
