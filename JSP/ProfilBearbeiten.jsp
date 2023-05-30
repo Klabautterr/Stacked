@@ -47,30 +47,5 @@
 			</form>
 	<!-- Jonathan Vielwerth -->
 	
-	<!-- Whiteman -->
-
-<div>
-	<br>
-	<hr>
-	<fieldset>
-	<legend><strong>Investments</strong></legend>
-
-	<br>
-	
-	<table>
-		<tr>
-			<td>Beispielaktie1</td>
-			<td>Beispiel-DailyTrend in %</td>
-		</tr>
-		<tr>
-			<td>Beispielaktie2</td>
-			<td>Beispiel-DailyTrend in %</td>
-		</tr>
-	</table>
-</div>
-<div>
-	<Button type="submit" id="Investments hinzfügen">Investments hinzufügen</Button>
-</div>
-<!-- Whiteman -->
 </body>
 </html>

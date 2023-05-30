@@ -26,8 +26,34 @@
 		<a href="../html/Feed.html">Zu deinem Feed</a> <br> 
 		<a href="../Index.html">Abmelden</a>
 		<!-- Jonathan Vielwerth -->
-
-
 	</div>
+	
+	<!-- Tobias Weiß HTML-Tabelle der Investments -->
+
+<div>
+	<br>
+	<fieldset>
+	<legend><strong>Investments</strong></legend>
+
+	<br>
+	
+	<table>
+		<tr>
+			<td>Beispielaktie1</td>
+			<td>Beispiel-DailyTrend in %</td>
+		</tr>
+		<tr>
+			<td>Beispielaktie2</td>
+			<td>Beispiel-DailyTrend in %</td>
+		</tr>
+	</table>
+</div>
+
+<div>
+	<a href="./addInvestment.jsp">Investment hinzufügen</a>
+</div>
+<!-- Tobias Weiß -->
+	
+	
 </body>
 </html>
