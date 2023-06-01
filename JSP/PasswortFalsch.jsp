@@ -15,14 +15,18 @@
 
 	<br>
 	<div align="center">
-		<img src="./images/Logo.jpg" width="200" height="200" alt="Logo">
+		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
-	<form method="post" action="../LoginServlet">
+
+	<h1>
+		<u><strong>Das eingegebene Passwort ist falsch</strong></u>
+	</h1>
+	<form method="post" action="../../LoginServlet">
 		<fieldset>
 			<legend>Login</legend>
 			<div>
-				<label for="username">Username:</label> <input type="text" name="username"
-					id="username" required />
+				<label for="username">Username:</label> <input type="text"
+					name="username" id="username" required />
 			</div>
 			<div>
 				<label for="passwort">Passwort:</label> <input type="password"
@@ -44,7 +48,7 @@
 		</fieldset>
 	</form>
 	<br>
-	<a href="./html/Registrierung.html"> Noch keinen Account?</a>
+	<a href="../html/Registrierung.html"> Noch keinen Account?</a>
 	<br>
 
 	<!-- Jonathan Vielwerth -->

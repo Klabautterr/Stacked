@@ -13,13 +13,37 @@
 		</h1>
 	</center>
 
-	Geschlecht:
-	<select mutilple name="Geschlechter_Auswahl" size="3">
-		<option value="val1">Männlich</option>
-		<option value="val2">Weiblich</option>
-		<option value="val3">Divers</option>
+
 	</select>
-	<br>
+
+	<form method="post" action="../../RegistrierungServlet" 
+			enctype="multipart/form-data">
+		<fieldset>
+			<legend>Registrierung</legend>
+			<div>
+				<label for="username">Benutzername:</label> <input type="text"
+					name="username" id="username" required />
+			</div>
+			<div>
+				<label for="passwort">Passwort:</label> <input type="password"
+					name="passwort" id="passwort" required />
+			</div>
+			<div>
+				<label for="userImage">Bild:</label> <input type="file"
+					name="userImage" id="userImage" accept="images/*" required />
+			</div>
+
+			<!--  		<div>
+				<label for="prodtime">P.-Zeit (hh:mm):</label>
+				<input type="time" name="prodtime" id="prodtime" required/>
+			</div>
+			-->
+			<div>
+				<button type="submit" id="button">Registrieren</button>
+			</div>
+		</fieldset>
+	</form>
+	<!-- 	<br>
 	<br> Vorname:
 	<input type="text" name="vorname" size="30" maxlength="40">
 	<br> Nachname:
@@ -34,6 +58,8 @@
 	<a href="../Index.html">Zurück zur Anmeldung</a>
 	
 	<!-- Jonathan Vielwerth -->
-
+	<br>
+	<a href="../Index.html"> Doch einen Account?</a>
+	<br>
 </body>
 </html>

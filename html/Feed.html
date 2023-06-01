@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Feed</title>
 <link rel="stylesheet" type="text/css" href="../CSS/Feed.css">
 </head>
 <body>
 
-	<!-- no -->
+	<!-- Linus Baumeister -->
 	<div class="full-side">
 
 
@@ -18,22 +18,35 @@
 
 		</div>
 		<div class="middle">
-			
-			<textarea class="Postfeld" id="Posten" maxlength="120"
-				placeholder="irgendwas los in der Welt?"></textarea>
-			<div class = "button-container">	
-				<button type = "submit" class = "text-button">Bilder</button>
-				<button type = "submit" class = "picture-button">Posten</button>
-			</div>	
-			
-		
+
+			<form class="form-posten" method="post" action="../../Posten"
+				enctype="multipart/form-data">
+				<textarea class="Postfeld" id="nachricht" name="nachricht"
+					maxlength="120" placeholder="irgendwas los in der Welt?" required></textarea>
+				<div class="button-container">
+					<label for="bild" class="picture-button">Bilder</label> <input
+						class="image-input" type="file" name="bild" id="bild"
+						accept="image/*" required>
+					<button type="submit" class="text-button">Posten</button>
+				</div>
+			</form>
+
+
 		</div>
 		<div class="right-side">
 			<input type="text" name="suche" size="25" maxlength="40"
-			placeholder = "suchen">
+				placeholder="suche">
 		</div>
 	</div>
-	<!-- no -->
+	<!-- Linus Baumeister -->
+	<!-- datenbank Create TABLE thidb.post (
+	id int PRIMARY KEY AUTO_INCREMENT,
+	username Varchar(100),
+	nachricht Varchar(150),
+	link Varchar(255),
+	bildname Varchar(255),
+	bild MEdiumblob
+); -->
 
 </body>
 </html>
