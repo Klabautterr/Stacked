@@ -39,8 +39,9 @@
 	
 	<table>
 		<tr>
-			<td>Beispielaktie1</td>
-			<td>Beispiel-DailyTrend in %</td>
+			<td>${assets.stockname}</td>
+			<td>Hier sollte eine Zahl stehen: </td> ${assets.anzahl}
+			<td>Hier auch: </td> ${assets.buyin}
 		</tr>
 		<tr>
 			<td>Beispielaktie2</td>
