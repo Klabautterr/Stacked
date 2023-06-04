@@ -18,11 +18,23 @@
 		<input type="text" name="Investment" id="investment" required>
 		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label>
 		<input type="number" name="amountOfStock" id="amountOfStock">
-	</form>
+		<label for="buyIn">Buy-In eingeben:</label>
+		<input type="number" name="buyIn" id="buyIn">
 	
 	<div>
 		<button type="submit" id="newInvestmentButton">Neues Investment dem Portfolio hinzufügen</button>
 	</div>
+	</form>
+	
+	
 <!-- Tobias Weiß -->
+
+<!-- Befehl um Datenbank zu erstellen: Create Table create table thidb.Investments (
+	username varchar(100) primary key,
+	stockname varchar(100),
+	anzahl int,
+	buyin int
+
+); -->
 </body>
 </html>
