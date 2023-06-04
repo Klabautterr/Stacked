@@ -39,9 +39,9 @@
 	
 	<table>
 		<tr>
-			<td>${assets.stockname}</td>
-			<td>Hier sollte eine Zahl stehen: </td> ${assets.anzahl}
-			<td>Hier auch: </td> ${assets.buyin}
+			<td><b>Stockname: </b>${Assets.stockname}</td>
+		<!-- <td>Hier sollte eine Zahl stehen: </td> ${assets.anzahl} <td>Hier auch: </td> ${assets.buyin}-->	
+			
 		</tr>
 		<tr>
 			<td>Beispielaktie2</td>
