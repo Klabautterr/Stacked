@@ -22,7 +22,7 @@
 	<form method="post" action="../../ProfilBearbeitenServlet"
 		enctype="multipart/form-data">
 		<fieldset>
-			<legend>ProfilBearbeiten</legend>
+			<legend>Ihr neuer Nutzername ist leider schon vergeben</legend>
 			<br>
 			<div>
 				<label for="username">Neuer Nutzername:</label> <input type="text" name="NeuerUsername"
