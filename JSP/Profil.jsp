@@ -23,7 +23,7 @@
 				<td>${Login.username}</td>
 			</tr>
 		</table>
-		<a href="../html/Feed.html">Zu deinem Feed</a> <br> 
+		<a href="./OutputFeed.jsp">Zu deinem Feed</a> <br> 
 		<a href="../Index.html">Abmelden</a>
 		<!-- Jonathan Vielwerth -->
 	</div>
@@ -39,9 +39,9 @@
 	
 	<table>
 		<tr>
-			<td><b>Stockname: </b>${Assets.stockname}</td>
-		<!-- <td>Hier sollte eine Zahl stehen: </td> ${assets.anzahl} <td>Hier auch: </td> ${assets.buyin}-->	
-			
+			<td>${assets.stockname}</td>
+			<td>Hier sollte eine Zahl stehen: </td> ${assets.anzahl}
+			<td>Hier auch: </td> ${assets.buyin}
 		</tr>
 		<tr>
 			<td>Beispielaktie2</td>
