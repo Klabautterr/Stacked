@@ -64,3 +64,72 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+  text-align: center;
+}
+
+.post-image {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.geposteter_Post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.geposteter_Post {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.post-username {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.post-message {
+  margin: 10px 0;
+}
+
+.post-image {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
