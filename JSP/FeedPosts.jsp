@@ -17,7 +17,7 @@
 					<td rowspan="2"><img
 						src="${pageContext.request.contextPath}/ProfilbildAuslesen?username=${Login.username}"
 						width="100" height="100"></td>
-					<td><a href="../../JSP/Profil.jsp">${Login.username}</a></td>
+					<td><a href="${pageContext.request.contextPath}/Stacked/JSP/Profil.jsp">${Login.username}</a></td>
 				</tr>
 			</table>
 		</div>
