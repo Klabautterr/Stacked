@@ -6,7 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Feed</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Stacked/CSS/Feed.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/Stacked/CSS/Feed.css">
 </head>
 <body>
 
@@ -17,7 +18,8 @@
 					<td rowspan="2"><img
 						src="${pageContext.request.contextPath}/ProfilbildAuslesen?username=${Login.username}"
 						width="100" height="100"></td>
-					<td><a href="${pageContext.request.contextPath}/Stacked/JSP/Profil.jsp">${Login.username}</a></td>
+					<td><a
+						href="${pageContext.request.contextPath}/Stacked/JSP/Profil.jsp">${Login.username}</a></td>
 				</tr>
 			</table>
 		</div>
@@ -36,25 +38,30 @@
 				</div>
 			</form>
 
-			<div class="geposteter_Post">
 
-				<c:forEach var="post" items="${posts}">
 
-					<b>${post.id}</b>
-					<br>
-					<b>${post.username}</b>
-					<br>
-					<b>${post.nachricht}</b>
-					<br>
-					<p>Bild</p>
-					<b><img
+			<c:forEach var="post" items="${posts}">
+				<div class="geposteter_Post">
+					<div class="username">${post.username}</div>
+					<form class="delete" method="post"
+						action="${pageContext.request.contextPath}/PostLoeschen">
+						<input type="hidden" name="id" value="${post.id}">
+						<button type="submit">Löschen</button>
+					</form>
+					<div class="message">${post.nachricht}</div>
+
+
+					<img
 						src="${pageContext.request.contextPath}/PostAuslesen?id=${post.id}"
-						width="400" height="150"></b>
-					<br>
-				</c:forEach>
+						width="400" height="150">
+					<div class="actions">
 
+						<div class="like">Like</div>
+						<div class="comment">Kommentar</div>
+					</div>
+				</div>
+			</c:forEach>
 
-			</div>
 		</div>
 
 		<div class="right-side"></div>
