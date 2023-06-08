@@ -15,11 +15,11 @@
 
 	<br>
 	
-		<form method="post" action="../../RegistrierungsanfragenAusgeben">
+		<form method="post" action="../../ProfiAnfragenAusgeben">
 		<fieldset>
-			<legend>Registrierungsanfragen</legend>
+			<legend>Profi Anfragen</legend>
 			<div>
-				<button type="submit" id="button">Registrierungsanfragen</button>
+				<button type="submit" id="button">Profi Anfragen</button>
 			</div>
 			</fieldset>
 			</form>
