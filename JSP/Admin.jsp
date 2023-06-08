@@ -14,22 +14,22 @@
 	</center>
 
 	<br>
-	
-		<form method="post" action="../../ProfiAnfragenAusgeben">
+
+	<form method="post" action="../../ProfiAnfragenAusgeben">
 		<fieldset>
 			<legend>Profi Anfragen</legend>
 			<div>
 				<button type="submit" id="button">Profi Anfragen</button>
 			</div>
-			</fieldset>
-			</form>
+		</fieldset>
+	</form>
 
 	<a href="./Registrierungsanfragen.jsp">Registrierungsanfragen</a>
 	<br>
 	<a href="./ProfiAnfragen.jsp">Anfragen für Profi </a>
 	<br>
 	<a href="../Index.html">Abmelden</a>
-	
+
 	<!-- Jonathan Vielwerth -->
 
 </body>
