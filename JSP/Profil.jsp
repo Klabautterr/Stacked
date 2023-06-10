@@ -51,7 +51,7 @@
 					<td>buyin: ${Assets.buyin}</td> 
 				</tr>
 				<tr>
-					<td>Beispielaktie2</td>
+					<td>stockname: ${Assets.stockname}</td>
 					<td>Beispiel-DailyTrend in %</td>
 				</tr>
 			</table>
