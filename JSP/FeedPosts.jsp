@@ -33,7 +33,7 @@
 				<div class="button-container">
 					<label for="bild" class="picture-button">Bilder</label> <input
 						class="image-input" type="file" name="bild" id="bild"
-						accept="image/*" required>
+						accept="image/*">
 					<button type="submit" class="text-button">Posten</button>
 				</div>
 			</form>
@@ -53,7 +53,7 @@
 
 					<img
 						src="${pageContext.request.contextPath}/PostAuslesen?id=${post.id}"
-						width="400" height="150">
+						onerror="this.remove()" width="400" height="150">
 					<div class="actions">
 
 						<div class="like">Like</div>
