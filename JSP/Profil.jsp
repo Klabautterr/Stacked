@@ -34,6 +34,7 @@
 
 	<!-- Tobias Weiß HTML-Tabelle der Investments -->
 
+
 	<div>
 		<br>
 		<fieldset>
@@ -45,9 +46,9 @@
 
 			<table>
 				<tr>
-					<td>${assets.stockname}</td>
-					<td>Hier sollte eine Zahl stehen:</td> ${assets.anzahl}
-					<td>Hier auch:</td> ${assets.buyin}
+					<td>stockname: ${Assets.stockname}</td>
+					<td>amount: ${Assets.anzahl}</td> 
+					<td>buyin: ${Assets.buyin}</td> 
 				</tr>
 				<tr>
 					<td>Beispielaktie2</td>
@@ -60,6 +61,7 @@
 		<a href="./addInvestment.jsp">Investment hinzufügen</a>
 	</div>
 	<!-- Tobias Weiß -->
+
 
 
 </body>
