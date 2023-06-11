@@ -22,7 +22,7 @@
 	<form method="post" action="../../ProfilBearbeitenServlet"
 		enctype="multipart/form-data">
 		<fieldset>
-			<legend>ProfilBearbeiten</legend>
+			<legend>Ihr neuer Nutzername ist leider schon vergeben</legend>
 			<br>
 			<div>
 				<label for="username">Neuer Nutzername:</label> <input type="text" name="NeuerUsername"
@@ -41,16 +41,6 @@
 				<button type="submit" id="button">Änderungen speichern</button>
 			</div>
 			</form>
-			
-
-			<!--  Später noch mit JavaScript mit Logik versehen, sodass den Button nur leute angezeigt bekommen die noch keinen offenen Antrag haben -->			
-			<form method="post" action="../../ProfiAnfrageStellen">
-						<fieldset>
-							<div>
-								<button type="submit" id="button">Profi Anfrage stellen</button>
-							</div>
-						</fieldset>
-					</form>
 	<!-- Jonathan Vielwerth -->
 	
 </body>

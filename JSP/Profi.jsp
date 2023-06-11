@@ -15,6 +15,7 @@
 
 	<br>
 	<a href="./ProfilBearbeiten.jsp">Profil bearbeiten</a>
+	<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment Kings</h2>
 	<div>
 		<table>
 			<tr>
@@ -34,7 +35,6 @@
 
 	<!-- Tobias Weiß HTML-Tabelle der Investments -->
 
-
 	<div>
 		<br>
 		<fieldset>
@@ -46,12 +46,12 @@
 
 			<table>
 				<tr>
-					<td>stockname: ${Assets.stockname}</td>
-					<td>amount: ${Assets.anzahl}</td> 
-					<td>buyin: ${Assets.buyin}</td> 
+					<td>${assets.stockname}</td>
+					<td>Hier sollte eine Zahl stehen:</td> ${assets.anzahl}
+					<td>Hier auch:</td> ${assets.buyin}
 				</tr>
 				<tr>
-					<td>stockname: ${Assets.stockname}</td>
+					<td>Beispielaktie2</td>
 					<td>Beispiel-DailyTrend in %</td>
 				</tr>
 			</table>
@@ -61,7 +61,6 @@
 		<a href="./addInvestment.jsp">Investment hinzufügen</a>
 	</div>
 	<!-- Tobias Weiß -->
-
 
 
 </body>

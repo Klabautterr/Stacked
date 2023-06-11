@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,50 +10,81 @@
 </head>
 <body>
 
-	<!-- no -->
+
+<p>ICH BIN VERALTET WIRD WAHRSCHEINLICH NICHT MEHR GEBRAUCHT ALSO NICHT DRAUF VERWEISEN </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="full-side">
-
-
 		<div class="left-side">
 			<table>
-			<tr>
-				<td rowspan="2"><img src="../../ProfilbildAuslesen?username=${Login.username}"
-					width="100" height="100"></td>
-				<td>${Login.username}</td>
-			</tr>
-		</table>
+				<tr>
+					<td rowspan="2"><img
+						src="../../ProfilbildAuslesen?username=${Login.username}"
+						width="100" height="100"></td>
+					<td><a href="../JSP/Profil.jsp">${Login.username}</a></td>
+				</tr>
+			</table>
 		</div>
-		<div class="middle">
 
-			<form class="form-posten" method ="post" action="../../Posten"
+		<div class="middle">
+			<form class="form-posten" method="post" action="../../Posten"
 				enctype="multipart/form-data">
-				<textarea class="Postfeld" id="nachricht" name="nachricht" maxlength="120"
-					placeholder="irgendwas los in der Welt?" required></textarea>
+				<textarea class="Postfeld" id="nachricht" name="nachricht"
+					maxlength="200" placeholder="irgendwas los in der Welt?" required></textarea>
 				<div class="button-container">
 					<label for="bild" class="picture-button">Bilder</label> <input
 						class="image-input" type="file" name="bild" id="bild"
 						accept="image/*" required>
 					<button type="submit" class="text-button">Posten</button>
-
 				</div>
 			</form>
-			<br>
-			
-			<b> ${form.nachricht}</b>
-			<br>
-			<!--  <b>bildname: ${form.bildname} </b><br>	-->
-			<b> <img src="../../PostAuslesen?id=${form.id}" width= "400" height="150" ></b>
-			<b> username = ${form.username}</b>
-			<b>Woah der ${form.id} Post</b>
-			<br>
-			
+
+			<div class="geposteter_Post">
+
+				<!--  -->
+				<c:if test="${formPost != null}">
+					<form method="post" action="../../PostLoeschen">
+						<input type="hidden" name="id" value="${formPost.id}">
+						<button type="submit">Löschen</button>
+					</form>
+					<br>
+					<b> ${formPost.nachricht}</b>
+					<br>
+					<b> <img src="../../PostAuslesen?id=${formPost.id}" width="400"
+						height="150"></b>
+					<b> username = ${formPost.username}</b>
+					<b>Woah der ${formPost.id} Post</b>
+					<br>
+				</c:if>
+			</div>
 		</div>
+
 		<div class="right-side">
-			<input type="text" name="suche" size="25" maxlength="40"
-				placeholder="suche">
+			<form id="myForm" method="post" action="../../AllePostsAusgeben">		
+			<fieldset>
+				<legend>Post-Suche</legend>
+				<div>
+					<button name="submit" type="submit">Feed laden</button>
+					<button name="reset" type="reset">Zurücksetzen</button>
+				</div>
+			</fieldset>
+			</form>
 		</div>
+
+
 	</div>
-	<!-- no -->
 
 </body>
 </html>

@@ -14,8 +14,8 @@
 
 
 	<form method="post" action="../../InvestmentsServlet">
-		<label for="investment">Neues Investment eingeben:</label>
-		<input type="text" name="Investment" id="investment" required>
+		<label for="stockname">Neues Investment eingeben:</label>
+		<input type="text" name="stockname" id="stockname">
 		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label>
 		<input type="number" name="amountOfStock" id="amountOfStock">
 		<label for="buyIn">Buy-In eingeben:</label>
