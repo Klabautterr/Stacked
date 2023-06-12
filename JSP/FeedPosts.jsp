@@ -56,7 +56,14 @@
 						onerror="this.remove()" width="400" height="150">
 					<div class="actions">
 
-						<div class="like">Like</div>
+						<form method="post"
+							action="${pageContext.request.contextPath}/Liken">
+							<input type="hidden" name="id" value="${post.id}">
+							<button type="submit" class="like">Like</button>
+
+							<p>test = ${post.anzahl_likes}</p>
+
+						</form>
 						<div class="comment">Kommentar</div>
 					</div>
 				</div>
