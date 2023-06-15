@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LayoutCopy</title>
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/Feed.css">
+</head>
+<!-- Jan Holtmann -->
+<body>
+
+<nav class=navList>
+<div >
+<table class=UserTopProfil>
+<tr><th><img class=ProfilPicture src="../images/testprofile.jpeg" width="50" height="50"><!-- Profil Picture --></th><th><a class=ProfilLink href="Profil.html">USERNAME</a></th></tr>
+</table>
+</div>
+
+<div>
+<table class=Sidelinks>
+<tr><th><input type="text" class=FriendInput placeholder="Freunde Suchen"></th></tr>
+<tr><th><a class=FunctionLinks>Freunde</a></th></tr>
+<tr><th><a class=FunctionLinks>Feed</a></th></tr>
+<tr><th><a class=FunctionLinks>Profil</a></th></tr>
+<tr><th><a class=FunctionLinks>Investments</a></th></tr>
+<tr><th><a class=FunctionLinks>Profi Bereich</a></th></tr>
+<tr><th><a class=FunctionLinks>Abmelden</a></th></tr>
+</table>
+</div>
+</nav>
+
+<aside class=SelectedContent>
+<div >
+<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
+		
+		<p class=Name>Harald Schmidtt</p>
+		
+		<p class=T>Jochen hat wieder in Audi investiert, meint ihr das ist eine gute Idee?</p>
+		
+		<p class=Name>Dieter der Große</p>
+		
+		<p class=T>Schätze das wird schon seinen Grund haben. Ich bin eher bei Apple dieses Jahr.</p>
+		
+		
+		
+		
+		<div class="middle">
+			<form class="form-posten" method="post"
+				action="${pageContext.request.contextPath}/Posten"
+				enctype="multipart/form-data">
+				<textarea class="Postfeld" id="nachricht" name="nachricht"
+					maxlength="200" placeholder="irgendwas los in der Welt?" required></textarea>
+				<div class="button-container">
+					<label for="bild" class="picture-button">Bilder</label> <input
+						class="image-input" type="file" name="bild" id="bild"
+						accept="image/*">
+					<button type="submit" class="text-button">Posten</button>
+				</div>
+			</form>
+
+		</div>
+
+
+</div>
+</aside>
+
+</body>
+
+<footer>
+<table class=BottomLine>
+<tr><th><p class=FirmenNameFooter>KONTAKT</p></th><th><a class=KontactLink>RECHTLICHES</a></th></tr>
+</table>
+
+
+</footer>
+
+</html>

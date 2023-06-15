@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.navList {
+	float: left;
+}
+
+.T {
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.Name {
+	padding-left: 20px;
+	padding-top: 50px;
+}
+
+.middle {
+	margin-bottom: 20px;
+}
+
+.UserTopProfil {
+	background: #FAAB28;
+	border-style: solid;
+	border-width: 2px 2px 1px 2px;
+	border-color: black;
+	width: 20vw;
+	height: 10vh;
+	margin: auto;
+	font-family: sans-serif;
+	color: white;
+}
+
+.ProfilPicture {
+
+}
+
+.ProfilLink {
+	
+}
+
+.Sidelinks {
+	border-style: solid;
+	border-width: 1px 2px 0px 2px;
+	border-color: black;
+	margin: auto;
+	width: 20vw;
+	height: 80vh;
+	background: #FA7C27;
+	font-family: sans-serif;
+	color: white;
+}
+
+.FriendInput {
+	margin-top: -10x;
+}
+
+.FunctionLinks {
+	
+}
+
+.SelectedContent {
+	float: right;
+	background: #76AFE5;
+	width: 77vw;
+	height: 90vh;
+	font-family: sans-serif;
+	color: white;
+}
+
+.BottomLine {
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: black;
+	clear: both;
+	position: relative;
+	width: 100vw;
+	height: 10vh;
+	background: #FA7C27;
+	font-family: sans-serif;
+	color: white;
+	
+}
+
+.FirmenNameFooter {
+	
+}
+
+.KontactLink {
+	
+}
