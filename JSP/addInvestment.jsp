@@ -7,29 +7,32 @@
 <title>Stacked</title>
 </head>
 <body>
-<!-- Tobias Weiß Neue Investments hinzufügen -->
+	<!-- Tobias Weiß Neue Investments hinzufügen -->
 	<h1>Füge Investments deinem Portfolio hinzu</h1>
 
-	<a href="./Profil.jsp"> Zurück zum Profil </a>
+	<!-- <a href="./Profil.jsp"> Zurück zum Profil </a> -->
 
-
-	<form method="post" action="../../InvestmentsServlet">
-		<label for="stockname">Neues Investment eingeben:</label>
-		<input type="text" name="stockname" id="stockname">
-		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label>
-		<input type="number" name="amountOfStock" id="amountOfStock">
-		<label for="buyIn">Buy-In eingeben:</label>
-		<input type="number" name="buyIn" id="buyIn">
-	
-	<div>
-		<button type="submit" id="newInvestmentButton">Neues Investment dem Portfolio hinzufügen</button>
-	</div>
+	<form action="../../InvestmentsAnzeigenServlet" method="post">
+		<button type="submit">Zurück zum Profil</button>
 	</form>
-	
-	
-<!-- Tobias Weiß -->
+	<form method="post" action="../../InvestmentsServlet">
+		<label for="stockname">Neues Investment eingeben:</label> <input
+			type="text" name="stockname" id="stockname"> <label
+			for="amountOfStock">Anzahl an Anteilen eingeben:</label> <input
+			type="number" name="amountOfStock" id="amountOfStock"> <label
+			for="buyIn">Buy-In eingeben:</label> <input type="number"
+			name="buyIn" id="buyIn">
 
-<!-- Befehl um Datenbank zu erstellen: Create Table create table thidb.Investments (
+		<div>
+			<button type="submit" id="newInvestmentButton">Neues
+				Investment dem Portfolio hinzufügen</button>
+		</div>
+	</form>
+
+
+	<!-- Tobias Weiß -->
+
+	<!-- Befehl um Datenbank zu erstellen: Create Table create table thidb.Investments (
 	username varchar(100) primary key,
 	stockname varchar(100),
 	anzahl int,

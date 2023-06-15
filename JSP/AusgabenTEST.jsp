@@ -18,21 +18,17 @@
 			<th>Aktion</th>
 		</tr>
 
-
-
-
-		<c:forEach var="post" items="${posts}">
+		<c:forEach var="asset" items="${AssetsAnzeigen}">
 			<tr>
-				<td>${post.id}</td>
-				<td>${post.username}</td>
-				<td>${post.nachricht}</td>
-				<td>
-					<p>Bild</p> <img
-					src="${pageContext.request.contextPath}/PostAuslesen?id=${post.id}"
-					width="400" height="150">
-				</td>
+				<td>${asset.stockname}</td>
+				<td>${asset.anzahl}</td>
+				<td>${asset.buyin}</td>
 			</tr>
 		</c:forEach>
+	</table>
+
+
+
 
 	</table>
 
