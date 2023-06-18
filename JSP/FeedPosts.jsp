@@ -17,7 +17,7 @@
 					<td rowspan="2"><img
 						src="./ProfilbildAuslesen?username=${Login.username}" width="100"
 						height="100"></td>
-					<td><a href="Stacked/JSP/Profil.jsp">${Login.username}</a></td>
+					<td><a href="./InvestmentsAnzeigenServlet">${Login.username}</a></td>
 				</tr>
 			</table>
 		</div>
@@ -58,7 +58,12 @@
 							<p>test = ${post.anzahl_likes}</p>
 
 						</form>
-						<div class="comment">Kommentar</div>
+						<div class="comment">
+						<form method="post" action="Stacked/JSP/Kommentieren.jsp"> 
+						<input type="hidden" name="id" value="${post.id}">
+						<button type="submit" class="comment">Kommentar</button>
+						</form>
+						</div>
 					</div>
 				</div>
 			</c:forEach>
