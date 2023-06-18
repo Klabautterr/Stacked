@@ -15,7 +15,8 @@
 
 	<br>
 	<a href="./ProfilBearbeiten.jsp">Profil bearbeiten</a>
-	<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment Kings</h2>
+	<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment
+		Kings</h2>
 	<div>
 		<table>
 			<tr>
@@ -28,9 +29,11 @@
 		<form action="../../AllePostsAusgeben" method="post">
 			<button type="submit">Zu deinem Feed</button>
 		</form>
-	<br>
-	<a href="../Index.html">Abmelden</a>
-	<!-- Jonathan Vielwerth -->
+		<form action="../../FollowsVerwalten">
+			<button type="submit">Follows verwalten</button>
+		</form>
+		<br> <a href="../Index.html">Abmelden</a>
+		<!-- Jonathan Vielwerth -->
 	</div>
 
 	<!-- Tobias Weiß HTML-Tabelle der Investments -->

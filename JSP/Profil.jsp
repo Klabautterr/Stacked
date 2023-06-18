@@ -30,6 +30,11 @@
 		<form action="./AllePostsAusgeben" method="post">
 			<button type="submit">Zu deinem Feed</button>
 		</form>
+		
+		<form action="./FollowsVerwalten">
+			<button type="submit">Follows verwalten</button>
+		</form>
+		
 		<br> <a href="Stacked/Index.html">Abmelden</a>
 		<!-- Jonathan Vielwerth -->
 	</div>
