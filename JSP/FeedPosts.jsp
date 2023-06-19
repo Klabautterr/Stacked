@@ -59,9 +59,11 @@
 
 						</form>
 						<div class="comment">
-						<form method="post" action="Stacked/JSP/Kommentieren.jsp"> 
-						<input type="hidden" name="id" value="${post.id}">
-						<button type="submit" class="comment">Kommentar</button>
+						<form method="post" action="./EinPostAusgeben">
+							<input type="hidden" name="id" value="${post.id}">
+							<button type="submit" class="comment">Kommentieren ?</button>
+
+
 						</form>
 						</div>
 					</div>

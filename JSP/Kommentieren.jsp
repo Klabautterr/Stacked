@@ -26,6 +26,15 @@
 					<img src="./PostAuslesen?id=${post.id}" onerror="this.remove()"
 						width="400" height="150">
 				</div>
+				<form method="post" action="./Kommentieren">
+				<textarea class="Postfeld" id="kommentar" name="kommentar"
+					maxlength="200" placeholder="Was möchtest du den Kommentieren?" required></textarea>
+					<input type= "hidden" value= "${post.id}" name ="id"></input>
+					<div class="button-container">
+					
+					<button type="submit" class="text-button">Posten</button>					
+				</div>
+				</form>
 			</div>
 		</div>
 		<div class="right-side"></div>
