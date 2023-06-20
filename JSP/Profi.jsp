@@ -40,28 +40,26 @@
 
 	<div>
 		<br>
+
 		<fieldset>
-			<legend>
-				<strong>Investments</strong>
-			</legend>
-
-			<br>
-
+			<legend>Deine Investments</legend>
 			<table>
-				<tr>
-					<td>${assets.stockname}</td>
-					<td>Hier sollte eine Zahl stehen:</td> ${assets.anzahl}
-					<td>Hier auch:</td> ${assets.buyin}
-				</tr>
-				<tr>
-					<td>Beispielaktie2</td>
-					<td>Beispiel-DailyTrend in %</td>
-				</tr>
+				<c:forEach var="asset" items="${AssetsAnzeigen}">
+					<tr>
+						<td>${asset.stockname}</td>
+						<td>${asset.anzahl}</td>
+						<td>${asset.buyin}</td>
+					</tr>
+				</c:forEach>
 			</table>
+		</fieldset>
+	<!--  	<form method="post" action="./InvestmentsAnzeigenServlet">
+			<button type="submit">Investments laden</button>
+		</form>-->
 	</div>
 
 	<div>
-		<a href="./addInvestment.jsp">Investment hinzufügen</a>
+		<a href="Stacked/JSP/addInvestment.jsp">Investment hinzufügen</a>
 	</div>
 	<!-- Tobias Weiß -->
 

@@ -15,13 +15,21 @@
 	<form action="../../InvestmentsAnzeigenServlet" method="post">
 		<button type="submit">Zurück zum Profil</button>
 	</form>
-	<form method="post" action="../../InvestmentsServlet">
-		<label for="stockname">Neues Investment eingeben:</label> <input
-			type="text" name="stockname" id="stockname"> <label
-			for="amountOfStock">Anzahl an Anteilen eingeben:</label> <input
-			type="number" name="amountOfStock" id="amountOfStock"> <label
-			for="buyIn">Buy-In eingeben:</label> <input type="number"
-			name="buyIn" id="buyIn">
+	
+	<form method="post" action="../../InvestmentsServlet"> 
+	
+		<label for="stockname">Wählen Sie eine Aktien aus:</label>
+		<select multiple name="stockname" size="5">
+			<option value="Apple">Apple</option>
+			<option value="AT&T">AT&T</option>
+			<option value="Amazon">Amazon</option>
+			<option value="Alphabet">Alphabet</option>
+			<option value="BlackRock">BlackRock</option>
+		</select>
+		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label> 
+		<input type="number" name="amountOfStock" id="amountOfStock"> 
+		<label	for="buyIn">Buy-In eingeben:</label> 
+		<input type="number" name="buyIn" id="buyIn">
 
 		<div>
 			<button type="submit" id="newInvestmentButton">Neues

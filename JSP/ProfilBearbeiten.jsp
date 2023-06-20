@@ -15,7 +15,7 @@
 	
 	
 	
-	<a href="./Profil.jsp"> Zurück zum Profil </a>
+	<a href="../../InvestmentsAnzeigenServlet"> Zurück zum Profil </a>
 	
 	
 	
