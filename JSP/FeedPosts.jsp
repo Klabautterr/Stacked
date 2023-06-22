@@ -7,9 +7,12 @@
 <meta charset="UTF-8">
 <title>Feed</title>
 <link rel="stylesheet" type="text/css" href="Stacked/CSS/Feed.css">
+<script src="Stacked/JS/Bildupload.js"></script>
 </head>
 <body>
 
+    <div id="loggedInUsername" style="display: none;">${Login.username}</div>
+	
 	<div class="full-side">
 		<div class="left-side">
 			<table>
