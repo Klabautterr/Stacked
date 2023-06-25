@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,29 +17,29 @@
 	</center>
 
 	<br>
-	<a href="./ProfilBearbeiten.jsp">Profil bearbeiten</a>
-	<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment
+	<a href="Stacked/JSP/ProfilBearbeiten.jsp">Profil bearbeiten</a>
+	<h2>Herzlichen GlÃ¼ckwunsch du bist einer der krassesten Investment
 		Kings</h2>
 	<div>
 		<table>
 			<tr>
 				<td rowspan="2"><img
-					src="../../ProfilbildAuslesen?username=${Login.username}"
+					src="./ProfilbildAuslesen?username=${Login.username}"
 					width="100" height="100"></td>
 				<td>${Login.username}</td>
 			</tr>
 		</table>
-		<form action="../../AllePostsAusgeben" method="post">
+		<form action="./AllePostsAusgeben" method="post">
 			<button type="submit">Zu deinem Feed</button>
 		</form>
-		<form action="../../FollowsVerwalten">
+		<form action="./FollowsVerwalten">
 			<button type="submit">Follows verwalten</button>
 		</form>
-		<br> <a href="../Index.html">Abmelden</a>
+		<br> <a href="Stacked/Index.html">Abmelden</a>
 		<!-- Jonathan Vielwerth -->
 	</div>
 
-	<!-- Tobias Weiß HTML-Tabelle der Investments -->
+	<!-- Tobias WeiÃŸ HTML-Tabelle der Investments -->
 
 	<div>
 		<br>
@@ -59,9 +62,9 @@
 	</div>
 
 	<div>
-		<a href="Stacked/JSP/addInvestment.jsp">Investment hinzufügen</a>
+		<a href="Stacked/JSP/addInvestment.jsp">Investment hinzufÃ¼gen</a>
 	</div>
-	<!-- Tobias Weiß -->
+	<!-- Tobias WeiÃŸ -->
 
 
 </body>
