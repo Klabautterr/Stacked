@@ -22,7 +22,10 @@
 	<table>
 		<c:forEach var="aktuelleFollows" items="${follows}">
 			<tr>
-				<td>${aktuelleFollows.username}</td>
+				<td><a
+					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollows.username}">${aktuelleFollows.username}</a>
+				</td>
+				<!--  		<td>${aktuelleFollows.username}</td>-->
 				<td>
 					<form method="post" action="./FollowEntfernen">
 						<fieldset>
@@ -42,7 +45,10 @@
 	<table>
 		<c:forEach var="aktuelleFollower" items="${follower}">
 			<tr>
-				<td>${aktuelleFollower.username}</td>
+				<td><a
+					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollower.username}">${aktuelleFollower.username}</a>
+				</td>
+				<!--  	<td>${aktuelleFollower.username}</td>-->
 				<td>
 					<form method="post" action="./FollowHinzufuegen">
 						<fieldset>
@@ -94,13 +100,15 @@
 		<table>
 			<c:forEach var="user" items="${userSuche}">
 				<tr>
-					<td>${user.username}</td>
+					<td><a
+						href="./InvestmentsAnzeigenServlet?username=${user.username}">${user.username}</a>
+					</td>
+					<!--  	<td>${user.username}</td>-->
 					<td>
 						<form method="post" action="./FollowHinzufuegen">
 							<fieldset>
 								<div>
-									<input type="hidden" name="username2"
-										value="${user.username}">
+									<input type="hidden" name="username2" value="${user.username}">
 									<button type="submit" id="button">Folgen</button>
 								</div>
 							</fieldset>
