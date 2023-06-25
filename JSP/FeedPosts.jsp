@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div id="loggedInUsername" style="display: none;">${Login.username}</div>
+ 
 	
 	<div class="full-side">
 		<div class="left-side">
@@ -42,23 +42,30 @@
 
 			<c:forEach var="post" items="${posts}">
 				<div class="geposteter_Post">
-					<div class="username">${post.username}</div>
+					<div class="username"> 
+					<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
+					</div>
+					<c:if test="${post.username == Login.username}">
 					<form class="delete" method="post" action="./PostLoeschen">
 						<input type="hidden" name="id" value="${post.id}">
 						<button type="submit">Löschen</button>
 					</form>
+					</c:if>
 					<div class="message">${post.nachricht}</div>
 
-
-					<img src="./PostAuslesen?id=${post.id}" onerror="this.remove()"
+					
+					<c:if test="${not empty post.bildname}">
+					<img src="./PostAuslesen?id=${post.id}"
 						width="400" height="150">
+					</c:if>
 					<div class="actions">
 
 						<form method="post" action="./Liken">
 							<input type="hidden" name="id" value="${post.id}">
 							<button type="submit" class="like">Like</button>
 
-							<p>test = ${post.anzahl_likes}</p>
+							<p>${post.anzahl_likes}</p>
+							
 
 						</form>
 						<div class="comment">

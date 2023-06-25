@@ -114,4 +114,8 @@ body {
   width: 250px;
   height: auto;
 }
+.invisible {
+    visibility: hidden;
+}
+
 
