@@ -19,7 +19,7 @@
 	<form method="post" action="../../InvestmentsServlet"> 
 	
 		<label for="stockname">Wählen Sie eine Aktien aus:</label>
-		<select multiple name="stockname" size="5">
+		<select multiple name="stockname" size="5" required >
 			<option value="Apple">Apple</option>
 			<option value="AT&T">AT&T</option>
 			<option value="Amazon">Amazon</option>
@@ -27,9 +27,9 @@
 			<option value="BlackRock">BlackRock</option>
 		</select>
 		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label> 
-		<input type="number" name="amountOfStock" id="amountOfStock"> 
+		<input type="number" name="amountOfStock" id="amountOfStock" required> 
 		<label	for="buyIn">Buy-In eingeben:</label> 
-		<input type="number" name="buyIn" id="buyIn">
+		<input type="number" name="buyIn" id="buyIn" required>
 
 		<div>
 			<button type="submit" id="newInvestmentButton">Neues
