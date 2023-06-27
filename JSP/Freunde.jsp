@@ -50,15 +50,15 @@
 				</td>
 				<!--  	<td>${aktuelleFollower.username}</td>-->
 				<td>
-					<form method="post" action="./FollowHinzufuegen">
-						<fieldset>
-							<div>
-								<input type="hidden" name="username2"
-									value="${aktuelleFollower.username}">
-								<button type="submit" id="button">Ebenfalls folgen</button>
-							</div>
-						</fieldset>
-					</form>
+						<form method="post" action="./FollowHinzufuegen">
+							<fieldset>
+								<div>
+									<input type="hidden" name="username2"
+										value="${aktuelleFollower.username}">
+									<button type="submit" id="button">Ebenfalls folgen</button>
+								</div>
+							</fieldset>
+						</form>
 				</td>
 				<td>
 					<form method="post" action="./FollowEntfernen">
