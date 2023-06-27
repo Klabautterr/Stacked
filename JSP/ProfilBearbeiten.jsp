@@ -41,21 +41,23 @@
 			</div>
 		</fieldset>
 		<div>
-			<button type="submit" id="button">Änderungen speichern</button>
+			<button type="submit" id="AenderungSpeichern">Änderungen
+				speichern</button>
 		</div>
 	</form>
+
 	<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
 		<form method="post" action="../../ProfiAnfrageStellen"
-			id="profiAnfragenButton">
+			id="profiAnfragenStellen">
 			<fieldset>
 				<div>
-					<button type="submit" id="button">Profi Anfrage stellen</button>
+					<button type="submit" id="ProfiAnfrageButton">Profi
+						Anfrage stellen</button>
 				</div>
 			</fieldset>
 		</form>
 	</c:if>
-
 	<!-- Jonathan Vielwerth -->
-
+<script src="../JS/ProfilBearbeiten.js"></script>
 </body>
 </html>
