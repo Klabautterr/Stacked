@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,46 +15,47 @@
 			<u><strong>Profil bearbeiten</strong></u>
 		</h1>
 	</center>
-	
-	
-	
-	<a href="../../InvestmentsAnzeigenServlet"> Zurück zum Profil </a>
-	
-	
-	
+
+
+
+	<a href="../../InvestmentsAnzeigenServlet"> ZurÃ¼ck zum Profil </a>
+
+
+
 	<form method="post" action="../../ProfilBearbeitenServlet"
 		enctype="multipart/form-data">
 		<fieldset>
 			<legend>ProfilBearbeiten</legend>
 			<br>
 			<div>
-				<label for="username">Neuer Nutzername:</label> <input type="text" name="NeuerUsername"
-					id="username"/>
+				<label for="username">Neuer Nutzername:</label> <input type="text"
+					name="NeuerUsername" id="username" />
 			</div>
 			<div>
 				<label for="passwort">Neues Passwort:</label> <input type="password"
-					name="passwort" id="passwort"/>
+					name="passwort" id="passwort" />
 			</div>
 			<div>
-			<label for="NewImage">Neues Bild:</label> <input type="file"
-					name="NewImage" id="NewImage" accept="images/*"/>
+				<label for="NewImage">Neues Bild:</label> <input type="file"
+					name="NewImage" id="NewImage" accept="images/*" />
 			</div>
+		</fieldset>
+		<div>
+			<button type="submit" id="button">Ã„nderungen speichern</button>
+		</div>
+	</form>
+	<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
+		<form method="post" action="../../ProfiAnfrageStellen"
+			id="profiAnfragenButton">
+			<fieldset>
+				<div>
+					<button type="submit" id="button">Profi Anfrage stellen</button>
+				</div>
 			</fieldset>
-			<div>
-				<button type="submit" id="button">Änderungen speichern</button>
-			</div>
-			</form>
-			
+		</form>
+	</c:if>
 
-			<!--  Später noch mit JavaScript mit Logik versehen, sodass den Button nur leute angezeigt bekommen die noch keinen offenen Antrag haben -->			
-			<form method="post" action="../../ProfiAnfrageStellen">
-						<fieldset>
-							<div>
-								<button type="submit" id="button">Profi Anfrage stellen</button>
-							</div>
-						</fieldset>
-					</form>
 	<!-- Jonathan Vielwerth -->
-	
+
 </body>
 </html>

@@ -24,10 +24,6 @@
 		</fieldset>
 	</form>
 
-	<a href="./Registrierungsanfragen.jsp">Registrierungsanfragen</a>
-	<br>
-	<a href="./ProfiAnfragen.jsp">Anfragen für Profi </a>
-	<br>
 	<a href="../Index.html">Abmelden</a>
 
 	<!-- Jonathan Vielwerth -->

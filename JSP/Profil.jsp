@@ -23,6 +23,7 @@
 			<tr>
 				<td rowspan="2"><img
 					src="./ProfilbildAuslesen?username=${Login.username}"
+					//
 					width="100" height="100"></td>
 				<td>${Login.username}</td>
 			</tr>
