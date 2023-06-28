@@ -8,19 +8,13 @@
 <!-- Jonathan Vielwerth -->
 
 <title>Profi Anfragen</title>
-
-<script type="text/javascript">
-	function tabelleHinzufuegen() {
-	var elem1.document.getElementById("h3");
-	document.getElementById("tabelle").style.display = 'inline';
-	}
-</script>
-
 </head>
 <body>
 	<h3>Diesen Leuten folgst du</h3>
 	<table>
+		<!-- Anfang ChatGPT -->
 		<c:forEach var="aktuelleFollows" items="${follows}">
+			<!-- Ende ChatGPT -->
 			<tr>
 				<td><a
 					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollows.username}">${aktuelleFollows.username}</a>
@@ -48,18 +42,6 @@
 				<td><a
 					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollower.username}">${aktuelleFollower.username}</a>
 				</td>
-				<!--  	<td>${aktuelleFollower.username}</td>-->
-				<td>
-						<form method="post" action="./FollowHinzufuegen">
-							<fieldset>
-								<div>
-									<input type="hidden" name="username2"
-										value="${aktuelleFollower.username}">
-									<button type="submit" id="button">Ebenfalls folgen</button>
-								</div>
-							</fieldset>
-						</form>
-				</td>
 				<td>
 					<form method="post" action="./FollowEntfernen">
 						<fieldset>
@@ -71,7 +53,17 @@
 						</fieldset>
 					</form>
 				</td>
-			</tr>
+				<td>
+					<form method="post" action="./FollowHinzufuegen">
+						<fieldset>
+							<div>
+								<input type="hidden" name="username2"
+									value="${aktuelleFollower.username}">
+								<button type="submit" id="button">Ebenfalls folgen</button>
+							</div>
+						</fieldset>
+					</form>
+				</td>
 		</c:forEach>
 	</table>
 

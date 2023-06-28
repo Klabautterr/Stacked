@@ -1,9 +1,14 @@
-var button = document.getElementById("ProfiAnfrageButton");
-button.addEventListener("click", alterAnzeigen);
+var ProfiButton = document.getElementById("ProfiAnfrageButton");
+ProfiButton.addEventListener("click", alertProfi);
 
-function alterAnzeigen(){
-	alert ("Profi Anfrage wurde erfolgreich verschickt");
+
+function alertProfi(){
+	alert ("Profi Anfrage wurde erfolgreich verschickt  TEST 2 ");
 }
+
+
+
+
 
 
 

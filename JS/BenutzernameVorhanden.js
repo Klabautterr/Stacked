@@ -1,7 +1,0 @@
-/**
- * 
- */
-
- function Nutzernameueberpruefung(){
-	 var
- } 
