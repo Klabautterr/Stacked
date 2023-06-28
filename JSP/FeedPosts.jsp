@@ -7,12 +7,11 @@
 <meta charset="UTF-8">
 <title>Feed</title>
 <link rel="stylesheet" type="text/css" href="Stacked/CSS/Feed.css">
-<script src="Stacked/JS/Bildupload.js"></script>
+
 </head>
 <body>
 
- 
-	
+
 	<div class="full-side">
 		<div class="left-side">
 			<table>
@@ -25,7 +24,7 @@
 			</table>
 		</div>
 
-		<div class="middle">
+		<div id="mehrPosts" class="middle">
 			<form class="form-posten" method="post" action="./Posten"
 				enctype="multipart/form-data">
 				<textarea class="Postfeld" id="nachricht" name="nachricht"
@@ -39,24 +38,22 @@
 			</form>
 
 
-
 			<c:forEach var="post" items="${posts}">
 				<div class="geposteter_Post">
-					<div class="username"> 
-					<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
+					<div class="username">
+						<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
 					</div>
 					<c:if test="${post.username == Login.username}">
-					<form class="delete" method="post" action="./PostLoeschen">
-						<input type="hidden" name="id" value="${post.id}">
-						<button type="submit">Löschen</button>
-					</form>
+						<form class="delete" method="post" action="./PostLoeschen">
+							<input type="hidden" name="id" value="${post.id}">
+							<button type="submit">Löschen</button>
+						</form>
 					</c:if>
 					<div class="message">${post.nachricht}</div>
 
-					
+
 					<c:if test="${not empty post.bildname}">
-					<img src="./PostAuslesen?id=${post.id}"
-						width="400" height="150">
+						<img src="./PostAuslesen?id=${post.id}" width="400" height="150">
 					</c:if>
 					<div class="actions">
 
@@ -65,27 +62,27 @@
 							<button type="submit" class="like">Like</button>
 
 							<p>${post.anzahl_likes}</p>
-							
+
 
 						</form>
 						<div class="comment">
-						<form method="post" action="./EinPostAusgeben">
-							<input type="hidden" name="id" value="${post.id}">
-							<button type="submit" class="comment">Kommentieren ?</button>
+							<form method="post" action="./EinPostAusgeben">
+								<input type="hidden" name="id" value="${post.id}">
+								<button type="submit" class="comment">Kommentieren ?</button>
 
 
-						</form>
+							</form>
 						</div>
 					</div>
 				</div>
 			</c:forEach>
 
+
 		</div>
-
+		<button id="mehrLaden">Mehr Laden</button>
 		<div class="right-side"></div>
-
-
 	</div>
 
+	<script src="Stacked/JS/Feed.js"></script>
 </body>
 </html>

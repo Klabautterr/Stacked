@@ -16,16 +16,17 @@
 
 		<div class="middle">
 
-			<div class="geposteter_Post">
+			
 				<div class="geposteter_Post">
 
-					<div class="username">${post.username}</div>
+					<div class="username">
+						<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
+					</div>
 
 					<div class="message">${post.nachricht}</div>
-					
+
 					<c:if test="${not empty post.bildname}">
-					<img src="./PostAuslesen?id=${post.id}"
-						width="400" height="150">
+						<img src="./PostAuslesen?id=${post.id}" width="400" height="150">
 					</c:if>
 				</div>
 				<form method="post" action="./Kommentieren">
@@ -42,9 +43,5 @@
 			</div>
 		</div>
 		<div class="right-side"></div>
-
-
-
-
 </body>
 </html>
