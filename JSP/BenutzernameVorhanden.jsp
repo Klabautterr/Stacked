@@ -1,24 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Registrieren</title>
+<title>Startseite</title>
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 </head>
-<body>
-
+<body class=outBG>
 	<!-- Jonathan Vielwerth -->
-	<center>
-		<h1>
-			<u><strong>Der Benutzername ist leider schon vergeben</strong></u>
-		</h1>
-	</center>
+	
+	<p class=NameVersion>Stacked V0.8</p>
 
-
-	</select>
-
-	<form method="post" action="../../RegistrierungServlet" 
+	<br> 
+	<div align="center">
+		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
+	</div>
+	
+	<div class="divCenter textColor">Der eingegebene Benutzername wird schon verwendet</div>
+	
+	<form class=indexForm method="post" action="../../RegistrierungServlet" 
 			enctype="multipart/form-data">
 		<fieldset>
 			<legend>Registrierung</legend>
@@ -41,29 +44,15 @@
 			</div>
 			-->
 			<div>
-				<button type="submit" id="button">Registrieren</button>
+				<button class=classicBT type="submit" id="button">Registrieren</button>
 			</div>
 		</fieldset>
 	</form>
-	<!-- 	<br>
-	<br> Vorname:
-	<input type="text" name="vorname" size="30" maxlength="40">
-	<br> Nachname:
-	<input type="text" name="nachname" size="30" maxlength="40">
-	<br> Email:
-	<input type="email" name="email" size="20" maxlength="20">
-	<br> Password:
-	<input type="password" size="20" maxlength="20">
 	<br>
-	<button type="button">Dummy Button</button>
+	<a href="../Index.html"><button class=regBT>Doch einen Account</button></a>
 	<br>
-	<a href="../Index.html">Zurück zur Anmeldung</a>
-	
-	<!-- Jonathan Vielwerth -->
-	<br>
-	<a href="../Index.html"> Doch einen Account?</a>
-	<br>
-</body>
+
 	<!-- Jonathan Vielwerth -->
 
+</body>
 </html>
