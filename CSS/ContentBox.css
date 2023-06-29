@@ -100,3 +100,18 @@
 	font-family: Verdana;
 	color: #cdcdcd;
 }
+
+.UserNameBT {
+	font-family: Verdana;
+	color: #cdcdcd;
+	background: #262625;
+	border-radius: 4px;
+	border-color: #288EE5;
+	border-style: solid;
+	transition-duration: 0.4s;
+	border: none;
+	margin-top: 2%;
+}
+.UserNameBT:hover {
+	background: #288EE5;
+}
