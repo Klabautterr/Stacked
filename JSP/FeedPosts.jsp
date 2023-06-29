@@ -51,10 +51,19 @@
 				</div>
 				
 			</form>
-			<form method="post" action="./AllePostsAusgeben">
+			
+			<form id = "freundeFeed"method="post" action="./AllePostsAusgeben">
 			<input type = "hidden" value = 1 name ="welcheSearch">
-			<button type = "submit" class = "text-button">freunde Posts</button>
+			<button type = "submit" class = "text-button">Freunde Posts</button>
 			</form>
+		
+			
+			
+			<form id = "allgemeierFeed"method="post" action="./AllePostsAusgeben">
+			<input type = "hidden" value = 0 name ="welcheSearch">
+			<button type = "submit" class = "text-button">Allgemeine Posts</button>
+			</form>
+		
 			
 			<c:forEach var="post" items="${posts}">
 				<div class="geposteter_Post divCenter">
@@ -95,12 +104,7 @@
 				</div>
 			</c:forEach>
 				<div class=divCenter>
-				<form method="post" action="./AllePostsAusgeben">
-				<input type = "hidden" value = 1 name ="welcheSearch">
-				<button class=classicBT type = "submit" class = "text-button">Lade Posts</button>
-				</form>
-				</div>
-	
+			
 
 		</div>
 		<div class=divCenter><button class=classicBT id="mehrLaden">Mehr Laden</button></div>

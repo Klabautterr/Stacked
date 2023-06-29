@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", init1);
 			function init1() {
 				document.getElementById("bild").addEventListener("click", bildhochladen);
 				document.getElementById("mehrLaden").addEventListener("click", addContent);
+
+				
 			}
 
 function bildhochladen() {
@@ -20,10 +22,6 @@ function bildhochladen() {
 
 "use strict";
 
-//document.addEventListener("DOMContentLoaded", init);
-		//	function init() {
-		//		document.getElementById("mehrLaden").addEventListener("click", addContent);
-		//	}
 
 
 var schongeladen = 0;
@@ -93,35 +91,5 @@ function addContent() {
     xmlhttp.send();
 }
 
-"use strict";
-			document.addEventListener("DOMContentLoaded", init);
-			function init() {
-				document.getElementById("like").addEventListener("click", changeLike);
-			}
-			 function changeLike(){
-				 var searchURL = "Liken";
-				 var id = document.getElementById("id").value;
-				 if (id != null && id.length>0)
-					searchURL += "?id=" + encodeURIComponent(id);
-					
-				 var xmlhttp = new XMLHttpRequest();
-   					xmlhttp.responseType = "json";
-				 xmlhttp.onreadystatechange = function() {
-       			 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					document.getElementById("updateLike").innerHTML = xmlhttp.responseText;
-			 }
-		};
-				xmlhttp.open("GET", searchURL , true);
-				xmlhttp.send();
-			}
 
-/*function clickbutton() {
-   var button = document.getElementById('wechselbutton');
-   if (button == "") {
-     button.value = "Accepted";
-   } else {
-     button.value = "Accept";
-   }
- }
- */
 
