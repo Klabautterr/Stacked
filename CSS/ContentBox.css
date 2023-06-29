@@ -115,3 +115,11 @@
 .UserNameBT:hover {
 	background: #288EE5;
 }
+
+.textColor {
+	color: #cdcdcd;
+}
+
+.proRequestBT {
+	margin-left: 3.3vw;
+}
