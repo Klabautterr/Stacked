@@ -3,28 +3,25 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 </head>
-<body>
+<body class=outBG>
 
-	<!-- Jonathan Vielwerth -->
-	<center>
-		<h1>
-			<u><strong>Admin</strong></u>
-		</h1>
-	</center>
-
+	<p class=NameVersion>Stacked V0.8</p>
 	<br>
+	<div class="adminTop textColor divCenter"><p >Admin</p></div>	
 
-	<form method="post" action="../../ProfiAnfragenAusgeben">
+	<form class=indexForm method="post" action="../../ProfiAnfragenAusgeben">
 		<fieldset>
 			<legend>Profi Anfragen</legend>
 			<div>
-				<button type="submit" id="button">Profi Anfragen</button>
+				<button class=classicBT type="submit" id="button">Einsehen</button>
 			</div>
 		</fieldset>
 	</form>
-
-	<a href="../Index.html">Abmelden</a>
+	
+	<div class=divCenter><a href="../Index.html"><button class=admAbmBT>Abmelden?</button></a></div>
 
 	<!-- Jonathan Vielwerth -->
 

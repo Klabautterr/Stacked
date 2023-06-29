@@ -14,9 +14,9 @@ addComment.addEventListener("click", addTopComment)
 
 var loadedComments = 0;
 
-var loginUser = '<%session.getAttribute("Login")%>';
+var loginUser = '<%=session.getAttribute("Login")%>';
 
-var selectedPost = '<%session.getAttribute("post")%>';
+var selectedPost = '<%=session.getAttribute("post")%>';
 
 function addTopComment() {
 	setTimeout('', 2000);

@@ -37,7 +37,7 @@
 				</div>
 				
 				<div>
-				<button id="loadMoreComments">Mehr Laden</button>
+				<button id="loadMoreComments" Data-id ="${post.id}">Mehr Laden</button>
 				</div>
 				<form method="post" action="./Kommentieren">
 					<textarea class="Postfeld" id="kommentar" name="kommentar"
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="right-side"></div>
-		<script src="Stacked/JS/Comments.js"></script>
+		<script src="./Stacked/JS/Comments.js"></script>
 		
 </body>
 </html>

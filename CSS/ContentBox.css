@@ -123,3 +123,32 @@
 .proRequestBT {
 	margin-left: 3.3vw;
 }
+
+.adminTop {
+	
+}
+
+.admAbmBT {
+	font-family: Verdana;
+	color: #cdcdcd;
+	background: #4b4c4a;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+	border: none;
+	margin-top: 2%;
+	width: 30%;
+}
+
+.admAbmBT:hover {
+	background: #5c5b5a;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	border-radius: 4px;
+}
+
+.tableBorder {
+	border-style: solid;
+	border-color: #cdcdcd;
+	width: 100%;
+}
