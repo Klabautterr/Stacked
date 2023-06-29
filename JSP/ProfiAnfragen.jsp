@@ -2,15 +2,24 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
+
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <meta charset="ISO-8859-1">
 <!-- Jonathan Vielwerth -->
 
 <title>Profi Anfragen</title>
 </head>
-<body>
-	<table>
+<body class=outBG>
+
+	<p class=NameVersion>Stacked V0.8</p>
+	<br>
+	<div class="adminTop textColor divCenter"><p >Profi Anfragen</p></div>
+	
+	<div>
+	<table class="divCenter textColor tableBorder">
 		<tr>
 
 			<th>Benutzername</th>
@@ -51,8 +60,10 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
+	
 
-	<a href="./Stacked/JSP/Admin.jsp">Startseite</a>
+	<div class=divCenter><a href="./Stacked/JSP/Admin.jsp"><button class=admAbmBT>Zurück</button></a></div>
 
 </body>
 <!-- Jonathan Vielwerth -->
