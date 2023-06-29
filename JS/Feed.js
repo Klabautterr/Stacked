@@ -1,5 +1,13 @@
 
-window.onload = function() {
+"use strict";
+
+document.addEventListener("DOMContentLoaded", init1);
+			function init1() {
+				document.getElementById("bild").addEventListener("click", bildhochladen);
+				document.getElementById("mehrLaden").addEventListener("click", addContent);
+			}
+
+function bildhochladen() {
 	var fileInput = document.getElementById('bild');
 	fileInput.onchange = function() {
 		var file = fileInput.files[0];
@@ -10,11 +18,13 @@ window.onload = function() {
 
 }
 
-// Rufen Sie den Button über seine ID ab
-var mehrLadenButton = document.getElementById("mehrLaden");
+"use strict";
 
-// Fügen Sie das Klick-Event-Handling hinzu
-mehrLadenButton.addEventListener("click", addContent);
+//document.addEventListener("DOMContentLoaded", init);
+		//	function init() {
+		//		document.getElementById("mehrLaden").addEventListener("click", addContent);
+		//	}
+
 
 var schongeladen = 0;
 
@@ -105,4 +115,13 @@ function addContent() {
 				xmlhttp.send();
 			}
 
+/*function clickbutton() {
+   var button = document.getElementById('wechselbutton');
+   if (button == "") {
+     button.value = "Accepted";
+   } else {
+     button.value = "Accept";
+   }
+ }
+ */
 

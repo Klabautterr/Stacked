@@ -6,9 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LayoutCopy</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
+<title>Feed</title>
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css"> 
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<script src="Stacked/JS/Feed.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class=body>
@@ -38,10 +39,22 @@
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
 		<div id="mehrPosts" class="middle">
-			
-			<div class=TopTitle><p >Dein Feed</p></div>	
-			
-			
+			<form class="form-posten" method="post" action="./Posten"
+				enctype="multipart/form-data">
+				<textarea class="Postfeld" id="nachricht" name="nachricht"
+					maxlength="200" placeholder="irgendwas los in der Welt?" required></textarea>
+				<div class="button-container">
+					<label for="bild" class="picture-button">Bilder</label> <input
+						class="image-input" type="file" name="bild" id="bild"
+						accept="image/*">
+					<button type="submit" class="text-button">Posten</button>
+				</div>
+				
+			</form>
+			<form method="post" action="./AllePostsAusgeben">
+			<input type = "hidden" value = 1 name ="welcheSearch">
+			<button type = "submit" class = "text-button">freunde Posts</button>
+			</form>
 			
 			<c:forEach var="post" items="${posts}">
 				<div class="geposteter_Post divCenter">
@@ -87,26 +100,11 @@
 				<button class=classicBT type = "submit" class = "text-button">Lade Posts</button>
 				</form>
 				</div>
-				
-			
-				<form class="formPost" method="post" action="./Posten"
-				enctype="multipart/form-data">
-				<div class=divCenter><textarea class="Postfeld" id="nachricht" name="nachricht" maxlength="200" placeholder="Irgendwas los in der Welt?" required></textarea></div>
-				<div class="button-container divCenter">
-					<label for="bild" class="picture-button">Bilder</label> <input
-						class="image-input" type="file" name="bild" id="bild"
-						accept="image/*">
-					<button type="submit" class="text-button classicBT">Posten</button>
-				</div>
-				</form>
+	
 
 		</div>
 		<div class=divCenter><button class=classicBT id="mehrLaden">Mehr Laden</button></div>
 
-	<script src="Stacked/JS/Feed.js"></script>
-
-</div>
-</aside>
-
+	
 </body>
 </html>
