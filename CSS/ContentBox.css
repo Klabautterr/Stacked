@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+.outBG {
+	width: 100vw;
+	height: 100vh;
+	background: #191919;
+	font-family: Verdana;
+	margin: 0;
+}
+
+.regBT {
+	width: 20%;
+	height: 10%;
+	background: #262625;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	transition-duration: 0.4s;
+	margin-left: 40%;
+	border-radius: 4px;
+	margin-top: 5%;
+}
+
+.regBT:hover {
+	width: 20%;
+	height: 10%;
+	background: #4b4c4a;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	border-radius: 4px;
+}
+
+.indexForm {
+	font-family: Verdana;
+	color: #cdcdcd;
+	width: 50vw;
+	height: 20vh;
+	margin: auto;
+}
+
+.classicBT {
+	font-family: Verdana;
+	color: #cdcdcd;
+	background: #262625;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+	border: none;
+	margin-top: 2%;
+}
+
+.classicBT:hover {
+	background: #4b4c4a;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	border-radius: 4px;
+}
+
+
+.divCenter {
+	text-align: center;
+}
+
+#addInvest{
+	height: 150%;
+}
+
+#editProfileBT{
+	margin-bottom: 0.5%;
+}
+
+.topTitleTable {
+	margin-top: 5.5vh;
+	margin-left: 2%;
+	width: 25vw;
+}
+
+.InvestTable {
+	width: 100%;
+}
+
+.TopTitle {
+	margin-top: 6.3vh;
+	margin-left: 2%
+}
+
+.formPost {
+	width: 80vw;
+	font-family: Verdana;
+}
+
+.Postfeld {
+	width: 70vw;
+	margin-top: 2%
+}
+
+.message {
+	background: #262625;
+	font-family: Verdana;
+	color: #cdcdcd;
+}

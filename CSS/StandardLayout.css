@@ -1,33 +1,41 @@
 @charset "UTF-8";
 
+.body {
+	margin: 0;
+}
+
 .navList {
 	float: left;
+	position: fixed;
 }
 
-.T {
-	padding-left: 20px;
-	padding-top: 20px;
-}
 
-.Name {
-	padding-left: 20px;
-	padding-top: 50px;
-}
-
-.middle {
-	margin-bottom: 20px;
+.NameVersion {
+	width: 100vw;
+	height: 2vh;
+	background: #191919;
+	font-family: Verdana;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	border-color: #646663;
+	color: #cdcdcd;
+	font-size: 8px;
+	margin: 0;
+	position: fixed;
+	padding-left: 5px;
 }
 
 .UserTopProfil {
-	background: #FAAB28;
+	background: #262625;
 	border-style: solid;
-	border-width: 2px 2px 1px 2px;
-	border-color: black;
+	border-width: 0px 1px 1px 0px;
+	border-color: #646663;
 	width: 20vw;
 	height: 10vh;
-	margin: auto;
-	font-family: sans-serif;
-	color: white;
+	font-family: Verdana;
+	color: #cdcdcd;
+	box-sizing: border-box;
+	margin-top: 2.2vh;
 }
 
 .ProfilPicture {
@@ -39,15 +47,15 @@
 }
 
 .Sidelinks {
-	border-style: solid;
-	border-width: 1px 2px 0px 2px;
-	border-color: black;
-	margin: auto;
 	width: 20vw;
-	height: 80vh;
-	background: #FA7C27;
-	font-family: sans-serif;
-	color: white;
+	height: 88vh;
+	background: #262625;
+	font-family: Verdana;
+	color: #cdcdcd;
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	border-color: #646663;
 }
 
 .FriendInput {
@@ -55,36 +63,32 @@
 }
 
 .FunctionLinks {
-	
+	width: 60%;
+	height: 60%;
+	background: #262625;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	transition-duration: 0.4s;
 }
+
+.FunctionLinks:hover {
+	width: 60%;
+	height: 60%;
+	background: #4b4c4a;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	border-radius: 4px;
+}
+
 
 .SelectedContent {
 	float: right;
-	background: #76AFE5;
-	width: 77vw;
-	height: 90vh;
-	font-family: sans-serif;
-	color: white;
-}
-
-.BottomLine {
-	border-style: solid;
-	border-width: 2px 2px 2px 2px;
-	border-color: black;
-	clear: both;
-	position: relative;
-	width: 100vw;
-	height: 10vh;
-	background: #FA7C27;
-	font-family: sans-serif;
-	color: white;
-	
-}
-
-.FirmenNameFooter {
-	
-}
-
-.KontactLink {
-	
+	background: #191919;
+	width: 80vw;
+	height: 100vh;
+	font-family: Verdana;
+	color: #cdcdcd;
+	box-sizing: border-box;
 }

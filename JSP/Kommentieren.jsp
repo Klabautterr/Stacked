@@ -29,6 +29,16 @@
 						<img src="./PostAuslesen?id=${post.id}" width="400" height="150">
 					</c:if>
 				</div>
+				
+				<div id=newComms>
+				</div>
+				
+				<div id=loadComms>
+				</div>
+				
+				<div>
+				<button id="loadMoreComments">Mehr Laden</button>
+				</div>
 				<form method="post" action="./Kommentieren">
 					<textarea class="Postfeld" id="kommentar" name="kommentar"
 						maxlength="200" placeholder="Was möchtest du den Kommentieren?"
@@ -36,12 +46,14 @@
 					<input type="hidden" value="${post.id}" name="id"></input>
 					<div class="button-container">
 
-						<button type="submit" class="text-button">Posten</button>
+						<button id=sendComment type="submit" class="text-button">Posten</button>
 					</div>
 				</form>
 
 			</div>
 		</div>
 		<div class="right-side"></div>
+		
+		<script src="Stacked/JS/Comments.js"></script>
 </body>
 </html>
