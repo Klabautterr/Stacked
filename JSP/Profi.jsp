@@ -63,13 +63,16 @@
 						<td>${asset.stockname}</td>
 						<td>${asset.anzahl}</td>
 						<td>${asset.buyin}</td>
+						<td>
+							<form action="./deleteInvestment" method="post">
+								<input type="hidden" name="assetId" value="${asset.stockname}">
+								<button type="submit" class=classicBT>Löschen</button>
+							</form>
+						 </td>
 					</tr>
 				</c:forEach>
 			</table>
 		</fieldset>
-	<!--  	<form method="post" action="./InvestmentsAnzeigenServlet">
-			<button type="submit">Investments laden</button>
-		</form>-->
 	</div>
 
 	<div class=divCenter>

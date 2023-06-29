@@ -42,8 +42,24 @@
 </table>
 	<br>
 	<div>
+		<table>
+			<tr>
+				<td rowspan="2"><img
+					src="./ProfilbildAuslesen?username=${Login.username}"
+					//
+					width="100" height="100"></td>
+				<td>${Login.username}</td>
+			</tr>
+		</table>
+		<form action="./AllePostsAusgeben" method="post">
+			<button type="submit">Zu deinem Feed</button>
+		</form>
 		
+		<form action="./FollowsVerwalten">
+			<button type="submit">Follows verwalten</button>
+		</form>
 		
+		<br> <a href="Stacked/Index.html">Abmelden</a>
 		<!-- Jonathan Vielwerth -->
 	</div>
 
@@ -55,18 +71,23 @@
 
 		<fieldset>
 			<legend>Deine Investments</legend>
-			<table class=InvestTable>
-				<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>
+			<table>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
 						<td>${asset.anzahl}</td>
 						<td>${asset.buyin}</td>
+						<td>
+							<form action="./deleteInvestment" method="post">
+								<input type="hidden" name="assetId" value="${asset.stockname}">
+								<button type="submit" class=classicBT>Löschen</button>
+							</form>
+						 </td>
 					</tr>
 				</c:forEach>
 			</table>
 		</fieldset>
-	<!--  	<form method="post" action="./InvestmentsAnzeigenServlet">
+		<!--  	<form method="post" action="./InvestmentsAnzeigenServlet">
 			<button type="submit">Investments laden</button>
 		</form>-->
 	</div>
