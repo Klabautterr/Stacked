@@ -1,53 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>LayoutCopy</title>
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 </head>
-<body>
+<!-- Jan Holtmann -->
+<body class=body>
 
-	<!-- Jonathan Vielwerth -->
-	<center>
-		<h1>
-			<u><strong>Profil</strong></u>
-		</h1>
-	</center>
+<p class=NameVersion>Stacked V0.8</p>
+<nav class=navList>
+<div>
 
+<table class=UserTopProfil>
+<tr><th><img class=ProfilPicture src="./ProfilbildAuslesen?username=${Login.username}" width="50" height="50"><!-- Profil Picture --></th><th><p class=ProfilLink>${Login.username}</p></th></tr>
+</table>
+</div>
+
+<div>
+<table class=Sidelinks>
+<tr><th><form action="./FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
+<tr><th><a href="./AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
+<tr><th><a href="./InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
+<tr><th><a href="Stacked/JSP/addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
+<tr><th><a href="./Stacked/Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
+</table>
+</div>
+</nav>
+
+<aside class=SelectedContent>
+<div >
+<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
+
+<table class=topTitleTable>
+<tr><td>Profil</td><td><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class=classicBT id=editProfileBT>Profil bearbeiten</button></a></td></tr>
+</table>
 	<br>
-	<a href="Stacked/JSP/ProfilBearbeiten.jsp">Profil bearbeiten</a>
-	<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment
-		Kings</h2>
 	<div>
-		<table>
-			<tr>
-				<td rowspan="2"><img
-					src="./ProfilbildAuslesen?username=${Login.username}"
-					width="100" height="100"></td>
-				<td>${Login.username}</td>
-			</tr>
-		</table>
-		<form action="./AllePostsAusgeben" method="post">
-			<button type="submit">Zu deinem Feed</button>
-		</form>
-		<form action="./FollowsVerwalten">
-			<button type="submit">Follows verwalten</button>
-		</form>
-		<br> <a href="Stacked/Index.html">Abmelden</a>
+		<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment
+		Kings</h2>
+		
 		<!-- Jonathan Vielwerth -->
 	</div>
 
 	<!-- Tobias Weiß HTML-Tabelle der Investments -->
+
 
 	<div>
 		<br>
 
 		<fieldset>
 			<legend>Deine Investments</legend>
-			<table>
-				<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td> 
+			<table class=InvestTable>
+				<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
@@ -62,11 +72,17 @@
 		</form>-->
 	</div>
 
-	<div>
-		<a href="Stacked/JSP/addInvestment.jsp">Investment hinzufügen</a>
+	<div class=divCenter>
+		<a href="Stacked/JSP/addInvestment.jsp"><button class=classicBT id=addInvest>Investment hinzufügen</button></a>
 	</div>
-	<!-- Tobias Weiß -->
 
+
+</div>
+</aside>
 
 </body>
 </html>
+
+
+
+
