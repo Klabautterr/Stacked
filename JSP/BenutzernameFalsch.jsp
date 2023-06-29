@@ -23,7 +23,7 @@
 		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
 	<div class="divCenter textColor">Der eingegebene Benutzername ist nicht korrekt</div>
-	<form class=indexForm method="post" action="../LoginServlet">
+	<form class=indexForm method="post" action="../../LoginServlet">
 		<fieldset>
 			<legend>Login</legend>
 			<div class=divCenter>

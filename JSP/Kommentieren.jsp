@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="right-side"></div>
+		<script src="Stacked/JS/Comments.js"></script>
 		
-		<script src="../JS/Comments.js"></script>
 </body>
 </html>

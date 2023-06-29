@@ -41,7 +41,7 @@ function addTopComment() {
 
 function loadCommis() {
 	
-	var searchURL = "AllePostsAusgeben?loadedComments=" + loadedComments + "&postID" + selectedPost.getId();
+	var searchURL = "CommentLoad?loadedComments=" + loadedComments + "&postID" + selectedPost.getId();
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.responseType = "json";
