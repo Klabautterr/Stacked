@@ -5,12 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Stacked</title>
+<script src="Stacked/JS/auswahlListeInvest.js"></script>
 </head>
 <body>
 	<!-- Tobias Weiß Neue Investments hinzufügen -->
 	<h1>Füge Investments deinem Portfolio hinzu</h1>
-
-	<!-- <a href="./Profil.jsp"> Zurück zum Profil </a> -->
 
 	<form action="../../InvestmentsAnzeigenServlet" method="post">
 		<button type="submit">Zurück zum Profil</button>
@@ -19,17 +18,16 @@
 	<form method="post" action="../../InvestmentsServlet"> 
 	
 		<label for="stockname">Wählen Sie eine Aktien aus:</label>
-		<select multiple name="stockname" size="5" required >
-			<option value="Apple">Apple</option>
-			<option value="AT&T">AT&T</option>
-			<option value="Amazon">Amazon</option>
-			<option value="Alphabet">Alphabet</option>
-			<option value="BlackRock">BlackRock</option>
-		</select>
+		<div id="stockname1">
+		
+			
+		
+		</div>
+		
 		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label> 
-		<input type="number" name="amountOfStock" id="amountOfStock" required> 
+		<input type="number" name="amountOfStock" id="amountOfStock" min="0" required> 
 		<label	for="buyIn">Buy-In eingeben:</label> 
-		<input type="number" name="buyIn" id="buyIn" required>
+		<input type="number" name="buyIn" id="buyIn" min="0" required>
 
 		<div>
 			<button type="submit" id="newInvestmentButton">Neues
@@ -37,15 +35,8 @@
 		</div>
 	</form>
 
-
+	
 	<!-- Tobias Weiß -->
 
-	<!-- Befehl um Datenbank zu erstellen: Create Table create table thidb.Investments (
-	username varchar(100) primary key,
-	stockname varchar(100),
-	anzahl int,
-	buyin int
-
-); -->
 </body>
 </html>
