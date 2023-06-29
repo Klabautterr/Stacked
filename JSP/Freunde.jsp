@@ -37,17 +37,38 @@
 <body>
 	<h3>Diese Leute folgen dir</h3>
 	<table>
-		<c:forEach var="aktuelleFollower" items="${follower}">
+		<c:forEach var="aktuelleFollowerOhneFollow" items="${followerOhneFollow}">
 			<tr>
 				<td><a
-					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollower.username}">${aktuelleFollower.username}</a>
+					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollowerOhneFollow.username}">${aktuelleFollowerOhneFollow.username}</a>
 				</td>
 				<td>
 					<form method="post" action="./FollowEntfernen">
 						<fieldset>
 							<div>
 								<input type="hidden" name="followerButton"
-									value="${aktuelleFollower.username}">
+									value="${aktuelleFollowerOhneFollow.username}">
+								<button type="submit" id="button">Follower entfernen</button>
+							</div>
+						</fieldset>
+					</form>
+				</td>
+				<td>
+				</td>
+		</c:forEach>
+	</table>
+	<table>
+		<c:forEach var="aktuelleFollowerMitFollow" items="${followerMitFollow}">
+			<tr>
+				<td><a
+					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollowerMitFollow.username}">${aktuelleFollowerMitFollow.username}</a>
+				</td>
+				<td>
+					<form method="post" action="./FollowEntfernen">
+						<fieldset>
+							<div>
+								<input type="hidden" name="followerButton"
+									value="${aktuelleFollowerMitFollow.username}">
 								<button type="submit" id="button">Follower entfernen</button>
 							</div>
 						</fieldset>
@@ -58,7 +79,7 @@
 						<fieldset>
 							<div>
 								<input type="hidden" name="username2"
-									value="${aktuelleFollower.username}">
+									value="${aktuelleFollowerMitFollow.username}">
 								<button type="submit" id="button">Ebenfalls folgen</button>
 							</div>
 						</fieldset>
