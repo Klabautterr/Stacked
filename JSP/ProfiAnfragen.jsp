@@ -5,8 +5,8 @@
 
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
-<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 <meta charset="ISO-8859-1">
 <!-- Jonathan Vielwerth -->
 
@@ -36,7 +36,7 @@
 							<div>
 								<input type="hidden" name="username"
 									value="${profiAnfrage.username}">
-								<button type="submit" id="button">Annehmen</button>
+								<button type="submit" id="button"  class="classicBT" >Annehmen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -47,7 +47,7 @@
 							<div>
 								<input type="hidden" name="username"
 									value="${profiAnfrage.username}">
-								<button type="submit" id="button">Ablehnen</button>
+								<button type="submit" id="button" class="classicBT">Ablehnen</button>
 							</div>
 						</fieldset>
 					</form>

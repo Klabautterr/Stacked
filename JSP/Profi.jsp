@@ -42,8 +42,7 @@
 </table>
 	<br>
 	<div>
-		<h2>Herzlichen Glückwunsch du bist einer der krassesten Investment
-		Kings</h2>
+		<h2>Herzlichen Glückwunsch du bist einer der krassesten</h2>
 		
 		<!-- Jonathan Vielwerth -->
 	</div>
