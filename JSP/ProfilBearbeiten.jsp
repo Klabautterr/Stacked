@@ -9,6 +9,7 @@
 <title>LayoutCopy</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../Stacked/CSS/ContentBox.css">
+<script src="../JS/ProfilBearbeiten.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class=body>
@@ -75,7 +76,7 @@
 		</form>
 	</c:if>
 	<!-- Jonathan Vielwerth -->
-<script src="../JS/ProfilBearbeiten.js"></script>
+
 
 </div>
 </aside>
