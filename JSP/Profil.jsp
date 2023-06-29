@@ -87,9 +87,7 @@
 				</c:forEach>
 			</table>
 		</fieldset>
-		<!--  	<form method="post" action="./InvestmentsAnzeigenServlet">
-			<button type="submit">Investments laden</button>
-		</form>-->
+		
 	</div>
 
 	<div class=divCenter>
