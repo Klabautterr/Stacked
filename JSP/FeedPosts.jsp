@@ -59,7 +59,7 @@
 			<c:forEach var="post" items="${posts}">
 				<div class="geposteter_Post divCenter">
 					<div class="username">
-						<a href="./InvestmentsAnzeigenServlet?username=${post.username}"><button class="UserNameBT">Feed</button></a>
+						<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
 					</div>
 					<c:if test="${post.username == Login.username}">
 						<form class="delete" method="post" action="./PostLoeschen">
