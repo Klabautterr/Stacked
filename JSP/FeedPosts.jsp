@@ -35,9 +35,13 @@
 						accept="image/*">
 					<button type="submit" class="text-button">Posten</button>
 				</div>
+				
 			</form>
-
-
+			<form method="post" action="./AllePostsAusgeben">
+			<input type = "hidden" value = 1 name ="welcheSearch">
+			<button type = "submit" class = "text-button">freunde Posts</button>
+			</form>
+			
 			<c:forEach var="post" items="${posts}">
 				<div class="geposteter_Post">
 					<div class="username">

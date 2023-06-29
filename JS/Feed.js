@@ -19,6 +19,7 @@ mehrLadenButton.addEventListener("click", addContent);
 var schongeladen = 0;
 
 function addContent() {
+  
     schongeladen += 5;
     var searchURL = "AllePostsAusgeben?schongeladen=" + schongeladen;
 
@@ -27,9 +28,9 @@ function addContent() {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var postList = xmlhttp.response;
-
             var ausgabe = "";
             for (var i=0; i < postList.length; i++) {
+ 
 
                 ausgabe += '<div class="geposteter_Post">';
 
@@ -42,6 +43,33 @@ function addContent() {
                 if (postList[i].bildname) {
                     ausgabe += '<img src="./PostAuslesen?id=' + postList[i].id + '" width="400" height="150">';
                 }
+                ausgabe += '<div class="actions">';
+
+                ausgabe += '<form method="post" action="./Liken">';
+                ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
+                ausgabe += '<button  type="submit" class="like">Like</button>';
+                ausgabe += '</form>';
+                
+                ausgabe += '<p id = updateLike >' + postList[i].anzahl_likes + '</p>';
+                ausgabe += '<p>' +"das name" + postList[i].loginUsername + '</p>';
+                
+     
+                
+                ausgabe += '<div class="comment">';
+                ausgabe += '<form method="post" action="./EinPostAusgeben">';
+                ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
+                ausgabe += '<button type="submit" class="comment">Kommentieren ?</button>';
+                ausgabe += '</form>';
+                ausgabe += '</div>';
+                
+               if (postList[i].username == postList[i].loginUsername) {
+                   ausgabe += '<form class="delete" method="post" action="./PostLoeschen">';
+                   ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
+                   ausgabe += '<button type="submit">Löschen</button>';
+                   ausgabe += '</form>';
+               }
+                
+                ausgabe += '</div>';
                 
                 ausgabe += '</div>';
             }
@@ -55,9 +83,26 @@ function addContent() {
     xmlhttp.send();
 }
 
-
-
-
-
+"use strict";
+			document.addEventListener("DOMContentLoaded", init);
+			function init() {
+				document.getElementById("like").addEventListener("click", changeLike);
+			}
+			 function changeLike(){
+				 var searchURL = "Liken";
+				 var id = document.getElementById("id").value;
+				 if (id != null && id.length>0)
+					searchURL += "?id=" + encodeURIComponent(id);
+					
+				 var xmlhttp = new XMLHttpRequest();
+   					xmlhttp.responseType = "json";
+				 xmlhttp.onreadystatechange = function() {
+       			 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("updateLike").innerHTML = xmlhttp.responseText;
+			 }
+		};
+				xmlhttp.open("GET", searchURL , true);
+				xmlhttp.send();
+			}
 
 

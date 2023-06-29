@@ -9,7 +9,8 @@
 		"username":"${post.username}",
 		"nachricht":"${post.nachricht}",
 		"anzahl_likes":${post.anzahl_likes},
-		"bildname":"${post.bildname}"
+		"bildname":"${post.bildname}",
+		"loginUsername":"${loginUsername}"
 			}<c:if test="${not status.last}">,</c:if>
 </c:forEach>
 ]
