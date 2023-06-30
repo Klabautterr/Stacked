@@ -67,13 +67,13 @@ function addContent() {
                 ausgabe += '<button  type="submit" class="classicBT">Like</button>';
                 ausgabe += '</form>';
                 
+				ausgabe += '</td><td>'
                 ausgabe += '<p id="updateLike" data-columns="' + postList[i].id + '">' + postList[i].anzahl_likes + '</p>';
-                ausgabe += '<p>' +"das name" + postList[i].loginUsername + '</p>';
 				ausgabe += '</td><td class=postDeleteBT>';
        
                 ausgabe += '<form method="post" action="./EinPostAusgeben">';
                 ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
-                ausgabe += '<button type="submit" class="comment">Kommentieren ?</button>';
+                ausgabe += '<button type="submit" class="classicBT">Kommentieren</button>';
                 ausgabe += '</form>';
 				ausgabe += '</td></tr></table>';
               
