@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Feed</title>
-<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css"> 
-<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css"> 
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 <script src="Stacked/JS/Feed.js"></script>
 </head>
 <!-- Jan Holtmann -->
@@ -39,10 +39,12 @@
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 		
 		<br>
+			
+			
+		<div id="mehrPosts">
+			
+			<div class=divCenter>
 			<p class="textColor proRequestBT">Dein Feed</p>
-			
-		<div id="mehrPosts" class="divCenter">
-			
 			<form class="form-posten" method="post" action="./Posten"
 				enctype="multipart/form-data">
 				<textarea class="Postfeld" id="nachricht" name="nachricht"
@@ -63,14 +65,14 @@
 				<td>
 				<form id = "freundeFeed"method="post" action="./AllePostsAusgeben">
 				<input type = "hidden" value = 1 name ="welcheSearch">
-				<button type = "submit" class = "classicBT">Freunde Posts</button>
+				<button id=friendPostBT type = "submit" class = "classicBT">Freunde Posts</button>
 				</form>
 				</td>
 			
 				<td>
 				<form id = "allgemeierFeed"method="post" action="./AllePostsAusgeben">
 				<input type = "hidden" value = 0 name ="welcheSearch">
-				<button type = "submit" class = "classicBT">Allgemeine Posts</button>
+				<button  id=allgPostsBT type = "submit" class = "classicBT">Allgemeine Posts</button>
 				</form>
 				</td>
 			
@@ -78,9 +80,10 @@
 				</tr>
 				</table>
 			</div>
-		</div>
-			
+		
+			</div>
 			<br>
+			
 			
 			
 			<c:forEach var="post" items="${posts}">
@@ -107,7 +110,7 @@
 
 
 					<c:if test="${not empty post.bildname}">
-						<img src="./PostAuslesen?id=${post.id}" width="400" height="150">
+						<img class=postPicture src="./PostAuslesen?id=${post.id}" width="400" height="150">
 					</c:if>
 					
 				<table class="postActionTable">
@@ -132,7 +135,7 @@
 					
 				</div>
 			</c:forEach>
-
+		</div>
 		<div class=divCenter><button class=classicBT id="mehrLaden">Mehr Laden</button></div>
 		<br>
 </div>
