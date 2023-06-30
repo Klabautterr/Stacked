@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Stacked</title>
-<script src="Stacked/JS/auswahlListeInvest.js"></script>
+<script src="../JS/auswahlListeInvest.js"></script>
 </head>
 <body>
 	<!-- Tobias Weiß Neue Investments hinzufügen -->
@@ -18,9 +18,9 @@
 	<form method="post" action="../../InvestmentsServlet"> 
 	
 		<label for="stockname">Wählen Sie eine Aktien aus:</label>
-		<div id="stockname1">
+		<div>
 		
-			
+			<Button id= "stockname1">Auswahlliste Laden</Button>
 		
 		</div>
 		
@@ -34,6 +34,9 @@
 				Investment dem Portfolio hinzufügen</button>
 		</div>
 	</form>
+	
+	
+	
 
 	
 	<!-- Tobias Weiß -->
