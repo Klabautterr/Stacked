@@ -60,7 +60,7 @@ function addContent() {
                 if (postList[i].bildname) {
 					ausgabe += '<div class=divCenter>';
                     ausgabe += '<img class=postPicture src="./PostAuslesen?id=' + postList[i].id + '"';
-                	ausgabe += '<div>'
+                	ausgabe += '</div>';
 				}
               
 				ausgabe += '<table class="postActionTable"><tr><td class=likeBT>';
