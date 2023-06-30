@@ -58,8 +58,10 @@ function addContent() {
                 ausgabe += '<div class="message">' + postList[i].nachricht + '</div>';
 
                 if (postList[i].bildname) {
+					ausgabe += '<div class=divCenter>';
                     ausgabe += '<img class=postPicture src="./PostAuslesen?id=' + postList[i].id + '"';
-                }
+                	ausgabe += '<div>'
+				}
               
 				ausgabe += '<table class="postActionTable"><tr><td class=likeBT>';
                 ausgabe += '<form method="post" action="./Liken">';
@@ -67,7 +69,7 @@ function addContent() {
                 ausgabe += '<button  type="submit" class="classicBT">Like</button>';
                 ausgabe += '</form>';
                 
-				ausgabe += '</td><td>'
+				ausgabe += '</td><td>';
                 ausgabe += '<p id="updateLike" data-columns="' + postList[i].id + '">' + postList[i].anzahl_likes + '</p>';
 				ausgabe += '</td><td class=postDeleteBT>';
        
