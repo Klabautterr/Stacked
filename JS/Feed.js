@@ -40,44 +40,47 @@ function addContent() {
             for (var i=0; i < postList.length; i++) {
  
 
-                ausgabe += '<div class="geposteter_Post">';
-
-                ausgabe += '<div class="username">';
-                ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '">' + postList[i].username + '</a>';
-                ausgabe += '</div>';
-
+                ausgabe += '<div class="post postBG">';
+				
+				ausgabe += '<table class="InvestTable"><tr><td>';
+				ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '"><button class=UserNameBT>' + postList[i].username +  '</button></a>';
+                //ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '">' + postList[i].username + '</a>';
+				
+				ausgabe += '</td><td class=postDeleteBT>';
+				if (postList[i].username == postList[i].loginUsername) {
+                   ausgabe += '<form class="delete" method="post" action="./PostLoeschen">';
+                   ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
+                   ausgabe += '<button class= classicBT type="submit">Löschen</button>';
+                   ausgabe += '</form>';
+               	}
+				ausgabe += '</td></tr></table>';
+				
                 ausgabe += '<div class="message">' + postList[i].nachricht + '</div>';
 
                 if (postList[i].bildname) {
-                    ausgabe += '<img src="./PostAuslesen?id=' + postList[i].id + '" width="400" height="150">';
+                    ausgabe += '<img class=postPicture src="./PostAuslesen?id=' + postList[i].id + '"';
                 }
-                ausgabe += '<div class="actions">';
-
+              
+				ausgabe += '<table class="postActionTable"><tr><td class=likeBT>';
                 ausgabe += '<form method="post" action="./Liken">';
                 ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
-                ausgabe += '<button  type="submit" class="like">Like</button>';
+                ausgabe += '<button  type="submit" class="classicBT">Like</button>';
                 ausgabe += '</form>';
-                
+                ausgabe += '</td><td>'
                 ausgabe += '<p id = updateLike >' + postList[i].anzahl_likes + '</p>';
                 ausgabe += '<p>' +"das name" + postList[i].loginUsername + '</p>';
-                
-     
-                
-                ausgabe += '<div class="comment">';
+				ausgabe += '</td><td class=postDeleteBT>';
+       
                 ausgabe += '<form method="post" action="./EinPostAusgeben">';
                 ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
                 ausgabe += '<button type="submit" class="comment">Kommentieren ?</button>';
                 ausgabe += '</form>';
-                ausgabe += '</div>';
+				ausgabe += '</td></tr></table>';
+              
                 
-               if (postList[i].username == postList[i].loginUsername) {
-                   ausgabe += '<form class="delete" method="post" action="./PostLoeschen">';
-                   ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
-                   ausgabe += '<button type="submit">Löschen</button>';
-                   ausgabe += '</form>';
-               }
+               
                 
-                ausgabe += '</div>';
+               
                 
                 ausgabe += '</div>';
             }
