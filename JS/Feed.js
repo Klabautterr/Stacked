@@ -59,7 +59,7 @@ function addContent() {
 
                 if (postList[i].bildname) {
 					ausgabe += '<div class=divCenter>';
-                    ausgabe += '<img class=postPicture src="./PostAuslesen?id=' + postList[i].id + '"';
+                    ausgabe += '<img class=postPicture src="./PostAuslesen?id=' + postList[i].id + '">';
                 	ausgabe += '</div>';
 				}
               
