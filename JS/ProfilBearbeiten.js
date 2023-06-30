@@ -7,7 +7,7 @@ ProfiButton.addEventListener("click", alertProfi);
 }
 
 function alertProfi(){
-	alert ("Profi Anfrage wurde erfolgreich verschickt  TEST 2 ");
+	alert ("Profi Anfrage wurde erfolgreich verschickt");
 }
 
 
