@@ -99,6 +99,14 @@
 	background: #262625;
 	font-family: Verdana;
 	color: #cdcdcd;
+	overflow-wrap: break-word;
+	width: 95%;
+	margin: auto;
+	border-radius: 2px;
+}
+
+.msgPEl {
+	margin: 4px;
 }
 
 .UserNameBT {
@@ -109,8 +117,6 @@
 	border-color: #288EE5;
 	border-style: solid;
 	transition-duration: 0.4s;
-	border: none;
-	margin-top: 2%;
 }
 .UserNameBT:hover {
 	background: #288EE5;
@@ -150,5 +156,33 @@
 .tableBorder {
 	border-style: solid;
 	border-color: #cdcdcd;
+	width: 100%;
+}
+
+.post {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 1%;
+}
+
+.postBG {
+	background: #4b4c4a;
+	border-radius: 2px;
+}
+
+.feedBG {
+	background: #191919;
+}
+
+.postDeleteBT {
+	text-align: right;
+}
+
+.likeBT {
+	width: 2%;
+	text-align: right;
+}
+
+.postActionTable {
 	width: 100%;
 }

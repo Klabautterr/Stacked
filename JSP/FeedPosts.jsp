@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Feed</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css"> 
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css"> 
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="Stacked/JS/Feed.js"></script>
 </head>
 <!-- Jan Holtmann -->
@@ -35,10 +35,14 @@
 </nav>
 
 <aside class=SelectedContent>
-<div >
+<div class=feedBG>
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
-
-		<div id="mehrPosts" class="middle">
+		
+		<br>
+			<p class="textColor proRequestBT">Dein Feed</p>
+			
+		<div id="mehrPosts" class="divCenter">
+			
 			<form class="form-posten" method="post" action="./Posten"
 				enctype="multipart/form-data">
 				<textarea class="Postfeld" id="nachricht" name="nachricht"
@@ -47,68 +51,91 @@
 					<label for="bild" class="picture-button">Bilder</label> <input
 						class="image-input" type="file" name="bild" id="bild"
 						accept="image/*">
-					<button type="submit" class="text-button">Posten</button>
+					<button type="submit" class="classicBT">Posten</button>
 				</div>
 				
 			</form>
+			<br>
+			<div>
+				<table class="postActionTable">
+				<tr>
 			
-			<form id = "freundeFeed"method="post" action="./AllePostsAusgeben">
-			<input type = "hidden" value = 1 name ="welcheSearch">
-			<button type = "submit" class = "text-button">Freunde Posts</button>
-			</form>
-		
+				<td>
+				<form id = "freundeFeed"method="post" action="./AllePostsAusgeben">
+				<input type = "hidden" value = 1 name ="welcheSearch">
+				<button type = "submit" class = "classicBT">Freunde Posts</button>
+				</form>
+				</td>
+			
+				<td>
+				<form id = "allgemeierFeed"method="post" action="./AllePostsAusgeben">
+				<input type = "hidden" value = 0 name ="welcheSearch">
+				<button type = "submit" class = "classicBT">Allgemeine Posts</button>
+				</form>
+				</td>
 			
 			
-			<form id = "allgemeierFeed"method="post" action="./AllePostsAusgeben">
-			<input type = "hidden" value = 0 name ="welcheSearch">
-			<button type = "submit" class = "text-button">Allgemeine Posts</button>
-			</form>
-		
+				</tr>
+				</table>
+			</div>
+		</div>
+			
+			<br>
+			
 			
 			<c:forEach var="post" items="${posts}">
-				<div class="geposteter_Post divCenter">
-					<div class="username">
-						<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
-					</div>
-					<c:if test="${post.username == Login.username}">
+				<div class="post postBG">
+				
+				
+				<table class="InvestTable">
+				<tr>
+				<td>
+				<a href="./InvestmentsAnzeigenServlet?username=${post.username}"><button class=UserNameBT>${post.username}</button></a>
+				</td>
+				<td class=postDeleteBT>
+				<c:if test="${post.username == Login.username}">
 						<form class="delete" method="post" action="./PostLoeschen">
 							<input type="hidden" name="id" value="${post.id}">
 							<button class=classicBT type="submit">Löschen</button>
 						</form>
-					</c:if>
-					<div class="message">${post.nachricht}</div>
+				</c:if>
+				</td>
+				</tr>
+				</table>
+				
+					<div class="message"><p>${post.nachricht}</p></div>
 
 
 					<c:if test="${not empty post.bildname}">
 						<img src="./PostAuslesen?id=${post.id}" width="400" height="150">
 					</c:if>
-					<div class="actions">
-
-						<form method="post" action="./Liken">
-							<input type="hidden" name="id" value="${post.id}">
-							<button type="submit" class="like">Like</button>
-
-							<p>${post.anzahl_likes}</p>
-
-
-						</form>
-						<div class="comment">
+					
+				<table class="postActionTable">
+				<tr>
+			
+				<td class=likeBT>
+				<form method="post" action="./Liken">
+						<input type="hidden" name="id" value="${post.id}">
+						<button type="submit" class="classicBT">Like</button>
+				</form>
+				</td>
+				<td><p>${post.anzahl_likes}</p></td>
+				<td class=postDeleteBT>
+				
 							<form method="post" action="./EinPostAusgeben">
 								<input type="hidden" name="id" value="${post.id}">
-								<button type="submit" class="comment">Kommentieren ?</button>
-
-
+								<button type="submit" class="classicBT">Kommentieren</button>
 							</form>
-						</div>
-					</div>
+				</td>
+				</tr>
+				</table>
+					
 				</div>
 			</c:forEach>
-				<div class=divCenter>
-			
 
-		</div>
 		<div class=divCenter><button class=classicBT id="mehrLaden">Mehr Laden</button></div>
-
-	
+		<br>
+</div>
+</aside>
 </body>
 </html>
