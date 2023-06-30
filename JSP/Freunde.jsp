@@ -98,7 +98,7 @@
 			<legend>FreundeSuchen</legend>
 			<div>
 				<label for="username">Username:</label> <input type="text"
-					name="username" id="username" required />
+					name="username" id="username" maxlength="30" required />
 			</div>
 			<div>
 				<button type="submit" id="suche">Suchen</button>

@@ -50,11 +50,11 @@
 			<br>
 			<div>
 				<label for="username">Neuer Nutzername:</label> <input type="text"
-					name="NeuerUsername" id="username" />
+					name="NeuerUsername" id="username" maxlength="30" />
 			</div>
 			<div>
 				<label for="passwort">Neues Passwort:</label> <input type="password"
-					name="passwort" id="passwort" />
+					name="passwort" id="passwort" maxlength="30"/>
 			</div>
 			<div>
 				<label for="NewImage">Neues Bild:</label> <input type="file"

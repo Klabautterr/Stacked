@@ -10,18 +10,16 @@
 
 	<p class=NameVersion>Stacked V0.8</p>
 	<br>
-	<div class="adminTop textColor divCenter"><p >Admin</p></div>	
+	<div class="adminTop textColor divCenter">
+		<p>Admin</p>
+	</div>
+	<a href="../../ProfiAnfragenAusgeben"><button class=regBT>Profi Anfragen</button></a>
+	<a href="./AnlageoptionHinzufuegen.jsp"><button class=regBT>Neue Anlageoption hinzufügen</button></a>
+	<a href="../../AnlageoptionenVerwaltenServlet"><button class=regBT>Anlageoption bearbeiten</button></a>
 
-	<form class=indexForm method="post" action="../../ProfiAnfragenAusgeben">
-		<fieldset>
-			<legend>Profi Anfragen</legend>
-			<div>
-				<button class=classicBT type="submit" id="button">Einsehen</button>
-			</div>
-		</fieldset>
-	</form>
-	
-	<div class=divCenter><a href="../Index.html"><button class=admAbmBT>Abmelden?</button></a></div>
+	<div class=divCenter>
+		<a href="../Index.html"><button class=admAbmBT>Abmelden?</button></a>
+	</div>
 
 	<!-- Jonathan Vielwerth -->
 
