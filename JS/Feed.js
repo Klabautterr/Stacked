@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", init1);
 			function init1() {
 				document.getElementById("bild").addEventListener("click", bildhochladen);
 				document.getElementById("mehrLaden").addEventListener("click", addContent);
-
+				document.getElementById("likenAJAX").addEventListener("click", likeanzeigen);
 				
 			}
 
@@ -66,8 +66,8 @@ function addContent() {
                 ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
                 ausgabe += '<button  type="submit" class="classicBT">Like</button>';
                 ausgabe += '</form>';
-                ausgabe += '</td><td>'
-                ausgabe += '<p id = updateLike >' + postList[i].anzahl_likes + '</p>';
+                
+                ausgabe += '<p id="updateLike" data-columns="' + postList[i].id + '">' + postList[i].anzahl_likes + '</p>';
                 ausgabe += '<p>' +"das name" + postList[i].loginUsername + '</p>';
 				ausgabe += '</td><td class=postDeleteBT>';
        
@@ -94,5 +94,27 @@ function addContent() {
     xmlhttp.send();
 }
 
-
+var ajaxlike = "0";
+function likeanzeigen(){
+	
+	
+	const id = document.getElementById("updateLike")
+	
+	ajaxlike = "1";
+	var searchURL = "Liken?ajaxLike" + ajaxlike;
+	var SearchUrl = "Liken?id=" + id;
+	
+	
+	var xmlhttp = new XMLHttpRequest();
+    xmlhttp.responseType = "json";
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var post = xmlhttp.response;
+            
+            			
+				ausgabe += '<p id = updateLike >' + post.anzahl_likes + '</p>';
+						
+	}
+}
+}
 
