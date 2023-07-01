@@ -45,7 +45,7 @@
 		<input type="number" name="buyIn" id="buyIn" min="0" required>
 	</td>
 		<div>
-			<button type="button" id="newInvestmentButton">Neues
+			<button type="submit" id="newInvestmentButton">Neues
 				Investment dem Portfolio hinzufügen</button>
 		</div>
 		</tr>

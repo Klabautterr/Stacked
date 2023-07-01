@@ -28,7 +28,7 @@ function refillList() {
 	
 			var ausgabe = "";
 
-			ausgabe += "<select multiple id='etf' name='etf' required >";
+			ausgabe += "<select multiple id='stockname' name='stockname' required >";
 
 			for (var i = 0; i < stockList.length; i++) {
 
