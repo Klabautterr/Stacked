@@ -9,6 +9,7 @@
 <title>LayoutCopy</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<script src="../JS/auswahlListeInvest.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class=body>
