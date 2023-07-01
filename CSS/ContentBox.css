@@ -77,7 +77,8 @@
 }
 
 .InvestTable {
-	width: 100%;
+	width: 90%;
+	margin: auto;
 }
 
 .TopTitle {
@@ -156,7 +157,8 @@
 .tableBorder {
 	border-style: solid;
 	border-color: #cdcdcd;
-	width: 100%;
+	width: 90%;
+	border-radius: 2px;
 }
 
 .post {
@@ -191,4 +193,8 @@
 	width: 300px;
 	height: 200px;
 	text-align: center;
+}
+
+.mTop {
+	margin-top: 2%;
 }

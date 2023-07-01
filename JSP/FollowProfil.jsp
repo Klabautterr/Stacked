@@ -1,42 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Follow Profil</title>
+<meta charset="UTF-8">
+<title>LayoutCopy</title>
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 </head>
-<body>
+<!-- Jan Holtmann -->
+<body class=body>
 
-	<!-- Jonathan Vielwerth -->
-	<center>
-		<h1>
-			<u><strong>Profil</strong></u>
-		</h1>
-	</center>
+<p class=NameVersion>Stacked V0.8</p>
+<nav class=navList>
+<div>
 
-	<div>
-		<table>
-			<tr>
-				<td rowspan="2"><img
-					src="./ProfilbildAuslesen?username=${FollowUser}" width="100"
-					height="100"></td>
-				<td>${FollowUser}</td>
-			</tr>
-		</table>
-		<form action="./AllePostsAusgeben" method="post">
-			<button type="submit">Zum Feed</button>
-		</form>
-		<form action="./FollowsVerwalten" method="post">
-			<button type="submit">Zurück zu Follows verwalten</button>
-		</form>
-		<form action="./InvestmentsAnzeigenServlet" method="post">
-			<button type="submit">Zurück zu deinem Profil</button>
-		</form>
+<table class=UserTopProfil>
+<tr><th><img class=ProfilPicture src="./ProfilbildAuslesen?username=${Login.username}" width="50" height="50"><!-- Profil Picture --></th><th><p class=ProfilLink>${Login.username}</p></th></tr>
+</table>
+</div>
 
-		<!-- Jonathan Vielwerth -->
-	</div>
+<div>
+<table class=Sidelinks>
+<tr><th><form action="./FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
+<tr><th><a href="./AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
+<tr><th><a href="./InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
+<tr><th><a href="Stacked/JSP/addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
+<tr><th><a href="./Stacked/Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
+</table>
+</div>
+</nav>
+
+<aside class=SelectedContent>
+<div >
+<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
+
+<table class=topTitleTable>
+<tr><td rowspan="2"><img src="./ProfilbildAuslesen?username=${FollowUser}" width="50" height="50"></td><td>${FollowUser}</td><td>Profil</td></tr>
+</table>
+	<br>
+	
 
 	<!-- Tobias Weiß HTML-Tabelle der Investments -->
 
@@ -46,7 +51,8 @@
 
 		<fieldset>
 			<legend>Deine Investments</legend>
-			<table>
+			<table class=InvestTable>
+			<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
@@ -56,14 +62,11 @@
 				</c:forEach>
 			</table>
 		</fieldset>
-		<!--  	<form method="post" action="./InvestmentsAnzeigenServlet">
-			<button type="submit">Investments laden</button>
-		</form>-->
+		
 	</div>
 
-	<!-- Tobias Weiß -->
-
-
+</div>
+</aside>
 
 </body>
 </html>

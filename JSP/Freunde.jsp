@@ -1,23 +1,54 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<!-- Jonathan Vielwerth -->
-
-<title>Profi Anfragen</title>
+<meta charset="UTF-8">
+<title>LayoutCopy</title>
+<link rel="stylesheet" type="text/css" href="./Stacekd/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 </head>
-<body>
-	<h3>Diesen Leuten folgst du</h3>
+<!-- Jan Holtmann -->
+<body class=body>
+
+<p class=NameVersion>Stacked V0.8</p>
+<nav class=navList>
+<div>
+
+<table class=UserTopProfil>
+				<tr>
+					<th><img class=ProfilPicture
+						src="./ProfilbildAuslesen?username=${Login.username}" width="50"
+						height="50"> <!-- Profil Picture --></th>
+					<th><p class=ProfilLink>${Login.username}</p></th>
+				</tr>
+			</table>
+</div>
+
+<div>
+<table class=Sidelinks>
+<tr><th><form action="./FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
+<tr><th><a href="./AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
+<tr><th><a href="./InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
+<tr><th><a href="Stacked/JSP/addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
+<tr><th><a href="./Stacked/Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
+</table>
+</div>
+</nav>
+
+<aside class=SelectedContent>
+<div >
+<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
+<h3>Diesen Leuten folgst du</h3>
 	<table>
 		<!-- Anfang ChatGPT -->
 		<c:forEach var="aktuelleFollows" items="${follows}">
 			<!-- Ende ChatGPT -->
 			<tr>
-				<td><a
-					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollows.username}">${aktuelleFollows.username}</a>
+				<td>
+				<a href="./InvestmentsAnzeigenServlet?username=${aktuelleFollows.username}"><button class=UserNameBT>${aktuelleFollows.username}</button></a>
 				</td>
 				<!--  		<td>${aktuelleFollows.username}</td>-->
 				<td>
@@ -26,7 +57,7 @@
 							<div>
 								<input type="hidden" name="followsButton"
 									value="${aktuelleFollows.username}">
-								<button type="submit" id="button">Nicht mehr Folgen</button>
+								<button class=classicBT type="submit" id="button">Nicht mehr Folgen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -34,13 +65,13 @@
 			</tr>
 		</c:forEach>
 	</table>
-<body>
+	
 	<h3>Diese Leute folgen dir</h3>
 	<table>
 		<c:forEach var="aktuelleFollowerOhneFollow" items="${followerOhneFollow}">
 			<tr>
-				<td><a
-					href="./InvestmentsAnzeigenServlet?username=${aktuelleFollowerOhneFollow.username}">${aktuelleFollowerOhneFollow.username}</a>
+				<td>
+				<a href="./InvestmentsAnzeigenServlet?username=${aktuelleFollowerOhneFollow.username}"><button class=UserNameBT>${aktuelleFollowerOhneFollow.username}</button></a>
 				</td>
 				<td>
 					<form method="post" action="./FollowEntfernen">
@@ -48,7 +79,7 @@
 							<div>
 								<input type="hidden" name="followerButton"
 									value="${aktuelleFollowerOhneFollow.username}">
-								<button type="submit" id="button">Follower entfernen</button>
+								<button class=classicBT type="submit" id="button">Follower entfernen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -69,7 +100,7 @@
 							<div>
 								<input type="hidden" name="followerButton"
 									value="${aktuelleFollowerMitFollow.username}">
-								<button type="submit" id="button">Follower entfernen</button>
+								<button class=classicBT type="submit" id="button">Follower entfernen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -80,7 +111,7 @@
 							<div>
 								<input type="hidden" name="username2"
 									value="${aktuelleFollowerMitFollow.username}">
-								<button type="submit" id="button">Ebenfalls folgen</button>
+								<button class=classicBT type="submit" id="button">Ebenfalls folgen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -95,26 +126,26 @@
 
 	<form method="post" action="./UserSuchen">
 		<fieldset>
-			<legend>FreundeSuchen</legend>
+			<legend>Freunde Suchen</legend>
 			<div>
 				<label for="username">Username:</label> <input type="text"
 					name="username" id="username" maxlength="30" required />
 			</div>
 			<div>
-				<button type="submit" id="suche">Suchen</button>
+				<button class=classicBT type="submit" id="suche">Suchen</button>
 			</div>
 		</fieldset>
 	</form>
 
 
 
-	<div id="tabelle"">
+	<div id="tabelle">
 
 		<table>
 			<c:forEach var="user" items="${userSuche}">
 				<tr>
-					<td><a
-						href="./InvestmentsAnzeigenServlet?username=${user.username}">${user.username}</a>
+					<td>
+					<a href="./InvestmentsAnzeigenServlet?username=${user.username}"><button class=UserNameBT>${user.username}</button></a>
 					</td>
 					<!--  	<td>${user.username}</td>-->
 					<td>
@@ -122,7 +153,7 @@
 							<fieldset>
 								<div>
 									<input type="hidden" name="username2" value="${user.username}">
-									<button type="submit" id="button">Folgen</button>
+									<button class=classicBT type="submit" id="button">Folgen</button>
 								</div>
 							</fieldset>
 						</form>
@@ -132,10 +163,11 @@
 		</table>
 	</div>
 	<br>
-	<a href="./InvestmentsAnzeigenServlet">Startseite</a>
 
+
+
+</div>
+</aside>
 
 </body>
-<!-- Jonathan Vielwerth -->
-
 </html>

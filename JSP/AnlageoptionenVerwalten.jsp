@@ -14,12 +14,14 @@
 </head>
 <body class=outBG>
 
+
 	<p class=NameVersion>Stacked V0.8</p>
 	<br>
+	<div class=divCenter>
 	<div class="adminTop textColor divCenter"><p >Anlageoptionen</p></div>
 	
 	<div>
-	<table class="divCenter textColor tableBorder">
+	<table class="textColor tableBorder InvestTable">
 		<tr>
 			<th>Aktienname</th>
 			<th>Löschen</th>
@@ -43,8 +45,9 @@
 		</c:forEach>
 	</table>
 	</div>
-		<div>
-	<table class="divCenter textColor tableBorder">
+	<br>
+	<div>
+	<table class="textColor tableBorder InvestTable">
 		<tr>
 			<th>ETF Name</th>
 			<th>Ablehnen</th>
@@ -68,8 +71,8 @@
 	</table>
 	</div>	
 
-	<div class=divCenter><a href="./Stacked/JSP/Admin.jsp"><button class=admAbmBT>Zurück</button></a></div>
-
+	<div><a href="./Stacked/JSP/Admin.jsp"><button class=admAbmBT>Zurück</button></a></div>
+</div>
 </body>
 <!-- Jonathan Vielwerth -->
 

@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Feed</title>
 <link rel="stylesheet" type="text/css"
-	href="./Stacked/CSS/StandardLayout.css">
+href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css"
 	href="./Stacked/CSS/ContentBox.css">
 <script src="Stacked/JS/Feed.js"></script>

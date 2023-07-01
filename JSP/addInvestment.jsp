@@ -1,45 +1,69 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Stacked</title>
-<script src="../JS/auswahlListeInvest.js"></script>
+<meta charset="UTF-8">
+<title>LayoutCopy</title>
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 </head>
-<body>
-	<!-- Tobias Weiß Neue Investments hinzufügen -->
-	<h1>Füge Investments deinem Portfolio hinzu</h1>
+<!-- Jan Holtmann -->
+<body class=body>
 
-	<form action="../../InvestmentsAnzeigenServlet" method="post">
-		<button type="submit">Zurück zum Profil</button>
-	</form>
+<p class=NameVersion>Stacked V0.8</p>
+<nav class=navList>
+<div>
+
+<table class=UserTopProfil>
+<tr><th><img class=ProfilPicture src="./ProfilbildAuslesen?username=${Login.username}" width="50" height="50"><!-- Profil Picture --></th><th><p class=ProfilLink>${Login.username}</p></th></tr>
+</table>
+</div>
+
+<div>
+<table class=Sidelinks>
+<tr><th><form action="./FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
+<tr><th><a href="./AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
+<tr><th><a href="./InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
+<tr><th><a href="Stacked/JSP/addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
+<tr><th><a href="./Stacked/Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
+</table>
+</div>
+</nav>
+
+<aside class=SelectedContent>
+<div >
+<!-- HIER Referenzierter HTML-Code einfÃ¼gen (zb. Post oder Feed oder Profil mit Investments) -->
+
+<!-- Tobias WeiÃŸ Neue Investments hinzufÃ¼gen -->
+	<h1 class=proRequestBT>FÃ¼ge Investments deinem Portfolio hinzu</h1>
 	
-	<form method="post" action="../../InvestmentsServlet"> 
+	<form class="proRequestBT" method="post" action="../../InvestmentsServlet"> 
 	
-		<label for="stockname">Wählen Sie eine Aktien aus:</label>
+		<label for="stockname">WÃ¤hlen Sie eine Aktien aus:</label>
 		<div>
 		
-			<Button id= "stockname1">Auswahlliste Laden</Button>
+			<Button class=classicBT id= "stockname1">Auswahlliste Laden</Button>
 		
 		</div>
-		
-		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label> 
-		<input type="number" name="amountOfStock" id="amountOfStock" min="0" required> 
-		<label	for="buyIn">Buy-In eingeben:</label> 
+		<div class=mTop>
+		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label>
+		<input type="number" name="amountOfStock" id="amountOfStock" min="0" required>
+		</div>
+		<div class=mTop>
+		<label for="buyIn">Buy-In eingeben:</label> 
 		<input type="number" name="buyIn" id="buyIn" min="0" required>
-
+		</div>
 		<div>
-			<button type="submit" id="newInvestmentButton">Neues
-				Investment dem Portfolio hinzufügen</button>
+			<button class=classicBT type="submit" id="newInvestmentButton">Neues
+				Investment dem Portfolio hinzufÃ¼gen</button>
 		</div>
 	</form>
-	
-	
-	
 
-	
-	<!-- Tobias Weiß -->
+</div>
+</aside>
 
 </body>
 </html>

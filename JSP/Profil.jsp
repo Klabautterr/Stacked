@@ -41,27 +41,7 @@
 <tr><td>Profil</td><td><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class=classicBT id=editProfileBT>Profil bearbeiten</button></a></td></tr>
 </table>
 	<br>
-	<div>
-		<table>
-			<tr>
-				<td rowspan="2"><img
-					src="./ProfilbildAuslesen?username=${Login.username}"
-					//
-					width="100" height="100"></td>
-				<td>${Login.username}</td>
-			</tr>
-		</table>
-		<form action="./AllePostsAusgeben" method="post">
-			<button type="submit">Zu deinem Feed</button>
-		</form>
-		
-		<form action="./FollowsVerwalten">
-			<button type="submit">Follows verwalten</button>
-		</form>
-		
-		<br> <a href="Stacked/Index.html">Abmelden</a>
-		<!-- Jonathan Vielwerth -->
-	</div>
+	
 
 	<!-- Tobias Weiß HTML-Tabelle der Investments -->
 
@@ -71,7 +51,8 @@
 
 		<fieldset>
 			<legend>Deine Investments</legend>
-			<table>
+			<table class=InvestTable>
+			<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
