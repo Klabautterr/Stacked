@@ -72,7 +72,7 @@
 	</div>
 
 	<div class=divCenter>
-		<a href="Stacked/JSP/addInvestment.jsp"><button class=classicBT id=addInvest>Investment hinzufügen</button></a>
+		<a href="Stacked/JSP/addETF.jsp"><button class=classicBT id=addInvest>Investment hinzufügen</button></a>
 	</div>
 
 

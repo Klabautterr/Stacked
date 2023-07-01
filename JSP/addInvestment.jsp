@@ -48,6 +48,7 @@
 			<Button class=classicBT id= "stockname1">Auswahlliste Laden</Button>
 		
 		</div>
+					<div id="stockname2"></div>
 		<div class=mTop>
 		<label for="amountOfStock">Anzahl an Anteilen eingeben:</label>
 		<input type="number" name="amountOfStock" id="amountOfStock" min="0" required>
