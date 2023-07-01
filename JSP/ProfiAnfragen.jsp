@@ -5,8 +5,10 @@
 
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css"
+	href="./Stacked/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css"
+	href="./Stacked/CSS/ContentBox.css">
 <meta charset="ISO-8859-1">
 <!-- Jonathan Vielwerth -->
 
@@ -16,55 +18,59 @@
 
 	<p class="NameVersion">Stacked V0.8</p>
 	<br>
-	<div class="adminTop textColor divCenter"><p >Profi Anfragen</p></div>
-	
+	<div class="adminTop textColor divCenter">
+		<p>Profi Anfragen</p>
+	</div>
+
 	<div>
-	<table class="divCenter textColor tableBorder">
-		<tr>
-
-			<th>Benutzername</th>
-			<th>Annehmen</th>
-			<th>Ablehnen</th>
-		</tr>
-		<c:forEach var="profiAnfrage" items="${profiAnfragen}">
+		<table class="divCenter textColor tableBorder">
 			<tr>
-			<td>
-			<a href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}"><button class="UserNameBT">${profiAnfrage.username}</button></a>
-			</td>
-				<td>
-					<form method="post" action="./ProfiAnfrageAnnehmen">
-						<fieldset>
-							<div>
-								<input type="hidden" name="username"
-									value="${profiAnfrage.username}">
-								<button type="submit" id="button"  class="classicBT" >Annehmen</button>
-							</div>
-						</fieldset>
-					</form>
-				</td>
-				<td>
-					<form method="post" action="./ProfiAnfrageAblehnen">
-						<fieldset>
-							<div>
-								<input type="hidden" name="username"
-									value="${profiAnfrage.username}">
-								<button type="submit" id="button" class="classicBT">Ablehnen</button>
-							</div>
-						</fieldset>
-					</form>
-				</td>
 
-				<!-- <td>  <img src="../../RegistrierungsanfragenAusgeben?username=${Registrierung.username}" width="400"
+				<th>Benutzername</th>
+				<th>Annehmen</th>
+				<th>Ablehnen</th>
+			</tr>
+			<c:forEach var="profiAnfrage" items="${profiAnfragen}">
+				<tr>
+					<td><a
+						href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}"><button
+								class="UserNameBT">${profiAnfrage.username}</button></a></td>
+					<td>
+						<form method="post" action="./ProfiAnfrageAnnehmen">
+							<fieldset>
+								<div>
+									<input type="hidden" name="username"
+										value="${profiAnfrage.username}">
+									<button type="submit" id="button" class="classicBT">Annehmen</button>
+								</div>
+							</fieldset>
+						</form>
+					</td>
+					<td>
+						<form method="post" action="./ProfiAnfrageAblehnen">
+							<fieldset>
+								<div>
+									<input type="hidden" name="username"
+										value="${profiAnfrage.username}">
+									<button type="submit" id="button" class="classicBT">Ablehnen</button>
+								</div>
+							</fieldset>
+						</form>
+					</td>
+
+					<!-- <td>  <img src="../../RegistrierungsanfragenAusgeben?username=${Registrierung.username}" width="400"
 					height="150"></td> 
 					-->
 
-			</tr>
-		</c:forEach>
-	</table>
+				</tr>
+			</c:forEach>
+		</table>
 	</div>
-	
 
-	<div class="divCenter"><a href="./Stacked/JSP/Admin.jsp"><button class="admAbmBT">Zurück</button></a></div>
+
+	<div class="divCenter">
+		<a href="./Stacked/JSP/Admin.jsp"><button class="admAbmBT">Zurück</button></a>
+	</div>
 
 </body>
 <!-- Jonathan Vielwerth -->
