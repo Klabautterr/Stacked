@@ -41,10 +41,11 @@ href="./Stacked/CSS/StandardLayout.css">
 	<aside class="SelectedContent">
 		<div class="feedBG">
 			<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
-
+			<!-- -->
 			<br>
 
-
+			<!-- Linus Baumeister -->
+			
 			<div id="mehrPosts">
 
 				<div class="divCenter">

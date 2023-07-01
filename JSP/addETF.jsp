@@ -19,18 +19,18 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
 <div>
 <table class="Sidelinks">
 
-<tr><th><a href="./InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
-<tr><th><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="classicBT" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
-<tr><th><a href="./AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
-<tr><th><a href="./FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
-<tr><th><a href="./Stacked/Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
+<tr><th><a href="./ProfilBearbeiten.jsp"><button class="classicBT" id="FunctionLinks">Profil bearbeiten</button></a></th></tr>
+<tr><th><a href="../../AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
+<tr><th><a href="../../FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
+<tr><th><a href="../Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
 
 </table>
 </div>
