@@ -54,7 +54,7 @@
 		</tr>
 		<c:forEach var="ETF" items="${ETFs}">
 			<tr>
-			<td>${ETF.name}</a></td>
+			<td>${ETF.name}</td>
 				<td>
 					<form method="post" action="./AnlageoptionLoeschen">
 						<fieldset>

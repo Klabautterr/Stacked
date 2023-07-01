@@ -7,79 +7,110 @@
 <head>
 <meta charset="UTF-8">
 <title>LayoutCopy</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ProfilBearbeiten.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class=body>
 
-<p class=NameVersion>Stacked V0.8</p>
-<nav class=navList>
-<div>
+	<p class=NameVersion>Stacked V0.8</p>
+	<nav class=navList>
+		<div>
 
-<table class=UserTopProfil>
-<tr><th><img class=ProfilPicture src="../../ProfilbildAuslesen?username=${Login.username}" width="50" height="50"><!-- Profil Picture --></th><th><p class=ProfilLink>${Login.username}</p></th></tr>
-</table>
-</div>
+			<table class=UserTopProfil>
+				<tr>
+					<th><img class=ProfilPicture
+						src="../../ProfilbildAuslesen?username=${Login.username}"
+						width="50" height="50">
+					<!-- Profil Picture --></th>
+					<th><p class=ProfilLink>${Login.username}</p></th>
+				</tr>
+			</table>
+		</div>
 
-<div>
-<table class=Sidelinks>
-<tr><th><form action="../../FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
-<tr><th><a href="../../AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
-<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
-<tr><th><a href="./addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
-<tr><th><a href="../Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
-</table>
-</div>
-</nav>
+		<div>
+			<table class=Sidelinks>
+				<tr>
+					<th><form action="../../FollowsVerwalten">
+							<button type="submit" class=FunctionLinks>Freunde</button>
+						</form></th>
+				</tr>
+				<tr>
+					<th><a href="../../AllePostsAusgeben"><button
+								class=FunctionLinks>Feed</button></a></th>
+				</tr>
+				<tr>
+					<th><a href="../../InvestmentsAnzeigenServlet"><button
+								class=FunctionLinks>Profil</button></a></th>
+				</tr>
+				<tr>
+					<th><a href="./addInvestment.jsp"><button
+								class=FunctionLinks>Investments</button></a></th>
+				</tr>
+				<tr>
+					<th><a href="../Index.html"><button class=FunctionLinks>Abmelden</button></a></th>
+				</tr>
+			</table>
+		</div>
+	</nav>
 
-<aside class=SelectedContent>
-<div >
-<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
-<!-- Jonathan Vielwerth -->
-	
-	<!-- <div class=TopTitle><p >Profil Bearbeiten</p></div> -->	
+	<aside class=SelectedContent>
+		<div>
+			<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
+			<!-- Jonathan Vielwerth -->
 
-
-
-	<form class=TopTitle method="post" action="../../ProfilBearbeitenServlet"
-		enctype="multipart/form-data">
-		<fieldset>
-			<legend>ProfilBearbeiten</legend>
-			<br>
-			<div>
-				<label for="username">Neuer Nutzername:</label> <input type="text"
-					name="NeuerUsername" id="username" maxlength="30" />
-			</div>
-			<div>
-				<label for="passwort">Neues Passwort:</label> <input type="password"
-					name="passwort" id="passwort" maxlength="30"/>
-			</div>
-			<div>
-				<label for="NewImage">Neues Bild:</label> <input type="file"
-					name="NewImage" id="NewImage" accept="images/*" />
-			</div>
-			<div>
-			<button class=classicBT type="submit" id="AenderungSpeichern">Änderungen
-				speichern</button>
-			</div>
-		</fieldset>
-		
-	</form>
-
-	<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
-		<form method="post" action="../../ProfiAnfrageStellen" id="profiAnfragenStellen">
-				<div>
-					<button class="classicBT proRequestBT" type="submit" id="ProfiAnfrageButton">Profi Anfrage stellen</button>
-				</div>
-		</form>
-	</c:if>
-	<!-- Jonathan Vielwerth -->
+			<!-- <div class=TopTitle><p >Profil Bearbeiten</p></div> -->
 
 
-</div>
-</aside>
+
+			<form class=TopTitle method="post"
+				action="../../ProfilBearbeitenServlet" enctype="multipart/form-data">
+				<fieldset>
+					<legend>ProfilBearbeiten</legend>
+					<br>
+					<div>
+						<label for="username">Neuer Nutzername:</label> <input type="text"
+							name="NeuerUsername" id="username" maxlength="30" />
+					</div>
+					<br>
+					<div>
+						<label for="passwort">Neues Passwort:</label> <input
+							type="password" name="passwort" id="passwort" maxlength="30" />
+					</div>
+					<br>
+					<div>
+						<label for="NewImage">Neues Bild:</label> <input type="file"
+							name="NewImage" id="NewImage" accept="images/*" />
+					</div>
+					<div>
+						<button class=classicBT type="submit" id="AenderungSpeichern">Änderungen
+							speichern</button>
+					</div>
+				</fieldset>
+
+			</form>
+
+			<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
+				<form method="post" action="../../ProfiAnfrageStellen"
+					id="profiAnfragenStellen">
+					<fieldset>
+
+						<legend>Profi Anfrage Stellen</legend>
+
+						<div>
+							<button class="classicBT proRequestBT" type="submit"
+								id="ProfiAnfrageButton">Anfrage abschicken</button>
+						</div>
+					</fieldset>
+
+				</form>
+			</c:if>
+			<!-- Jonathan Vielwerth -->
+
+
+		</div>
+	</aside>
 
 </body>
 </html>

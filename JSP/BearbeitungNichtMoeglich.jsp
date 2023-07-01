@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>LayoutCopy</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ProfilBearbeiten.js"></script>
 </head>
 <!-- Jan Holtmann -->

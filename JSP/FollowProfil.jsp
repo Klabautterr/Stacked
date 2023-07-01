@@ -38,7 +38,7 @@
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
 <table class=topTitleTable>
-<tr><td rowspan="2"><img src="./ProfilbildAuslesen?username=${FollowUser}" width="50" height="50"></td><td>${FollowUser}</td><td>Profil</td></tr>
+<tr><td rowspan="2"><img src="./ProfilbildAuslesen?username=${FollowUser}" width="50" height="50"></td><td>${FollowUser}</td></tr>
 </table>
 	<br>
 	

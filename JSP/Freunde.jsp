@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LayoutCopy</title>
-<link rel="stylesheet" type="text/css" href="./Stacekd/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 </head>
 <!-- Jan Holtmann -->
