@@ -7,16 +7,16 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-	
+	var loadComments = document.getElementById("loadMoreComments");
+
+	loadComments.addEventListener("click", loadCommis);
+
+	var addComment = document.getElementById("sendComment");
+
+	addComment.addEventListener("click", addTopComment)
 }
 
-var loadComments = document.getElementById("loadMoreComments");
 
-loadComments.addEventListener("click", loadCommis);
-
-var addComment = document.getElementById("sendComment");
-
-addComment.addEventListener("click", addTopComment)
 
 var loadedComments = 0;
 

@@ -19,29 +19,31 @@
 			enctype="multipart/form-data">
 		<fieldset>
 			<legend>Registrierung</legend>
-			<div>
-				<label for="username">Benutzername:</label> <input type="text"
-					name="username" id="username" maxlength="30" required />
-			</div>
-			<div>
-				<label for="passwort">Passwort:</label> <input type="password"
-					name="passwort" id="passwort" maxlength="30" required />
-			</div>
-			<div>
-				<label for="userImage">Bild:</label> <input type="file"
-					name="userImage" id="userImage" accept="images/*" required />
-			</div>
+			
+			<table class="InvestTable">
+			<tr>
+			<td><label for="username">Benutzername:</label></td><td><input type="text" name="username" id="username" maxlength="30" required /></td>
+			</tr>
+			<tr>
+			<td><label for="passwort">Passwort:</label></td> <td><input type="password" name="passwort" id="passwort" maxlength="30" required /></td>
+			</tr>
+			<tr>
+			<td><label for="userImage">Bild:</label></td> <td><input type="file" name="userImage" id="userImage" accept="images/*" required /></td>
+			</tr>
+			</table>
 
 			<!--  		<div>
 				<label for="prodtime">P.-Zeit (hh:mm):</label>
 				<input type="time" name="prodtime" id="prodtime" required/>
 			</div>
 			-->
-			<div>
+			<br>
+			<div class="divCenter">
 				<button class="classicBT" type="submit" id="button">Registrieren</button>
 			</div>
 		</fieldset>
 	</form>
+	<br>
 	<br>
 	<a href="../Index.html"><button class="regBT">Doch einen Account</button></a>
 	<br>
