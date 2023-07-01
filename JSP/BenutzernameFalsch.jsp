@@ -13,20 +13,20 @@
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 </head>
-<body class=outBG>
+<body class="outBG">
 	<!-- Jonathan Vielwerth -->
 	
-	<p class=NameVersion>Stacked V0.8</p>
+	<p class="NameVersion">Stacked V0.8</p>
 
 	<br> 
-	<div align="center">
+	<div class="divCenter">
 		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
 	<div class="divCenter textColor">Der eingegebene Benutzername ist nicht korrekt</div>
-	<form class=indexForm method="post" action="../../LoginServlet">
+	<form class="indexForm" method="post" action="../../LoginServlet">
 		<fieldset>
 			<legend>Login</legend>
-			<div class=divCenter>
+			<div class="divCenter">
 				<label for="username">Username:</label>
 				<div><input type="text" name="username" id="username" required /></div>
 				
@@ -36,7 +36,7 @@
 				<div><input type="password" name="passwort" id="passwort" required /></div>
 			
 	 		
-				<div><button class=classicBT type="submit" id="button">Einloggen</button></div>
+				<div><button class="classicBT" type="submit" id="button">Einloggen</button></div>
 			
 			</div>
 			<!--   <br> Email:
@@ -52,7 +52,7 @@
 		</fieldset>
 	</form>
 	<br>
-	<a href="./html/Registrierung.html"><button class=regBT> Noch keinen Account?</button></a>
+	<a href="./html/Registrierung.html"><button class="regBT"> Noch keinen Account?</button></a>
 	<br>
 
 	<!-- Jonathan Vielwerth -->

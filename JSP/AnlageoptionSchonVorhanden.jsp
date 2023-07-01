@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 </head>
 <!-- Jonathan Vielwerth -->
-<body class=outBG>
+<body class="outBG">
 
-	<p class=NameVersion>Stacked V0.8</p>
+	<p class="NameVersion">Stacked V0.8</p>
 	<br>
 	<div class="adminTop textColor divCenter">
 		<p>Diese Anlageoption ist schon vorhanden</p>
@@ -39,7 +39,7 @@
 			<input type="hidden" name="aktienBT" value="gedrueckt">
 
 			<div>
-				<button type="submit" id="aktieAnlegen" class=classicBT>Neue
+				<button type="submit" id="aktieAnlegen" class="classicBT">Neue
 					Aktie hinzufügen</button>
 			</div>
 		</fieldset>
@@ -53,14 +53,14 @@
 				type="number" name="etfPreis" id="etfPreis" required> <input
 				type="hidden" name="aktienBT" value="nichtgedrueckt">
 			<div>
-				<button type="submit" id="etfAnlegen" class=classicBT>Neuen
+				<button type="submit" id="etfAnlegen" class="classicBT">Neuen
 					ETF hinzufügen</button>
 			</div>
 		</fieldset>
 	</form>
 
-	<div class=divCenter>
-		<a href="./Admin.jsp"><button class=admAbmBT>Zurück</button></a>
+	<div class="divCenter">
+		<a href="./Admin.jsp"><button class="admAbmBT">Zurück</button></a>
 	</div>
 	<!-- Jonathan Vielwerth -->
 

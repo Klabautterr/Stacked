@@ -55,7 +55,7 @@ function loadCommis() {
 				newComms += '<div class="message"> + comList[i].kommentar + </div>';
 				if (comList[i].username == loginUser.getUsername) {
     				newComms += '<form class="delete" method="post" action="./CommentDelete">';
-       				newComms += '<input id=commID type="hidden" name="id" value=' + comList[i].id + '>';
+       				newComms += '<input id="commID" type="hidden" name="id" value=' + comList[i].id + '>';
         			newComms += '<button type="submit">Löschen</button>';
         			newComms += '</form>';
                	}

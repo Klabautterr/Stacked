@@ -12,59 +12,35 @@
 <script src="../JS/ProfilBearbeiten.js"></script>
 </head>
 <!-- Jan Holtmann -->
-<body class=body>
+<body class="bodyMargin">
 
-	<p class=NameVersion>Stacked V0.8</p>
-	<nav class=navList>
-		<div>
+<p class="NameVersion">Stacked V0.8</p>
+<nav class="navList">
+<div>
 
-			<table class=UserTopProfil>
-				<tr>
-					<th><img class=ProfilPicture
-						src="../../ProfilbildAuslesen?username=${Login.username}"
-						width="50" height="50">
-					<!-- Profil Picture --></th>
-					<th><p class=ProfilLink>${Login.username}</p></th>
-				</tr>
-			</table>
-		</div>
+<table class="UserTopProfil">
+<tr><th><img class="ProfilPicture" src="../images/testprofile.jpeg"></th><th><p class="ProfilLink">USERNAME</p></th></tr></table>
+</div>
 
-		<div>
-			<table class=Sidelinks>
-				<tr>
-					<th><form action="../../FollowsVerwalten">
-							<button type="submit" class=FunctionLinks>Freunde</button>
-						</form></th>
-				</tr>
-				<tr>
-					<th><a href="../../AllePostsAusgeben"><button
-								class=FunctionLinks>Feed</button></a></th>
-				</tr>
-				<tr>
-					<th><a href="../../InvestmentsAnzeigenServlet"><button
-								class=FunctionLinks>Profil</button></a></th>
-				</tr>
-				<tr>
-					<th><a href="./addInvestment.jsp"><button
-								class=FunctionLinks>Investments</button></a></th>
-				</tr>
-				<tr>
-					<th><a href="../Index.html"><button class=FunctionLinks>Abmelden</button></a></th>
-				</tr>
-			</table>
-		</div>
-	</nav>
+<div>
+<table class="Sidelinks">
 
-	<aside class=SelectedContent>
+<tr><th><a href="./InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
+<tr><th><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="classicBT" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
+<tr><th><a href="./AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
+<tr><th><a href="./FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
+<tr><th><a href="./Stacked/Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+
+</table>
+</div>
+</nav>
+
+	<aside class="SelectedContent">
 		<div>
 			<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 			<!-- Jonathan Vielwerth -->
 
-			<!-- <div class=TopTitle><p >Profil Bearbeiten</p></div> -->
-
-
-
-			<form class=TopTitle method="post"
+			<form class="TopTitle" method="post"
 				action="../../ProfilBearbeitenServlet" enctype="multipart/form-data">
 				<fieldset>
 					<legend>ProfilBearbeiten</legend>
@@ -84,7 +60,7 @@
 							name="NewImage" id="NewImage" accept="images/*" />
 					</div>
 					<div>
-						<button class=classicBT type="submit" id="AenderungSpeichern">Änderungen
+						<button class="classicBT" type="submit" id="AenderungSpeichern">Änderungen
 							speichern</button>
 					</div>
 				</fieldset>

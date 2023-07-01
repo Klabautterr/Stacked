@@ -9,19 +9,19 @@
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 </head>
-<body class=outBG>
+<body class="outBG">
 	<!-- Jonathan Vielwerth -->
 	
-	<p class=NameVersion>Stacked V0.8</p>
+	<p class="NameVersion">Stacked V0.8</p>
 
 	<br> 
-	<div align="center">
+	<div class="divCenter">
 		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
 	
 	<div class="divCenter textColor">Der eingegebene Benutzername wird schon verwendet</div>
 	
-	<form class=indexForm method="post" action="../../RegistrierungServlet" 
+	<form class="indexForm" method="post" action="../../RegistrierungServlet" 
 			enctype="multipart/form-data">
 		<fieldset>
 			<legend>Registrierung</legend>
@@ -44,12 +44,12 @@
 			</div>
 			-->
 			<div>
-				<button class=classicBT type="submit" id="button">Registrieren</button>
+				<button class="classicBT" type="submit" id="button">Registrieren</button>
 			</div>
 		</fieldset>
 	</form>
 	<br>
-	<a href="../Index.html"><button class=regBT>Doch einen Account</button></a>
+	<a href="../Index.html"><button class="regBT">Doch einen Account</button></a>
 	<br>
 
 	<!-- Jonathan Vielwerth -->

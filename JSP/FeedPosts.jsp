@@ -14,51 +14,32 @@ href="./Stacked/CSS/StandardLayout.css">
 <script src="Stacked/JS/Feed.js"></script>
 </head>
 <!-- Jan Holtmann -->
-<body class=body>
+<body class="bodyMargin">
 
-	<p class=NameVersion>Stacked V0.8</p>
-	<nav class=navList>
-		<div>
+<p class="NameVersion">Stacked V0.8</p>
+<nav class="navList">
+<div>
 
-			<table class=UserTopProfil>
-				<tr>
-					<th><img class=ProfilPicture
-						src="./ProfilbildAuslesen?username=${Login.username}" width="50"
-						height="50"> <!-- Profil Picture --></th>
-					<th><p class=ProfilLink>${Login.username}</p></th>
-				</tr>
-			</table>
-		</div>
+<table class="UserTopProfil">
+<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+</table>
+</div>
 
-		<div>
-			<table class=Sidelinks>
-				<tr>
-					<th><form action="./FollowsVerwalten">
-							<button type="submit" class=FunctionLinks>Freunde</button>
-						</form></th>
-				</tr>
-				<tr>
-					<th><a href="./AllePostsAusgeben"><button
-								class=FunctionLinks>Feed</button></a></th>
-				</tr>
-				<tr>
-					<th><a href="./InvestmentsAnzeigenServlet"><button
-								class=FunctionLinks>Profil</button></a></th>
-				</tr>
-				<tr>
-					<th><a href="Stacked/JSP/addInvestment.jsp"><button
-								class=FunctionLinks>Investments</button></a></th>
-				</tr>
-				<tr>
-					<th><a href="./Stacked/Index.html"><button
-								class=FunctionLinks>Abmelden</button></a></th>
-				</tr>
-			</table>
-		</div>
-	</nav>
+<div>
+<table class="Sidelinks">
 
-	<aside class=SelectedContent>
-		<div class=feedBG>
+<tr><th><a href="./InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
+<tr><th><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="classicBT" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
+<tr><th><a href="./AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
+<tr><th><a href="./FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
+<tr><th><a href="./Stacked/Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+
+</table>
+</div>
+</nav>
+
+	<aside class="SelectedContent">
+		<div class="feedBG">
 			<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
 			<br>
@@ -66,7 +47,7 @@ href="./Stacked/CSS/StandardLayout.css">
 
 			<div id="mehrPosts">
 
-				<div class=divCenter>
+				<div class="divCenter">
 					<p class="textColor proRequestBT">Dein Feed</p>
 					<form class="form-posten" method="post" action="./Posten"
 						enctype="multipart/form-data">
@@ -82,9 +63,6 @@ href="./Stacked/CSS/StandardLayout.css">
 					</form>
 					<br>
 					<div>
-					<!-- wieder raus -->
-						<button id="likenrAJAX" data-columns="256">test</button>
-						<p id="updatzeLike">test</p>
 						<table class="postActionTable">
 							<tr>
 
@@ -125,11 +103,11 @@ href="./Stacked/CSS/StandardLayout.css">
 								<td><a
 									href="./InvestmentsAnzeigenServlet?username=${post.username}"><button
 											class=UserNameBT>${post.username}</button></a></td>
-								<td class=postDeleteBT><c:if
+								<td class="postDeleteBT"><c:if
 										test="${post.username == Login.username}">
 										<form class="delete" method="post" action="./PostLoeschen">
 											<input type="hidden" name="id" value="${post.id}">
-											<button class=classicBT type="submit">Löschen</button>
+											<button class="classicBT" type="submit">Löschen</button>
 										</form>
 									</c:if></td>
 							</tr>
@@ -141,22 +119,22 @@ href="./Stacked/CSS/StandardLayout.css">
 
 
 						<c:if test="${not empty post.bildname}">
-							<div class=divCenter>
-								<img class=postPicture src="./PostAuslesen?id=${post.id}">
+							<div class="divCenter">
+								<img class="postPicture" src="./PostAuslesen?id=${post.id}">
 							</div>
 						</c:if>
 
 						<table class="postActionTable">
 							<tr>
 
-								<td class=likeBT>
+								<td class="likeBT">
 									<form method="post" action="./Liken">
 										<input type="hidden" name="id" value="${post.id}">
 										<button type="submit" class="classicBT">Like</button>
 									</form>
 								</td>
 								<td><p>${post.anzahl_likes}</p></td>
-								<td class=postDeleteBT>
+								<td class="postDeleteBT">
 
 									<form method="post" action="./EinPostAusgeben">
 										<input type="hidden" name="id" value="${post.id}">
@@ -169,8 +147,8 @@ href="./Stacked/CSS/StandardLayout.css">
 					</div>
 				</c:forEach>
 			</div>
-			<div class=divCenter>
-				<button class=classicBT id="mehrLaden">Mehr Laden</button>
+			<div class="divCenter">
+				<button class="classicBT" id="mehrLaden">Mehr Laden</button>
 			</div>
 
 			<br>

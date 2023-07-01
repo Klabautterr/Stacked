@@ -12,12 +12,12 @@
 
 <title>Anlageoptionen</title>
 </head>
-<body class=outBG>
+<body class="outBG">
 
 
-	<p class=NameVersion>Stacked V0.8</p>
+	<p class="NameVersion">Stacked V0.8</p>
 	<br>
-	<div class=divCenter>
+	<div class="divCenter">
 	<div class="adminTop textColor divCenter"><p >Anlageoptionen</p></div>
 	
 	<div>
@@ -71,7 +71,7 @@
 	</table>
 	</div>	
 
-	<div><a href="./Stacked/JSP/Admin.jsp"><button class=admAbmBT>Zurück</button></a></div>
+	<div><a href="./Stacked/JSP/Admin.jsp"><button class="admAbmBT">Zurück</button></a></div>
 </div>
 </body>
 <!-- Jonathan Vielwerth -->

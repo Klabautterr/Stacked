@@ -46,13 +46,13 @@ function addContent() {
 
 				ausgabe += '<table class="InvestTable"><tr><td>';
 				ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '"><button class=UserNameBT>' + postList[i].username + '</button></a>';
-				//ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '">' + postList[i].username + '</a>';
+				
 
 				ausgabe += '</td><td class=postDeleteBT>';
 				if (postList[i].username == postList[i].loginUsername) {
 					ausgabe += '<form class="delete" method="post" action="./PostLoeschen">';
 					ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
-					ausgabe += '<button class= classicBT type="submit">Löschen</button>';
+					ausgabe += '<button class="classicBT" type="submit">Löschen</button>';
 					ausgabe += '</form>';
 				}
 				ausgabe += '</td></tr></table>';
@@ -60,12 +60,12 @@ function addContent() {
 				ausgabe += '<div class="message">' + postList[i].nachricht + '</div>';
 
 				if (postList[i].bildname) {
-					ausgabe += '<div class=divCenter>';
-					ausgabe += '<img class=postPicture src="./PostAuslesen?id=' + postList[i].id + '">';
+					ausgabe += '<div class="divCenter">';
+					ausgabe += '<img class="postPicture" src="./PostAuslesen?id=' + postList[i].id + '">';
 					ausgabe += '</div>';
 				}
 
-				ausgabe += '<table class="postActionTable"><tr><td class=likeBT>';
+				ausgabe += '<table class="postActionTable"><tr><td class="likeBT">';
 				//ausgabe += '<form method="post" action="./Liken">';
 				ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
 				ausgabe += '<button type="submit"  data-columns="' + postList[i].id + '" class="likenAJAX classicBT">Like</button>';
@@ -74,7 +74,7 @@ function addContent() {
 				ausgabe += '</td><td>';
 				ausgabe += '<p id="updateLike_' + postList[i].id + '" >' + postList[i].anzahl_likes + '</p>';
 				//ausgabe += '<p id="updateLike" data-columns="' + postList[i].id + '" >' + postList[i].anzahl_likes + '</p>';
-				ausgabe += '</td><td class=postDeleteBT>';
+				ausgabe += '</td><td class="postDeleteBT">';
 
 				ausgabe += '<form method="post" action="./EinPostAusgeben">';
 				ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';

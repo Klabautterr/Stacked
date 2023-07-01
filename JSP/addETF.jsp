@@ -12,7 +12,7 @@
 <script src="../JS/auswahlListeETF.js"></script>
 </head>
 <!-- Jan Holtmann -->
-<body class="body">
+<body class="bodyMargin">
 
 <p class="NameVersion">Stacked V0.8</p>
 <nav class="navList">
@@ -29,7 +29,7 @@
 <tr><th><a href="./InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
 <tr><th><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="classicBT" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
 <tr><th><a href="./AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
-<tr><th><form action="./FollowsVerwalten"><button type="submit" class="FunctionLinks">Freunde</button></form></th></tr>
+<tr><th><a href="./FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
 <tr><th><a href="./Stacked/Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
 
 </table>

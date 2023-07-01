@@ -30,10 +30,10 @@
 					</c:if>
 				</div>
 				
-				<div id=newComms>
+				<div id="newComms">
 				</div>
 				
-				<div id=loadComms>
+				<div id="loadComms">
 				</div>
 				
 				<div>
@@ -46,7 +46,7 @@
 					<input type="hidden" value="${post.id}" name="id"></input>
 					<div class="button-container">
 
-						<button id=sendComment type="submit" class="text-button">Posten</button>
+						<button id="sendComment" type="submit" class="text-button">Posten</button>
 					</div>
 				</form>
 

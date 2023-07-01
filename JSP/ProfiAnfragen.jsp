@@ -12,9 +12,9 @@
 
 <title>Profi Anfragen</title>
 </head>
-<body class=outBG>
+<body class="outBG">
 
-	<p class=NameVersion>Stacked V0.8</p>
+	<p class="NameVersion">Stacked V0.8</p>
 	<br>
 	<div class="adminTop textColor divCenter"><p >Profi Anfragen</p></div>
 	
@@ -29,7 +29,7 @@
 		<c:forEach var="profiAnfrage" items="${profiAnfragen}">
 			<tr>
 			<td>
-			<a href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}"><button class=UserNameBT>${profiAnfrage.username}</button></a>
+			<a href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}"><button class="UserNameBT">${profiAnfrage.username}</button></a>
 			</td>
 				<td>
 					<form method="post" action="./ProfiAnfrageAnnehmen">
@@ -64,7 +64,7 @@
 	</div>
 	
 
-	<div class=divCenter><a href="./Stacked/JSP/Admin.jsp"><button class=admAbmBT>Zurück</button></a></div>
+	<div class="divCenter"><a href="./Stacked/JSP/Admin.jsp"><button class="admAbmBT">Zurück</button></a></div>
 
 </body>
 <!-- Jonathan Vielwerth -->
