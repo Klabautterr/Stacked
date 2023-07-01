@@ -19,17 +19,17 @@
 <div>
 
 <table class=UserTopProfil>
-<tr><th><img class=ProfilPicture src="./ProfilbildAuslesen?username=${Login.username}" width="50" height="50"><!-- Profil Picture --></th><th><p class=ProfilLink>${Login.username}</p></th></tr>
+<tr><th><img class=ProfilPicture src="../../ProfilbildAuslesen?username=${Login.username}" width="50" height="50"><!-- Profil Picture --></th><th><p class=ProfilLink>${Login.username}</p></th></tr>
 </table>
 </div>
 
 <div>
 <table class=Sidelinks>
-<tr><th><form action="./FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
-<tr><th><a href="./AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
-<tr><th><a href="./InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
-<tr><th><a href="Stacked/JSP/addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
-<tr><th><a href="./Stacked/Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
+<tr><th><form action="../../FollowsVerwalten"><button type="submit" class=FunctionLinks>Freunde</button></form></th></tr>
+<tr><th><a href="../../AllePostsAusgeben"><button class=FunctionLinks>Feed</button></a></th></tr>
+<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class=FunctionLinks>Profil</button></a></th></tr>
+<tr><th><a href="./addInvestment.jsp"><button class=FunctionLinks>Investments</button></a></th></tr>
+<tr><th><a href="../Index.html"><button class=FunctionLinks>Abmelden</button></a></th></tr>
 </table>
 </div>
 </nav>
