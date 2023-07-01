@@ -82,8 +82,12 @@ href="./Stacked/CSS/StandardLayout.css">
 					</form>
 					<br>
 					<div>
+					<!-- wieder raus -->
+						<button id="likenrAJAX" data-columns="256">test</button>
+						<p id="updatzeLike">test</p>
 						<table class="postActionTable">
 							<tr>
+
 
 								<td>
 									<form id="freundeFeed" method="post"
