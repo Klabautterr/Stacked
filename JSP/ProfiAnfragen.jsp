@@ -28,8 +28,9 @@
 		</tr>
 		<c:forEach var="profiAnfrage" items="${profiAnfragen}">
 			<tr>
-			<td><a
-					href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}">${profiAnfrage.username}</a></td>
+			<td>
+			<a href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}"><button class=UserNameBT>${profiAnfrage.username}</button></a>
+			</td>
 				<td>
 					<form method="post" action="./ProfiAnfrageAnnehmen">
 						<fieldset>

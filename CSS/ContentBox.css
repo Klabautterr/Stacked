@@ -39,7 +39,7 @@
 	margin: auto;
 }
 
-.classicBT {
+.clTopMargBT {
 	font-family: Verdana;
 	color: #cdcdcd;
 	background: #262625;
@@ -47,6 +47,23 @@
 	transition-duration: 0.4s;
 	border: none;
 	margin-top: 2%;
+}
+
+.clTopMargBT:hover {
+	background: #4b4c4a;
+	font-family: Verdana;
+	color: #cdcdcd;
+	border: none;
+	border-radius: 4px;
+}
+
+.classicBT {
+	font-family: Verdana;
+	color: #cdcdcd;
+	background: #262625;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+	border: none;
 }
 
 .classicBT:hover {
@@ -79,6 +96,7 @@
 .InvestTable {
 	width: 90%;
 	margin: auto;
+	table-layout: fixed;
 }
 
 .TopTitle {
@@ -197,4 +215,8 @@
 
 .mTop {
 	margin-top: 2%;
+}
+
+.fPT {
+	text-align: left;
 }

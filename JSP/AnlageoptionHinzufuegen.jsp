@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 </head>
 <!-- Jonathan Vielwerth -->
-<body class=outBG>
+<body class="outBG textColor">
 
 	<p class=NameVersion>Stacked V0.8</p>
 	<br>
@@ -44,6 +44,7 @@
 			</div>
 		</fieldset>
 	</form>
+	<br>
 	<form method="post" action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
 			<legend>Neuen ETF hinzufügen</legend>

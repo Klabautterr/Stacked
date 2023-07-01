@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>LayoutCopy</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 </head>
 <!-- Jan Holtmann -->
 <body class=body>
@@ -39,7 +39,7 @@
 </nav>
 
 <aside class=SelectedContent>
-<div >
+<div class="proRequestBT">
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 <h3>Diesen Leuten folgst du</h3>
 	<table>
