@@ -7,8 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>LayoutCopy</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<link rel="stylesheet" type="text/css"
+	href="./Stacked/CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css"
+	href="./Stacked/CSS/ContentBox.css">
 </head>
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
@@ -49,11 +51,11 @@
 		<!-- Jonathan Vielwerth -->
 	</div>
 
-	<!-- Tobias Weiß HTML-Tabelle der Investments -->
+				<!-- Jonathan Vielwerth -->
+			</div>
 
+			<!-- Tobias Weiß HTML-Tabelle der Investments -->
 
-	<div>
-		<br>
 
 		<fieldset class="InvestTable">
 			<legend>Deine Investments</legend>
@@ -84,11 +86,27 @@
 		<a href="Stacked/JSP/addETF.jsp"><button class="classicBT" id="addETF">ETF hinzufügen</button></a>
 	</div>
 
-</div>
+			<div class=divCenter>
+				<a href="Stacked/JSP/addETF.jsp"><button class=classicBT
+						id=addETF>ETF hinzufügen</button></a>
+			</div>
+
+		</div>
+
+			<div>
+				<table>
+					<tr>
+					<td>Diversifizierung nach Ländern</td>
+					</tr>
+					<tr>
+					
+					</tr>
+				</table>
+			</div>
 
 
 
-</aside>
+	</aside>
 
 </body>
 </html>
