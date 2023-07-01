@@ -40,7 +40,7 @@
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
 <table class="topTitleTable">
-<tr><td>Profil</td><td><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="classicBT" id="editProfileBT">Profil bearbeiten</button></a></td></tr>
+<tr><td>Profil</td></tr>
 </table>
 	<br>
 	
@@ -51,7 +51,7 @@
 	<div>
 		<br>
 
-		<fieldset>
+		<fieldset class="InvestTable">
 			<legend>Deine Investments</legend>
 			<table class="InvestTable">
 			<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>

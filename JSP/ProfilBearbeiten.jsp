@@ -25,7 +25,7 @@
 <div>
 <table class="Sidelinks">
 
-<tr><th><a href="../..InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
+<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
 <tr><th><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
 <tr><th><a href="../../AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
 <tr><th><a href="../../FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>

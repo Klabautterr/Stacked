@@ -51,7 +51,7 @@
 	<div>
 		<br>
 
-		<fieldset>
+		<fieldset class="InvestTable">
 			<legend>Deine Investments</legend>
 			<table class="InvestTable">
 			<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>
