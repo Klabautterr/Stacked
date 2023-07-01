@@ -19,7 +19,7 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="../images/testprofile.jpeg"></th><th><p class="ProfilLink">USERNAME</p></th></tr></table>
+<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr></table>
 </div>
 
 <div>

@@ -4,6 +4,12 @@
  * Function 2 -> Insert own new Comment
  */
 
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
+	
+}
+
 var loadComments = document.getElementById("loadMoreComments");
 
 loadComments.addEventListener("click", loadCommis);

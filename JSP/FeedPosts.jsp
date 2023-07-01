@@ -21,7 +21,7 @@ href="./Stacked/CSS/StandardLayout.css">
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr></table>
 </table>
 </div>
 
