@@ -105,6 +105,12 @@ function addContent() {
 			for (var i = 0; i < likeButtons.length; i++) {
 				likeButtons[i].addEventListener("click", likeanzeigen);
 			}
+			  if (postList.length < 5) {
+                document.getElementById("mehrLaden").disabled = true;
+                document.getElementById("mehrLaden").innerText = "Keine weiteren Beiträge";
+            } else {
+                schongeladen += 5;  // Only increment if there were enough posts to load.
+            }
 			//Linus Baumeister
 		}
 
