@@ -102,9 +102,8 @@ href="./Stacked/CSS/StandardLayout.css">
 
 						<table class="InvestTable">
 							<tr>
-								<td><a
-									href="./InvestmentsAnzeigenServlet?username=${post.username}"><button
-											class=UserNameBT>${post.username}</button></a></td>
+								<td><a class = "textColor"
+									href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a></td>
 								<td class="postDeleteBT"><c:if
 										test="${post.username == Login.username}">
 										<form class="delete" method="post" action="./PostLoeschen">

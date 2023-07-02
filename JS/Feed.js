@@ -6,6 +6,7 @@ function init1() {
 	document.getElementById("bild").addEventListener("click", bildhochladen);
 	document.getElementById("mehrLaden").addEventListener("click", addContent);
 
+
 }
 
 function bildhochladen() {
@@ -51,8 +52,9 @@ function addContent() {
 				ausgabe += '<div class="post postBG">';
 
 				ausgabe += '<table class="InvestTable"><tr><td>';
-				ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '"><button class=UserNameBT>' + postList[i].username + '</button></a>';
-				//ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '">' + postList[i].username + '</a>';
+				//ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '"><button class=UserNameBT id="ProfilnameJS">' + postList[i].username + '</button></a>';
+				//ausgabe += '<button class="UserNameBT" id="ProfilnameJS" value="' + postList[i].username + '">' + postList[i].username + '</button>';
+				ausgabe += '<a class = "textColor" href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '">' + postList[i].username + '</a>';
 
 				ausgabe += '</td><td class=postDeleteBT>';
 				if (postList[i].username == postList[i].loginUsername) {
