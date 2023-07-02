@@ -5,6 +5,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<script src="../JS/ButtonAdmin.js"></script>
 </head>
 <body class="outBG">
 
@@ -18,7 +19,7 @@
 	<a href="../../AnlageoptionenVerwaltenServlet"><button class="regBT">Anlageoption bearbeiten</button></a>
 
 	<div class="divCenter">
-		<a href="../Index.html"><button class="admAbmBT">Abmelden?</button></a>
+		<button class="admAbmBT" id="AbmeldenBT">Abmelden?</button>
 	</div>
 
 	<!-- Jonathan Vielwerth -->

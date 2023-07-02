@@ -7,6 +7,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
+<script src="./Stacked/JS/ButtonAdminServlet.js"></script>
 <meta charset="ISO-8859-1">
 <!-- Jonathan Vielwerth -->
 
@@ -71,7 +72,7 @@
 	</table>
 	</div>	
 
-	<div><a href="./Stacked/JSP/Admin.jsp"><button class="admAbmBT">Zurück</button></a></div>
+	<div><button class="admAbmBT" id="ZurueckBT">Zurück</button></div>
 </div>
 </body>
 <!-- Jonathan Vielwerth -->

@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<script src="../JS/ButtonAdminJSP.js"></script>
+
 </head>
 <!-- Jonathan Vielwerth -->
 <body class="outBG textColor">
@@ -61,7 +63,7 @@
 	</form>
 
 	<div class="divCenter">
-		<a href="./Admin.jsp"><button class="admAbmBT">Zurück</button></a>
+		<button class="admAbmBT" id="ZurueckBT">Zurück</button>
 	</div>
 	<!-- Jonathan Vielwerth -->
 

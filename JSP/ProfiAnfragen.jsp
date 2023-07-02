@@ -11,6 +11,8 @@
 	href="./Stacked/CSS/ContentBox.css">
 <meta charset="ISO-8859-1">
 <!-- Jonathan Vielwerth -->
+<script src="./Stacked/JS/ButtonAdminServlet.js"></script>
+
 
 <title>Profi Anfragen</title>
 </head>
@@ -69,7 +71,7 @@
 
 
 	<div class="divCenter">
-		<a href="./Stacked/JSP/Admin.jsp"><button class="admAbmBT">Zurück</button></a>
+	<button class="admAbmBT" id="ZurueckBT">Zurück</button>
 	</div>
 
 </body>
