@@ -22,7 +22,7 @@ href="./Stacked/CSS/StandardLayout.css">
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" alt = "Profilbild" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
@@ -121,7 +121,7 @@ href="./Stacked/CSS/StandardLayout.css">
 
 						<c:if test="${not empty post.bildname}">
 							<div class="divCenter">
-								<img class="postPicture" src="./PostAuslesen?id=${post.id}">
+								<img class="postPicture" alt="Gepostetes Bild" src="./PostAuslesen?id=${post.id}">
 							</div>
 						</c:if>
 
@@ -149,12 +149,14 @@ href="./Stacked/CSS/StandardLayout.css">
 				</c:forEach>
 			</div>
 			<div class="divCenter">
+				<!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
 				<button class="classicBT" id="mehrLaden" data-welche-search="${welcheSearch}">Mehr Laden</button>
 			</div>
-
+				<!-- Linus Baumeister -->
 			<br>
 		</div>
 
 	</aside>
 </body>
 </html>
+	<!-- Linus Baumeister -->
