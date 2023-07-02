@@ -12,6 +12,7 @@ href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css"
 	href="./Stacked/CSS/ContentBox.css">
 <script src="Stacked/JS/Feed.js"></script>
+<script src="./Stacked/JS/ButtonInServlet.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
@@ -28,11 +29,11 @@ href="./Stacked/CSS/StandardLayout.css">
 <div>
 <table class="Sidelinks">
 
-<tr><th><a href="./InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
-<tr><th><a href="./Stacked/JSP/ProfilBearbeiten.jsp"><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
-<tr><th><a href="./AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
-<tr><th><a href="./FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
-<tr><th><a href="./Stacked/Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+<tr><th><button class="FunctionLinks" id="ProfilBT">Profil</button></th></tr>
+<tr><th><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></th></tr>
+<tr><th><button class="FunctionLinks" id="FeedBT">Feed</button></th></tr>
+<tr><th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th></tr>
+<tr><th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th></tr>
 
 </table>
 </div>

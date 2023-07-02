@@ -8,6 +8,7 @@
 <title>Startseite</title>
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<script src="../JS/ButtonRegistrierung.js"></script>
 </head>
 <body class="outBG">
 	<!-- Jonathan Vielwerth -->
@@ -49,7 +50,7 @@
 		</fieldset>
 	</form>
 	<br>
-	<a href="../Index.html"><button class="regBT">Doch einen Account</button></a>
+	<button class="regBT" id="IndexBT">Doch einen Account</button>
 	<br>
 
 	<!-- Jonathan Vielwerth -->

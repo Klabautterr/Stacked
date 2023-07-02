@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/auswahlListeETF.js"></script>
+<script src="../JS/ButtonInJSP.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
@@ -26,11 +27,11 @@
 <div>
 <table class="Sidelinks">
 
-<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
-<tr><th><a href="./ProfilBearbeiten.jsp"><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
-<tr><th><a href="../../AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
-<tr><th><a href="../../FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
-<tr><th><a href="../Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+<tr><th><button class="FunctionLinks" id="ProfilBT">Profil</button></th></tr>
+<tr><th><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></th></tr>
+<tr><th><button class="FunctionLinks" id="FeedBT">Feed</button></th></tr>
+<tr><th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th></tr>
+<tr><th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th></tr>
 
 </table>
 </div>

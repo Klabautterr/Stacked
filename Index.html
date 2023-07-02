@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Startseite</title>
 <link rel="stylesheet" type="text/css" href="./CSS/ContentBox.css">
 <link rel="stylesheet" type="text/css" href="./CSS/StandardLayout.css">
 <script src="./JS/Cookieueberpruefung.js"></script>
+<script src="./JS/ButtonIndex.js"></script>
 </head>
 <body class="outBG">
 	<!-- Jonathan Vielwerth -->
-	<noscript class="textColor">Hoppla! Es scheint so als haben sie Javascript deaktiviert
-	 <br>Bitte aktivieren Sie Javascript um alle Funktionen unserer Website zu aktivieren
+	<noscript class="textColor">
+		Hoppla! Es scheint so als haben sie Javascript deaktiviert <br>Bitte
+		aktivieren Sie Javascript um alle Funktionen unserer Website zu
+		aktivieren
 	</noscript>
-	
+
 	<p class="NameVersion">Stacked V0.8</p>
 
-	<br> 
+	<br>
 	<div class="divCenter">
 		<img src="./images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
@@ -24,21 +27,27 @@
 			<legend>Login</legend>
 			<div class="divCenter">
 				<label for="username">Username:</label>
-				<div><input type="text" name="username" id="username" required /></div>
-				
-			
+				<div>
+					<input type="text" name="username" id="username" required />
+				</div>
+
+
 				<label for="passwort">Passwort:</label>
-				
-				<div><input type="password" name="passwort" id="passwort" required /></div>
-			
-	 		
-				<div><button class="classicBT" type="submit" id="login">Einloggen</button></div>
-			
+
+				<div>
+					<input type="password" name="passwort" id="passwort" required />
+				</div>
+
+
+				<div>
+					<button class="classicBT" type="submit" id="login">Einloggen</button>
+				</div>
+
 			</div>
 		</fieldset>
 	</form>
 	<br>
-	<a href="./html/Registrierung.html"><button class="regBT"> Noch keinen Account?</button></a>
+	<button class="regBT" id="RegistrierungBT">Noch keinen Account?</button>
 	<br>
 
 	<!-- Jonathan Vielwerth -->

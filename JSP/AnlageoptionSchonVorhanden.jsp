@@ -17,7 +17,7 @@
 		<p>Diese Anlageoption ist schon vorhanden</p>
 	</div>
 
-	<form method="post" action="../../AnlageoptionHinzufuegenServlet">
+	<form class="textColor" method="post" action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
 			<legend>Neue Aktie hinzufügen</legend>
 
@@ -44,7 +44,8 @@
 			</div>
 		</fieldset>
 	</form>
-	<form method="post" action="../../AnlageoptionHinzufuegenServlet">
+	<br>
+	<form class="textColor" method="post" action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
 			<legend>Neuen ETF hinzufügen</legend>
 

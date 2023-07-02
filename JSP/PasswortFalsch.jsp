@@ -9,6 +9,7 @@
 <title>Startseite</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<script src="../JS/ButtonEinlogenFehlgeschlagen.js"></script>
 </head>
 <body class="outBG">
 	<!-- Jonathan Vielwerth -->
@@ -40,7 +41,7 @@
 		</fieldset>
 	</form>
 	<br>
-	<a href="./html/Registrierung.html"><button class="regBT"> Noch keinen Account?</button></a>
+	<button class="regBT" id="RegistrierungBT">Noch keinen Account?</button>
 	<br>
 
 	<!-- Jonathan Vielwerth -->
