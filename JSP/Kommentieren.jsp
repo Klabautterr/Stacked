@@ -1,22 +1,43 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Kommentieren</title>
-<link rel="stylesheet" type="text/css" href="./Stacked/CSS/Feed.css">
+<title>LayoutCopy</title>
+<link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
+<link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
+<script src="../JS/auswahlListeETF.js"></script>
 </head>
-<body>
+<!-- Jan Holtmann -->
+<body class="bodyMargin">
 
-	<div class="full-side">
+<p class="NameVersion">Stacked V0.8</p>
+<nav class="navList">
+<div>
 
-		<div class="left-side"></div>
+<table class="UserTopProfil">
+<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+</table>
+</div>
 
-		<div class="middle">
+<div>
+<table class="Sidelinks">
 
-			
+<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
+<tr><th><a href="./ProfilBearbeiten.jsp"><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
+<tr><th><a href="../../AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
+<tr><th><a href="../../FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
+<tr><th><a href="../Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+
+</table>
+</div>
+</nav>
+
+<aside class="SelectedContent">
+<div >
 				<div class="geposteter_Post">
 
 					<div class="username">
@@ -26,14 +47,21 @@
 					<div class="message">${post.nachricht}</div>
 
 					<c:if test="${not empty post.bildname}">
-						<img src="./PostAuslesen?id=${post.id}" width="400" height="150">
+						<img class=postPicture src="./PostAuslesen?id=${post.id}">
 					</c:if>
 				</div>
 				
-				<div id="newComms">
+				<div 
+				id="newComms"
+				data-commentID="${formKommentar.id}"
+				data-commentUsername="${formKommentar.username}"
+				data-commentText="${formKommentar.kommentar}">
 				</div>
 				
-				<div id="loadComms">
+				<div 
+				id="loadComms"
+				data-postID="${post.id}"
+				data-loginUser="${Login.username}">
 				</div>
 				
 				<div>
@@ -49,11 +77,8 @@
 						<button id="sendComment" type="submit" class="text-button">Posten</button>
 					</div>
 				</form>
+</div>
+</aside>
 
-			</div>
-		</div>
-		<div class="right-side"></div>
-		<script src="./Stacked/JS/Comments.js"></script>
-		
 </body>
 </html>

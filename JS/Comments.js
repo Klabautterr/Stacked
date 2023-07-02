@@ -20,23 +20,21 @@ function init() {
 
 var loadedComments = 0;
 
-var loginUser = '<%=session.getAttribute("Login")%>';
-
-var selectedPost = '<%=session.getAttribute("post")%>';
+var needVars = document.getElementById("loadComms");
 
 function addTopComment() {
 	setTimeout('', 2000);
-	var newComment ='<%session.getAttribute("formKommentar")%>';
+	var newComment = document.getElementById("newComms");
 	
 	var newCommHTML = "";
 	
-	newCommHTML += '<div class="Comment" id="cID${newComment.getId()}">';
+	newCommHTML += '<div class="Comment" id="' + newComment.dataset.commentID + '">';
 	
-	newCommHTML += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=${newComment.getUsername()}">${newComment.getUsername()}</a></div>';
-	newCommHTML += '<div class="message"> + newComment.getKommentar() + </div>';
+	newCommHTML += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=' + newComment.dataset.commentUsername + '">' + newComment.dataset.commentUsername + '</a></div>';
+	newCommHTML += '<div class="message">' + newComment.dataset.commentText + '</div>';
 	
    	newCommHTML += '<form class="delete" method="post" action="./CommentDelete">';
-    newCommHTML += '<input id=commID type="hidden" name="id" value=' + newComment.getId() + '>';
+    newCommHTML += '<input id=commID type="hidden" name="id" value=' + newComment.dataset.commentID + '>';
     newCommHTML += '<button type="submit">Löschen</button>';
     newCommHTML += '</form>';
                
@@ -47,7 +45,7 @@ function addTopComment() {
 
 function loadCommis() {
 	
-	var searchURL = "CommentLoad?loadedComments=" + loadedComments + "&postID" + selectedPost.getId();
+	var searchURL = "CommentLoad?loadedComments=" + loadedComments + "&postID" + selectedPost.dataset.postID;
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.responseType = "json";
@@ -56,10 +54,10 @@ function loadCommis() {
 			var comList = xmlhttp.response;
             var newComms = "";
             for (var i=0; i < postList.length; i++) {
-				newComms += '<div class="Comment" id="cID${comList[i].id}">';
-				newComms += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=${comList[i].username}">${comList[i].username}</a></div>';
+				newComms += '<div class="Comment" id="cID' + comList[i].id + '">';
+				newComms += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=' + comList[i].username + '">' + comList[i].username + '</a></div>';
 				newComms += '<div class="message"> + comList[i].kommentar + </div>';
-				if (comList[i].username == loginUser.getUsername) {
+				if (comList[i].username == needVars.dataset.loginUser) {
     				newComms += '<form class="delete" method="post" action="./CommentDelete">';
        				newComms += '<input id="commID" type="hidden" name="id" value=' + comList[i].id + '>';
         			newComms += '<button type="submit">Löschen</button>';
