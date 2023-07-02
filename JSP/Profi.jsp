@@ -88,22 +88,23 @@
 		<a href="Stacked/JSP/addETF.jsp"><button class="classicBT" id="addETF">ETF hinzufügen</button></a>
 	</div>
 
-			<div class=divCenter>
-				<a href="Stacked/JSP/addETF.jsp"><button class=classicBT
-						id=addETF>ETF hinzufügen</button></a>
-			</div>
-
 		</div>
 
 			<div>
+			<fieldset class= "InvestTable">
+			<legend>Diversifizierung</legend>
 				<table>
+			
 					<tr>
-					<td>Diversifizierung nach Ländern</td>
+						<td>prozentuale ETF-Verteilung:</td>
+						<td>${anzahlEtf}</td>
 					</tr>
 					<tr>
-					
+						<td>prozentuale Aktien-Verteilung:</td>
+						<td>${AnzahlStocks}</td>
 					</tr>
 				</table>
+				</fieldset>
 			</div>
 
 
