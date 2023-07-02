@@ -62,8 +62,10 @@
 		<input type="number" name="buyIn" id="buyIn" min="0" required>
 		</div>
 		<div>
+			<input type="hidden" name="input1" value="0">
 			<button class="classicBT" type="submit" id="newInvestmentButton">Neues
 				Investment dem Portfolio hinzufügen</button>
+			
 		</div>
 	</form>
 

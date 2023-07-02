@@ -62,7 +62,7 @@
 		<fieldset class="InvestTable">
 			<legend>Deine Investments</legend>
 			<table class="InvestTable">
-				<tr><td>Stockname</td> <td>Anzahl</td> <td>BuyIn</td>
+				<tr><td>Stockname</td> <td>Anzahl</td> <td>letzter BuyIn</td>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
