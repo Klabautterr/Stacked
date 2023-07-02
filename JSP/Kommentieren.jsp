@@ -9,7 +9,7 @@
 <title>LayoutCopy</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
-<script src="../JS/auswahlListeETF.js"></script>
+<script src="../JS/Comments.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
@@ -74,7 +74,7 @@
 					<input type="hidden" value="${post.id}" name="id"></input>
 					<div class="button-container">
 
-						<button id="sendComment" type="submit" class="text-button">Posten</button>
+						<button id="sendComment" class="text-button">Posten</button>
 					</div>
 				</form>
 </div>
