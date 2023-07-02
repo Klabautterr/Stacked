@@ -46,7 +46,7 @@
 	
 	<form class="proRequestBT" method="post" action="../../InvestmentsServlet"> 
 	
-		<label for="stockname">Wählen Sie eine Aktien aus:</label>
+		<label>Wählen Sie eine Aktien aus:</label>
 		<div>
 		
 			<Button class="classicBT" id= "stockname1">Auswahlliste Laden</Button>

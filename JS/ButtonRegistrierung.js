@@ -6,7 +6,7 @@ IndexBT.addEventListener("click", IndexBTFunc);
 
 }
 
-function RegistrierungBTFunc(){
+function IndexBTFunc(){
 	window.location.href = "../Index.html";
 }
 
