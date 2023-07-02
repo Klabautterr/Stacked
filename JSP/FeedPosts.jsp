@@ -72,7 +72,7 @@ href="./Stacked/CSS/StandardLayout.css">
 								<td>
 									<form id="freundeFeed" method="post"
 										action="./AllePostsAusgeben">
-										<input type="hidden" value=1 name="welcheSearch">
+										<input  type="hidden" value=1 name="welcheSearch">
 										<button id=friendPostBT type="submit" class="classicBT">Freunde
 											Posts</button>
 									</form>
@@ -81,7 +81,7 @@ href="./Stacked/CSS/StandardLayout.css">
 								<td>
 									<form id="allgemeierFeed" method="post"
 										action="./AllePostsAusgeben">
-										<input type="hidden" value=0 name="welcheSearch">
+										<input  type="hidden" value=0 name="welcheSearch">
 										<button id=allgPostsBT type="submit" class="classicBT">Allgemeine
 											Posts</button>
 									</form>
@@ -150,7 +150,7 @@ href="./Stacked/CSS/StandardLayout.css">
 				</c:forEach>
 			</div>
 			<div class="divCenter">
-				<button class="classicBT" id="mehrLaden">Mehr Laden</button>
+				<button class="classicBT" id="mehrLaden" data-welche-search="${welcheSearch}">Mehr Laden</button>
 			</div>
 
 			<br>

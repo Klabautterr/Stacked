@@ -6,7 +6,6 @@ function init1() {
 	document.getElementById("bild").addEventListener("click", bildhochladen);
 	document.getElementById("mehrLaden").addEventListener("click", addContent);
 
-
 }
 
 function bildhochladen() {
@@ -20,6 +19,7 @@ function bildhochladen() {
 
 }
 
+
 "use strict";
 
 
@@ -27,10 +27,18 @@ function bildhochladen() {
 var schongeladen = 0;
 
 function addContent() {
-
+	
+	var welcheSearch = 0;
+	
+	 welcheSearch = document.getElementById("mehrLaden").dataset.welcheSearch;
+	
 	schongeladen += 5;
-	var searchURL = "AllePostsAusgeben?schongeladen=" + schongeladen;
 
+	//var searchURL = "AllePostsAusgeben?schongeladen=" + schongeladen;
+	
+    var searchURL = "AllePostsAusgeben?schongeladen=" + schongeladen + "&welcheSearch=" + welcheSearch;
+
+	
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.responseType = "json";
 	xmlhttp.onreadystatechange = function() {
