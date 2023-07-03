@@ -37,46 +37,45 @@
 </nav>
 
 <aside class="SelectedContent">
-<div >
-				<div class="geposteter_Post">
-
-					<div class="username">
-						<a href="./InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
-					</div>
-
-					<div class="message">${post.nachricht}</div>
-
+<div class="feedBG" >
+				<br>
+				<br>
+				<div class="textColor">
+					
+					
+					
+					<a class="UserNameBT mLeft" href="../../InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
+					<br>
+					<br>
+					<div class="message">${post.nachricht}</div></td>
+					
+					
 					<c:if test="${not empty post.bildname}">
-						<img class=postPicture src="./PostAuslesen?id=${post.id}">
+						<img class="postPicture divCenter" src="./PostAuslesen?id=${post.id}">
 					</c:if>
 				</div>
 				
-				<div 
-				id="newComms"
-				data-commentID="${formKommentar.id}"
-				data-commentUsername="${formKommentar.username}"
-				data-commentText="${formKommentar.kommentar}">
-				</div>
+				<div class="Commfeld" id="newComms"></div>
 				
 				<div 
+				class="Commfeld"
 				id="loadComms"
 				data-postID="${post.id}"
 				data-loginUser="${Login.username}">
 				</div>
-				
-				<div>
-				<button id="loadMoreComments">Mehr Laden</button>
+				<br>
+				<div class=divCenter>
+				<button class=classicBT id="loadMoreComments">Mehr Laden</button>
+				</div >
+				<div class=divCenter>
+						<textarea class="Commfeld" id="kommentar" name="kommentar"
+						maxlength="200" placeholder="Was möchtest du den Kommentieren?"></textarea>
+						<br>
+						<button class=classicBT id="sendComment" class="text-button">Posten</button>
 				</div>
-				<form method="post" action="../../Kommentieren">
-					<textarea class="Postfeld" id="kommentar" name="kommentar"
-						maxlength="200" placeholder="Was möchtest du den Kommentieren?"
-						required></textarea>
-					<input type="hidden" value="${post.id}" name="id"></input>
-					<div class="button-container">
-
-						<button id="sendComment" class="text-button">Posten</button>
-					</div>
-				</form>
+				<br>
+					
+				
 </div>
 </aside>
 

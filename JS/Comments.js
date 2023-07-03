@@ -34,25 +34,52 @@ var pID;
 
 var loginUN;
 
+var newCommentText = "";
+
+
+
 function addTopComment() {
-	setTimeout('', 2000);
-	var newComment = document.getElementById("newComms");
 	
-	var newCommHTML = "";
+	newCommentText = document.getElementById("kommentar").value;
 	
-	newCommHTML += '<div class="Comment" id="' + newComment.dataset.commentID + '">';
+	if(newCommentText == "") {
+		return;
+	}
 	
-	newCommHTML += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=' + newComment.dataset.commentUsername + '">' + newComment.dataset.commentUsername + '</a></div>';
-	newCommHTML += '<div class="message">' + newComment.dataset.commentText + '</div>';
+	console.log(newCommentText);
 	
-   	newCommHTML += '<form class="delete" method="post" action="./CommentDelete">';
-    newCommHTML += '<input id=commID type="hidden" name="id" value=' + newComment.dataset.commentID + '>';
-    newCommHTML += '<button type="submit">Löschen</button>';
-    newCommHTML += '</form>';
+	var searchURL = "../../Kommentieren?id=" + pID + "&kommentar=" + newCommentText;
+	
+	var xmlhttp = new XMLHttpRequest();
+    xmlhttp.responseType = "json";
+
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var returnComment = xmlhttp.response;
+			
+			var newCommHTML = "";
+			newCommHTML += '<br><br>';
+			newCommHTML += '<div class="Comment" id="cID' + returnComment[0].id + '">';
+	
+			newCommHTML += '<a class="UserNameBT mLeft" href="../../InvestmentsAnzeigenServlet?username=' + returnComment[0].username + '">' + returnComment[0].username + '</a>';
+			newCommHTML += '<br><br>';
+			newCommHTML += '<div class="message">' + returnComment[0].kommentar + '</div>';
+			
+			newCommHTML += '<br>';
+   			newCommHTML += '<form class="divCenter" method="post" action="./CommentDelete">';
+    		newCommHTML += '<input id=commID type="hidden" name="id" value=' + returnComment[0].id + '>';
+    		newCommHTML += '<button class="classicBT" type="submit">Löschen</button>';
+    		newCommHTML += '</form>';
                
-	newCommHTML += '</div>';
+			newCommHTML += '</div>';
+			
 	
-	document.getElementById("newComms").insertAdjacentHTML("afterbegin", newCommHTML);
+			document.getElementById("newComms").insertAdjacentHTML("afterbegin", newCommHTML);
+		}
+	}
+	xmlhttp.open("GET", searchURL, true);
+    xmlhttp.send();
+	loadedComments += 1;
 }
 
 function loadCommis() {
@@ -67,15 +94,19 @@ function loadCommis() {
 			var comList = xmlhttp.response;
             var newComms = "";
             for (var i=0; i < comList.length; i++) {
+				newComms += '<br><br>';
 				newComms += '<div class="Comment" id="cID' + comList[i].id + '">';
-				newComms += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=' + comList[i].username + '">' + comList[i].username + '</a></div>';
+				newComms += '<a class="UserNameBT mLeft" href="../../InvestmentsAnzeigenServlet?username=' + comList[i].username + '">' + comList[i].username + '</a>';
+				newComms += '<br><br>';
 				newComms += '<div class="message">' + comList[i].kommentar + '</div>';
 				console.log("inside");
 				if (comList[i].username == loginUN) {
-    				newComms += '<form class="delete" method="post" action="./CommentDelete">';
+					newComms += '<br>';
+    				newComms += '<form class="divCenter" method="post" action="../../CommentDelete">';
        				newComms += '<input id="commID" type="hidden" name="id" value=' + comList[i].id + '>';
-        			newComms += '<button type="submit">Löschen</button>';
+        			newComms += '<button class="classicBT" type="submit">Löschen</button>';
         			newComms += '</form>';
+					
                	}
 				newComms += '</div>';
 			}

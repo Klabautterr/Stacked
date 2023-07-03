@@ -114,6 +114,14 @@
 	margin-top: 2%
 }
 
+.Commfeld {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	
+}
+
 .message {
 	background: #262625;
 	font-family: Verdana;
@@ -136,6 +144,7 @@
 	border-color: #288EE5;
 	border-style: solid;
 	transition-duration: 0.4s;
+	text-decoration-line: none;
 }
 .UserNameBT:hover {
 	background: #288EE5;
@@ -147,10 +156,6 @@
 
 .proRequestBT {
 	margin-left: 3.3vw;
-}
-
-.adminTop {
-	
 }
 
 .admAbmBT {
@@ -215,6 +220,10 @@
 
 .mTop {
 	margin-top: 2%;
+}
+
+.mLeft {
+	margin-left: 2.3%;
 }
 
 .fPT {
