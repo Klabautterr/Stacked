@@ -87,9 +87,9 @@ function addContent() {
 
 				ausgabe += '</div>';
 			}
-// Chat GPT
+
 			var mehrPosts = document.getElementById("mehrPosts");
-		
+// Chat GPT	
 			mehrPosts.insertAdjacentHTML("beforeend", ausgabe);
 
 			

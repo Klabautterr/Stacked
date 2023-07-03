@@ -70,12 +70,14 @@
 				
 				<div class="Commfeld" id="newComms"></div>
 				
+				<!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
 				<div 
 				class="Commfeld"
 				id="loadComms"
 				data-postID="${post.id}"
 				data-loginUser="${Login.username}">
 				</div>
+				<!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
 				<br>
 				<div class=divCenter>
 				<button class=classicBT id="loadMoreComments">Mehr Laden</button>

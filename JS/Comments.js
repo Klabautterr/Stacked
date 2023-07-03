@@ -107,7 +107,9 @@ function loadCommis() {
                	}
 				newComms += '</div>';
 			}
+			//Chat-GPT
 			document.getElementById("loadComms").insertAdjacentHTML("beforeend", newComms);
+			//Chat-GPT
 		}
 	}
 	xmlhttp.open("GET", searchURL, true);
