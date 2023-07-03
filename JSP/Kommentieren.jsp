@@ -51,9 +51,18 @@
 					
 					
 					<c:if test="${not empty post.bildname}">
-						<img class="postPicture divCenter" src="./PostAuslesen?id=${post.id}">
+						<img class="postPicture divCenter" src="../../PostAuslesen?id=${post.id}">
 					</c:if>
 				</div>
+				
+				<div class=divCenter>
+						<textarea class="Commfeld" id="kommentar" name="kommentar"
+						maxlength="200" placeholder="Was möchtest du den Kommentieren?"></textarea>
+						<br>
+						<button class=classicBT id="sendComment" class="text-button">Posten</button>
+				</div>
+				<br>
+				
 				
 				<div class="Commfeld" id="newComms"></div>
 				
@@ -67,12 +76,7 @@
 				<div class=divCenter>
 				<button class=classicBT id="loadMoreComments">Mehr Laden</button>
 				</div >
-				<div class=divCenter>
-						<textarea class="Commfeld" id="kommentar" name="kommentar"
-						maxlength="200" placeholder="Was möchtest du den Kommentieren?"></textarea>
-						<br>
-						<button class=classicBT id="sendComment" class="text-button">Posten</button>
-				</div>
+				
 				<br>
 					
 				
