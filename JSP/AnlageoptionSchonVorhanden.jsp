@@ -7,8 +7,7 @@
 <title>Anlageoption schon vorhanden</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
-<script src="./Stacked/JS/ButtonIndex.js"></script>
-<script src="./Stacked/JS/ButtonAdminServlet.js"></script>
+<script src="../JS/ButtonAdminJSP.js"></script>
 </head>
 <!-- Jonathan Vielwerth -->
 <body class="outBG">

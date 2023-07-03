@@ -44,6 +44,11 @@
 <tr><td>Profil</td></tr>
 </table>
 	<br>
+	<div>
+		<h2>Um deinem Portfolio Aktien hinzufügen zu können, stelle eine Profi Anfrage unter "Profil bearbeiten"</h2>
+		
+		<!-- Jonathan Vielwerth -->
+	</div>
 	
 
 	<!-- Tobias Weiß -->
@@ -75,7 +80,7 @@
 	</div>
 
 	<div class="divCenter">
-		<button class="classicBT" id="addETF">Investment hinzufügen</button>
+		<button class="classicBT" id="addETF">ETF hinzufügen</button>
 	</div>
 
 

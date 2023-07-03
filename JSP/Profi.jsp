@@ -49,7 +49,7 @@
 </table>
 	<br>
 	<div>
-		<h2>Du Profi bist 👍</h2>
+		<h2>Du bist ein Profi 👍</h2>
 		
 		<!-- Jonathan Vielwerth -->
 	</div>

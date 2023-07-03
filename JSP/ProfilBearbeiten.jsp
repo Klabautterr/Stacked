@@ -15,26 +15,42 @@
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
 
-<p class="NameVersion">Stacked V0.8</p>
-<nav class="navList">
-<div>
+	<p class="NameVersion">Stacked V0.8</p>
+	<nav class="navList">
+		<div>
 
-<table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" alt="Profilbild" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr></table>
-</div>
+			<table class="UserTopProfil">
+				<tr>
+					<th><img class="ProfilPicture" alt="Profilbild"
+						src="../../ProfilbildAuslesen?username=${Login.username}"></th>
+					<th><p class="ProfilLink">${Login.username}</p></th>
+				</tr>
+			</table>
+		</div>
 
-<div>
-<table class="Sidelinks">
+		<div>
+			<table class="Sidelinks">
 
-<tr><th><button class="FunctionLinks" id="ProfilBT">Profil</button></th></tr>
-<tr><th><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></th></tr>
-<tr><th><button class="FunctionLinks" id="FeedBT">Feed</button></th></tr>
-<tr><th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th></tr>
-<tr><th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th></tr>
+				<tr>
+					<th><button class="FunctionLinks" id="ProfilBT">Profil</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="editProfileBT">Profil
+							bearbeiten</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="FeedBT">Feed</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th>
+				</tr>
 
-</table>
-</div>
-</nav>
+			</table>
+		</div>
+	</nav>
 
 	<aside class="SelectedContent">
 		<div>
@@ -65,11 +81,8 @@
 							speichern</button>
 					</div>
 				</fieldset>
-
 			</form>
-		<h1>${Login.isProfi}</h1>
-		<h1>${Login.offeneProfiAnfrage}</h1>
-		
+				<br>
 			<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
 				<form method="post" action="../../ProfiAnfrageStellen"
 					id="profiAnfragenStellen">
