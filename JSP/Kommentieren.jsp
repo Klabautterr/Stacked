@@ -65,9 +65,9 @@
 				</div>
 				
 				<div>
-				<button id="loadMoreComments" Data-id ="${post.id}">Mehr Laden</button>
+				<button id="loadMoreComments">Mehr Laden</button>
 				</div>
-				<form method="post" action="./Kommentieren">
+				<form method="post" action="../../Kommentieren">
 					<textarea class="Postfeld" id="kommentar" name="kommentar"
 						maxlength="200" placeholder="Was möchtest du den Kommentieren?"
 						required></textarea>

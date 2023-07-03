@@ -137,7 +137,7 @@ href="./Stacked/CSS/StandardLayout.css">
 								<td><p>${post.anzahl_likes}</p></td>
 								<td class="postDeleteBT">
 
-									<form method="post" action="./Stacked/JSP/Kommentieren.jsp">
+									<form method="post" action="./EinPostAusgeben">
 										<input type="hidden" name="id" value="${post.id}">
 										<button type="submit" class="classicBT">Kommentieren</button>
 									</form>

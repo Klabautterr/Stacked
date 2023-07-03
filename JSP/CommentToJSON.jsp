@@ -8,7 +8,7 @@
 		"id":${com.id},
 		"username":"${com.username}",
 		"kommentar":"${com.kommentar}",
-		"post_id":${com.post_id},
+		"post_id":${com.post_id}
 		}<c:if test="${not status.last}">,</c:if>
 </c:forEach>
 ]

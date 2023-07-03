@@ -6,6 +6,8 @@
 
 document.addEventListener("DOMContentLoaded", init);
 
+
+
 function init() {
 	var loadComments = document.getElementById("loadMoreComments");
 
@@ -13,14 +15,24 @@ function init() {
 
 	var addComment = document.getElementById("sendComment");
 
-	addComment.addEventListener("click", addTopComment)
+	addComment.addEventListener("click", addTopComment);
+	
+	needVars = document.getElementById("loadComms");
+	
+	pID = needVars.getAttribute("data-postID");
+	
+	loginUN = needVars.getAttribute("data-loginUser");
 }
 
 
 
 var loadedComments = 0;
 
-var needVars = document.getElementById("loadComms");
+var needVars;
+
+var pID;
+
+var loginUN;
 
 function addTopComment() {
 	setTimeout('', 2000);
@@ -44,20 +56,22 @@ function addTopComment() {
 }
 
 function loadCommis() {
-	
-	var searchURL = "CommentLoad?loadedComments=" + loadedComments + "&postID" + selectedPost.dataset.postID;
+	console.log(pID);
+	var searchURL = "../../CommentLoad?loadedComments=" + loadedComments + "&postID=" + pID;
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.responseType = "json";
+	console.log("sdfsdf");
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			var comList = xmlhttp.response;
             var newComms = "";
-            for (var i=0; i < postList.length; i++) {
+            for (var i=0; i < comList.length; i++) {
 				newComms += '<div class="Comment" id="cID' + comList[i].id + '">';
 				newComms += '<div class="username"><a href="./InvestmentsAnzeigenServlet?username=' + comList[i].username + '">' + comList[i].username + '</a></div>';
-				newComms += '<div class="message"> + comList[i].kommentar + </div>';
-				if (comList[i].username == needVars.dataset.loginUser) {
+				newComms += '<div class="message">' + comList[i].kommentar + '</div>';
+				console.log("inside");
+				if (comList[i].username == loginUN) {
     				newComms += '<form class="delete" method="post" action="./CommentDelete">';
        				newComms += '<input id="commID" type="hidden" name="id" value=' + comList[i].id + '>';
         			newComms += '<button type="submit">Löschen</button>';
@@ -67,9 +81,10 @@ function loadCommis() {
 			}
 			document.getElementById("loadComms").insertAdjacentHTML("beforeend", newComms);
 		}
+	}
+	console.log("fast");
 	xmlhttp.open("GET", searchURL, true);
     xmlhttp.send();
-	
+	console.log("vorEnde");
 	loadedComments += 5;
-	}
 }
