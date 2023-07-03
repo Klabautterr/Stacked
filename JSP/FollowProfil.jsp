@@ -38,7 +38,7 @@
 
 <aside class="SelectedContent">
 <div >
-<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
+
 
 <table class="topTitleTable">
 <tr><td><img class="ProfilPicture" alt="Profilbild eines Freundes" src="./ProfilbildAuslesen?username=${FollowUser}"></td><td class="fPT">${FollowUser}</td></tr>

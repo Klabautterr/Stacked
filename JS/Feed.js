@@ -92,7 +92,7 @@ function addContent() {
 		
 			mehrPosts.insertAdjacentHTML("beforeend", ausgabe);
 
-			// Event Listener hinzufügen zu den neu erstellten Like-Buttons
+			
 			var likeButtons = mehrPosts.getElementsByClassName("likenAJAX");
 			for (var i = 0; i < likeButtons.length; i++) {
 				likeButtons[i].addEventListener("click", likeanzeigen);

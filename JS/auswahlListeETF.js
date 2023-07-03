@@ -1,6 +1,4 @@
-/**
- * 
- */
+//Tobias Weiß
 
  "use strict";
 document.addEventListener("DOMContentLoaded", init);
@@ -8,7 +6,7 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
 	document.getElementById("stockname1").addEventListener("click",refillList);
 	
-	//refillList();
+	
 }
 
 
@@ -47,3 +45,4 @@ function refillList() {
 	xmlhttp.send();
 
 };
+//Tobias Weiß
