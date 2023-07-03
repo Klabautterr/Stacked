@@ -46,8 +46,6 @@ function addTopComment() {
 		return;
 	}
 	
-	console.log(newCommentText);
-	
 	var searchURL = "../../Kommentieren?id=" + pID + "&kommentar=" + newCommentText;
 	
 	var xmlhttp = new XMLHttpRequest();
@@ -61,7 +59,7 @@ function addTopComment() {
 			newCommHTML += '<br><br>';
 			newCommHTML += '<div class="Comment" id="cID' + returnComment[0].id + '">';
 	
-			newCommHTML += '<a class="UserNameBT mLeft" href="../../InvestmentsAnzeigenServlet?username=' + returnComment[0].username + '">' + returnComment[0].username + '</a>';
+			newCommHTML += '<a class="textColor mLeft" href="../../InvestmentsAnzeigenServlet?username=' + returnComment[0].username + '">' + returnComment[0].username + '</a>';
 			newCommHTML += '<br><br>';
 			newCommHTML += '<div class="message">' + returnComment[0].kommentar + '</div>';
 			
@@ -83,12 +81,10 @@ function addTopComment() {
 }
 
 function loadCommis() {
-	console.log(pID);
 	var searchURL = "../../CommentLoad?loadedComments=" + loadedComments + "&postID=" + pID;
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.responseType = "json";
-	console.log("sdfsdf");
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			var comList = xmlhttp.response;
@@ -96,10 +92,9 @@ function loadCommis() {
             for (var i=0; i < comList.length; i++) {
 				newComms += '<br><br>';
 				newComms += '<div class="Comment" id="cID' + comList[i].id + '">';
-				newComms += '<a class="UserNameBT mLeft" href="../../InvestmentsAnzeigenServlet?username=' + comList[i].username + '">' + comList[i].username + '</a>';
+				newComms += '<a class="textColor mLeft" href="../../InvestmentsAnzeigenServlet?username=' + comList[i].username + '">' + comList[i].username + '</a>';
 				newComms += '<br><br>';
 				newComms += '<div class="message">' + comList[i].kommentar + '</div>';
-				console.log("inside");
 				if (comList[i].username == loginUN) {
 					newComms += '<br>';
     				newComms += '<form class="divCenter" method="post" action="../../CommentDelete">';
@@ -113,9 +108,7 @@ function loadCommis() {
 			document.getElementById("loadComms").insertAdjacentHTML("beforeend", newComms);
 		}
 	}
-	console.log("fast");
 	xmlhttp.open("GET", searchURL, true);
     xmlhttp.send();
-	console.log("vorEnde");
 	loadedComments += 5;
 }

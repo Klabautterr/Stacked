@@ -44,7 +44,7 @@
 					
 					
 					
-					<a class="UserNameBT mLeft" href="../../InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
+					<a class="textColor mLeft" href="../../InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
 					<br>
 					<br>
 					<div class="message">${post.nachricht}</div></td>
@@ -78,7 +78,6 @@
 				<div class=divCenter>
 				<button class=classicBT id="loadMoreComments">Mehr Laden</button>
 				</div >
-				
 				<br>
 					
 				
