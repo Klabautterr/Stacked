@@ -39,7 +39,6 @@
 
 <aside class="SelectedContent">
 <div >
-<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
 <table class="topTitleTable">
 <tr><td>Profil</td></tr>
@@ -47,7 +46,7 @@
 	<br>
 	
 
-	<!-- Tobias Weiß HTML-Tabelle der Investments -->
+	<!-- Tobias Weiß -->
 
 
 	<div>
@@ -81,6 +80,9 @@
 
 
 </div>
+
+<!-- Tobias Weiß -->
+
 </aside>
 
 </body>

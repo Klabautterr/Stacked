@@ -39,9 +39,9 @@
 
 <aside class="SelectedContent">
 <div >
-<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
-<!-- Tobias Weiß Neue Investments hinzufügen -->
+<!-- Tobias Weiß -->
+
 	<h1 class="proRequestBT">Füge Investments deinem Portfolio hinzu</h1>
 	
 	<form class="proRequestBT" method="post" action="../../InvestmentsServlet"> 
@@ -68,6 +68,7 @@
 	</form>
 
 </div>
+<!-- Tobias Weiß -->
 </aside>
 
 </body>

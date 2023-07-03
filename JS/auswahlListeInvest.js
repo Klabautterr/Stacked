@@ -2,6 +2,8 @@
  * 
  */
 
+//Tobias Weiß
+
 "use strict";
 document.addEventListener("DOMContentLoaded", init);
 
@@ -47,3 +49,5 @@ function refillList() {
 	xmlhttp.send();
 
 };
+
+//Tobias Weiß
