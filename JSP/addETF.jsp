@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LayoutCopy</title>
+<title>ETFs hinzufügen</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/auswahlListeETF.js"></script>
@@ -20,7 +20,7 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" alt = "Profilbild" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
@@ -39,14 +39,14 @@
 
 <aside class="SelectedContent">
 <div >
-<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
-<!-- Tobias Weiß Neue Investments hinzufügen -->
+<!-- Tobias Weiß -->
+
 	<h1 class="proRequestBT">Füge Investments deinem Portfolio hinzu</h1>
 	
 	<form class="proRequestBT" method="post" action="../../InvestmentsServlet"> 
 	
-		<label>Wählen Sie eine Aktien aus:</label>
+		<label>Wählen Sie einen ETF aus:</label>
 		<div>
 		
 			<Button class="classicBT" id= "stockname1">Auswahlliste Laden</Button>
@@ -68,6 +68,7 @@
 	</form>
 
 </div>
+<!-- Tobias Weiß -->
 </aside>
 
 </body>

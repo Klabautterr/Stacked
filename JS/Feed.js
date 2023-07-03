@@ -3,21 +3,14 @@
 
 document.addEventListener("DOMContentLoaded", init1);
 function init1() {
-	document.getElementById("bild").addEventListener("click", bildhochladen);
+	document.getElementById("bild").addEventListener("change", bildhochladen);
 	document.getElementById("mehrLaden").addEventListener("click", addContent);
 
 
 }
 
 function bildhochladen() {
-	var fileInput = document.getElementById('bild');
-	fileInput.onchange = function() {
-		var file = fileInput.files[0];
-		if (file) {
-			alert("Bild wurde hochgeladen: " + file.name);
-		}
-	}
-
+			alert("Bild wurde Ausgewählt");
 }
 
 
@@ -35,7 +28,7 @@ function addContent() {
 //Linus Baumeister
 	schongeladen += 5;
 
-	//var searchURL = "AllePostsAusgeben?schongeladen=" + schongeladen;
+
 	
     var searchURL = "AllePostsAusgeben?schongeladen=" + schongeladen + "&welcheSearch=" + welcheSearch;
 
@@ -52,8 +45,6 @@ function addContent() {
 				ausgabe += '<div class="post postBG">';
 
 				ausgabe += '<table class="InvestTable"><tr><td>';
-				//ausgabe += '<a href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '"><button class=UserNameBT id="ProfilnameJS">' + postList[i].username + '</button></a>';
-				//ausgabe += '<button class="UserNameBT" id="ProfilnameJS" value="' + postList[i].username + '">' + postList[i].username + '</button>';
 				ausgabe += '<a class = "textColor" href="./InvestmentsAnzeigenServlet?username=' + postList[i].username + '">' + postList[i].username + '</a>';
 
 				ausgabe += '</td><td class=postDeleteBT>';
@@ -70,12 +61,10 @@ function addContent() {
 				if (postList[i].bildname) {
 					ausgabe += '<div class="divCenter">';
 					ausgabe += '<img class="postPicture" alt="Gepostetes Bild" src="./PostAuslesen?id=' + postList[i].id + '">';
-					//ausgabe += '<img class="postPicture"  alt="Gepostetes Bild"src="./PostAuslesen?id=' + postList[i].id + '">';
 					ausgabe += '</div>';
 				}
 
 				ausgabe += '<table class="postActionTable"><tr><td class="likeBT">';
-				//ausgabe += '<form method="post" action="./Liken">';
 				ausgabe += '<input type="hidden" name="id" value=' + postList[i].id + '>';
 //https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 				ausgabe += '<button type="submit"  data-columns="' + postList[i].id + '" class="likenAJAX classicBT">Like</button>';
@@ -83,7 +72,6 @@ function addContent() {
 
 				ausgabe += '</td><td>';
 				ausgabe += '<p id="updateLike_' + postList[i].id + '" >' + postList[i].anzahl_likes + '</p>';
-				//ausgabe += '<p id="updateLike" data-columns="' + postList[i].id + '" >' + postList[i].anzahl_likes + '</p>';
 				ausgabe += '</td><td class=postDeleteBT>';
 
 				ausgabe += '<form method="post" action="./EinPostAusgeben">';

@@ -2,14 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-</body>
-</html>
-
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Startseite</title>
+<meta charset="UTF-8">
+<title>Benutzername falsch</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ButtonEinlogenFehlgeschlagen.js"></script>

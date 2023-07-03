@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LayoutCopy</title>
+<title>Freunde Profil</title>
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 <script src="./Stacked/JS/ButtonInServlet.js"></script>
@@ -19,7 +19,7 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" alt="Profilbild" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
@@ -41,7 +41,7 @@
 <!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
 
 <table class="topTitleTable">
-<tr><td rowspan="2"><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${FollowUser}"></td><td class="fPT">${FollowUser}</td></tr>
+<tr><td><img class="ProfilPicture" alt="Profilbild eines Freundes" src="./ProfilbildAuslesen?username=${FollowUser}"></td><td class="fPT">${FollowUser}</td></tr>
 </table>
 	<br>
 	

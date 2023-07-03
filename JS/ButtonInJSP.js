@@ -23,7 +23,7 @@ function ProfilBTFunc(){
 }
 
 function editProfileBTFunc(){
-	window.location.href = "./Stacked/JSP/ProfilBearbeiten.jsp";
+	window.location.href = "./ProfilBearbeiten.jsp";
 }
 
 function FeedBTFunc(){

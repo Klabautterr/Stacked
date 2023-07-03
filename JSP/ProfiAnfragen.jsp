@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 	href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css"
 	href="./Stacked/CSS/ContentBox.css">
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <!-- Jonathan Vielwerth -->
 <script src="./Stacked/JS/ButtonAdminServlet.js"></script>
 
@@ -34,16 +34,14 @@
 			</tr>
 			<c:forEach var="profiAnfrage" items="${profiAnfragen}">
 				<tr>
-					<td><a
-						href="./InvestmentsAnzeigenServlet?username=${profiAnfrage.username}"><button
-								class="UserNameBT">${profiAnfrage.username}</button></a></td>
+					<td class = "textColor">${profiAnfrage.username}</td>
 					<td>
 						<form method="post" action="./ProfiAnfrageAnnehmen">
 							<fieldset>
 								<div>
 									<input type="hidden" name="username"
 										value="${profiAnfrage.username}">
-									<button type="submit" id="button" class="classicBT">Annehmen</button>
+									<button type="submit" id="button1" class="classicBT">Annehmen</button>
 								</div>
 							</fieldset>
 						</form>
@@ -54,16 +52,11 @@
 								<div>
 									<input type="hidden" name="username"
 										value="${profiAnfrage.username}">
-									<button type="submit" id="button" class="classicBT">Ablehnen</button>
+									<button type="submit" id="button2" class="classicBT">Ablehnen</button>
 								</div>
 							</fieldset>
 						</form>
 					</td>
-
-					<!-- <td>  <img src="../../RegistrierungsanfragenAusgeben?username=${Registrierung.username}" width="400"
-					height="150"></td> 
-					-->
-
 				</tr>
 			</c:forEach>
 		</table>
@@ -71,7 +64,7 @@
 
 
 	<div class="divCenter">
-	<button class="admAbmBT" id="ZurueckBT">Zurück</button>
+	<button class="admAbmBT" id="ZurueckBT">ZurÃ¼ck</button>
 	</div>
 
 </body>

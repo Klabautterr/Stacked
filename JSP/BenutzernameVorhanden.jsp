@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Startseite</title>
+<meta charset="UTF-8">
+<title>Benutzername schon vorhanden</title>
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <script src="../JS/ButtonRegistrierung.js"></script>
