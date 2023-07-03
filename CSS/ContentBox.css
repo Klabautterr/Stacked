@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/*Linus Baumeister, Jonathan Vielwerth, Tobias Weiß - Größtenteils in dynamischer Zusammenarbeit*/
+
+/*Linus Baumeister*/
 .outBG {
 	width: 100vw;
 	height: 100vh;
@@ -74,7 +77,8 @@
 	border-radius: 4px;
 }
 
-
+/*Linus Baumeister*/
+/*Jonathan Vielwerth*/
 .divCenter {
 	text-align: center;
 }
@@ -149,7 +153,8 @@
 .UserNameBT:hover {
 	background: #288EE5;
 }
-
+/*Jonathan Vielwerth*/
+/*Tobias Weiß*/
 .textColor {
 	color: #cdcdcd;
 }
@@ -229,3 +234,5 @@
 .fPT {
 	text-align: left;
 }
+/*Tobias Weiß*/
+/*Linus Baumeister, Jonathan Vielwerth, Tobias Weiß*/

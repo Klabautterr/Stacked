@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/*Jan Holtmann*/
+
 .bodyMargin {
 	margin: 0;
 }
@@ -43,9 +45,6 @@
 	height: 50px;
 }
 
-.ProfilLink {
-	
-}
 
 .Sidelinks {
 	width: 20vw;
@@ -89,3 +88,4 @@
 	color: #cdcdcd;
 	box-sizing: border-box;
 }
+/*Jan Holtmann*/
