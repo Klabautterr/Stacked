@@ -1,4 +1,4 @@
-
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 
@@ -8,7 +8,6 @@ function init() {
 }
 
 // Chat GPT
-
 function checkCookiesEnabled() {
 	var cookiesEnabled = navigator.cookieEnabled;
 
@@ -16,7 +15,5 @@ function checkCookiesEnabled() {
 		alert("Um diese Website zu nutzen, aktivieren Sie bitte Cookies.");
 	}
 }
-
 //Chat GPT
-
-
+//Jonathan Vielwerth

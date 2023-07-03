@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
-
 <html>
 <head>
 <link rel="stylesheet" type="text/css"
@@ -10,12 +10,14 @@
 <link rel="stylesheet" type="text/css"
 	href="./Stacked/CSS/ContentBox.css">
 <meta charset="UTF-8">
-<!-- Jonathan Vielwerth -->
+
 <script src="./Stacked/JS/ButtonAdminServlet.js"></script>
 
 
 <title>Profi Anfragen</title>
 </head>
+<!-- Jan Holtmann -->
+<!-- Jonathan Vielwerth -->
 <body class="outBG">
 
 	<p class="NameVersion">Stacked V0.8</p>
@@ -34,7 +36,7 @@
 			</tr>
 			<c:forEach var="profiAnfrage" items="${profiAnfragen}">
 				<tr>
-					<td class = "textColor">${profiAnfrage.username}</td>
+					<td class="textColor">${profiAnfrage.username}</td>
 					<td>
 						<form method="post" action="./ProfiAnfrageAnnehmen">
 							<fieldset>
@@ -64,10 +66,8 @@
 
 
 	<div class="divCenter">
-	<button class="admAbmBT" id="ZurueckBT">Zurück</button>
+		<button class="admAbmBT" id="ZurueckBT">Zurück</button>
 	</div>
-
 </body>
-<!-- Jonathan Vielwerth -->
-
 </html>
+<!-- Jonathan Vielwerth -->

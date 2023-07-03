@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +12,6 @@
 <script src="../JS/ProfilBearbeiten.js"></script>
 <script src="../JS/ButtonInJSP.js"></script>
 </head>
-<!-- Jan Holtmann -->
 <body class="bodyMargin">
 
 	<p class="NameVersion">Stacked V0.8</p>
@@ -53,10 +52,9 @@
 	</nav>
 
 	<aside class="SelectedContent">
+		<!-- Jan Holtmann -->
+		<!-- Jonathan Vielwerth -->
 		<div>
-			<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
-			<!-- Jonathan Vielwerth -->
-
 			<form class="TopTitle" method="post"
 				action="../../ProfilBearbeitenServlet" enctype="multipart/form-data">
 				<fieldset>
@@ -82,7 +80,7 @@
 					</div>
 				</fieldset>
 			</form>
-				<br>
+			<br>
 			<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
 				<form method="post" action="../../ProfiAnfrageStellen"
 					id="profiAnfragenStellen">
@@ -98,11 +96,9 @@
 
 				</form>
 			</c:if>
-			<!-- Jonathan Vielwerth -->
-
-
 		</div>
 	</aside>
 
 </body>
 </html>
+<!-- Jonathan Vielwerth -->

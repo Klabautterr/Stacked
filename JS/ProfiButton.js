@@ -1,3 +1,4 @@
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 function init(){
@@ -16,5 +17,4 @@ function addInvestFunc(){
 function addETFFunc(){
 	window.location.href = "./Stacked/JSP/addETF.jsp";
 }
-
-
+//Jonathan Vielwerth

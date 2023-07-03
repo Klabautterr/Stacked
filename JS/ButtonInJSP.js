@@ -1,3 +1,4 @@
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 function init(){
@@ -16,7 +17,6 @@ FreundeBT.addEventListener("click", FreundeBTFunc);
 var LogoutBT = document.getElementById("LogoutBT");
 LogoutBT.addEventListener("click", LogoutBTFunc);
 }
-
 
 function ProfilBTFunc(){
 	window.location.href = "../../InvestmentsAnzeigenServlet";
@@ -37,4 +37,4 @@ function FreundeBTFunc(){
 function LogoutBTFunc(){
 	window.location.href = "../../LogoutServlet";
 }
-
+//Jonathan Vielwerth

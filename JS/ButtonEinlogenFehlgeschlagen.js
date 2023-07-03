@@ -1,3 +1,4 @@
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 function init(){
@@ -9,4 +10,5 @@ RegistrierungBT.addEventListener("click", RegistrierungBTFunc);
 function RegistrierungBTFunc(){
 	window.location.href = "../html/Registrierung.html";
 }
+//Jonathan Vielwerth
 

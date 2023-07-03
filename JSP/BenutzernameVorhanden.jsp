@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,20 +10,21 @@
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <script src="../JS/ButtonRegistrierung.js"></script>
 </head>
+<!-- Jan Holtmann -->
+<!-- Jonathan Vielwerth -->
 <body class="outBG">
-	<!-- Jonathan Vielwerth -->
-	
 	<p class="NameVersion">Stacked V0.8</p>
 
-	<br> 
+	<br>
 	<div class="divCenter">
 		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
-	
-	<div class="divCenter textColor">Der eingegebene Benutzername wird schon verwendet</div>
-	
-	<form class="indexForm" method="post" action="../../RegistrierungServlet" 
-			enctype="multipart/form-data">
+
+	<div class="divCenter textColor">Der eingegebene Benutzername
+		wird schon verwendet</div>
+
+	<form class="indexForm" method="post"
+		action="../../RegistrierungServlet" enctype="multipart/form-data">
 		<fieldset>
 			<legend>Registrierung</legend>
 			<div>
@@ -38,12 +39,6 @@
 				<label for="userImage">Bild:</label> <input type="file"
 					name="userImage" id="userImage" accept="images/*" required />
 			</div>
-
-			<!--  		<div>
-				<label for="prodtime">P.-Zeit (hh:mm):</label>
-				<input type="time" name="prodtime" id="prodtime" required/>
-			</div>
-			-->
 			<div>
 				<button class="classicBT" type="submit" id="button">Registrieren</button>
 			</div>
@@ -52,8 +47,6 @@
 	<br>
 	<button class="regBT" id="IndexBT">Doch einen Account</button>
 	<br>
-
-	<!-- Jonathan Vielwerth -->
-
 </body>
 </html>
+<!-- Jonathan Vielwerth -->

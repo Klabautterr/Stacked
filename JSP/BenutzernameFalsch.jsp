@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +11,9 @@
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ButtonEinlogenFehlgeschlagen.js"></script>
 </head>
+<!-- Jan Holtmann -->
+<!-- Jonathan Vielwerth -->
 <body class="outBG">
-	<!-- Jonathan Vielwerth -->
-
 	<p class="NameVersion">Stacked V0.8</p>
 
 	<br>
@@ -44,24 +44,12 @@
 				</div>
 
 			</div>
-			<!--   <br> Email:
-	<input type="email" name="email" size="20" maxlength="20">
-	<br> Password:
-	<input type="password" size="20" maxlength="20">
-	<br>
-	<a href="./html/Profil.html"><button>Anmelden</button></a>
-	<br>
-	<a href="./html/Registrierung.html"> Noch keinen Account?</a>
-	<br>
-	-->
 		</fieldset>
 	</form>
 	<br>
 	<button class="regBT" id="RegistrierungBT">Noch keinen
 		Account?</button>
 	<br>
-
-	<!-- Jonathan Vielwerth -->
-
 </body>
 </html>
+<!-- Jonathan Vielwerth -->

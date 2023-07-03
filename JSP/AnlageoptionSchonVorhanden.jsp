@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ButtonAdminJSP.js"></script>
 </head>
+<!-- Jan Holtmann -->
 <!-- Jonathan Vielwerth -->
 <body class="outBG">
 
@@ -18,26 +20,27 @@
 		<p>Diese Anlageoption ist schon vorhanden</p>
 	</div>
 
-	<form class="textColor" method="post" action="../../AnlageoptionHinzufuegenServlet">
+	<form class="textColor" method="post"
+		action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
 			<legend>Neue Aktie hinzufügen</legend>
 
-			<label>Land:</label> <select multiple name="land" size="3"
-				required>
+			<label>Land:</label> <select multiple name="land" size="3" required>
 				<option value="Deutschland">Deutschland</option>
 				<option value="USA">USA</option>
 				<option value="China">China</option>
-			</select> <label>Branche:</label> <select multiple
-				name="branche" size="5" required>
+			</select> <label>Branche:</label> <select multiple name="branche" size="5"
+				required>
 				<option value="Technologie">Technologie</option>
 				<option value="Finanzen">Finanzen</option>
 				<option value="Industrie">Industrie</option>
 				<option value="Pharmazie">Pharmazie</option>
 				<option value="Automobil">Automobil</option>
 			</select> <label for="aktienName">Name:</label> <input type="text"
-				name="aktienName" id="aktienName" maxlength="30"/> <label for="aktienPreis">Preis:</label>
-			<input type="number" name="aktienPreis" id="aktienPreis" required>
-			<input type="hidden" name="aktienBT" value="gedrueckt">
+				name="aktienName" id="aktienName" maxlength="30" /> <label
+				for="aktienPreis">Preis:</label> <input type="number"
+				name="aktienPreis" id="aktienPreis" required> <input
+				type="hidden" name="aktienBT" value="gedrueckt">
 
 			<div>
 				<button type="submit" id="aktieAnlegen" class="classicBT">Neue
@@ -46,14 +49,15 @@
 		</fieldset>
 	</form>
 	<br>
-	<form class="textColor" method="post" action="../../AnlageoptionHinzufuegenServlet">
+	<form class="textColor" method="post"
+		action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
 			<legend>Neuen ETF hinzufügen</legend>
 
 			<label for="etfName">Name:</label> <input type="text" name="etfName"
-				id="etfName" maxlength="30" /> <label for="etfPreis">Preis:</label> <input
-				type="number" name="etfPreis" id="etfPreis" required> <input
-				type="hidden" name="aktienBT" value="nichtgedrueckt">
+				id="etfName" maxlength="30" /> <label for="etfPreis">Preis:</label>
+			<input type="number" name="etfPreis" id="etfPreis" required>
+			<input type="hidden" name="aktienBT" value="nichtgedrueckt">
 			<div>
 				<button type="submit" id="etfAnlegen" class="classicBT">Neuen
 					ETF hinzufügen</button>
@@ -64,7 +68,6 @@
 	<div class="divCenter">
 		<button class="admAbmBT" id="ZurueckBT">Zurück</button>
 	</div>
-	<!-- Jonathan Vielwerth -->
-
 </body>
 </html>
+<!-- Jonathan Vielwerth -->

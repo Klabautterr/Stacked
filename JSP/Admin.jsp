@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ButtonAdmin.js"></script>
 </head>
+<!-- Jan Holtmann -->
+<!-- Jonathan Vielwerth -->
 <body class="outBG">
 
 	<p class="NameVersion">Stacked V0.8</p>
@@ -17,14 +20,14 @@
 		<p>Admin</p>
 	</div>
 	<button class="regBT" id="AnfrageBT">Profi Anfragen</button>
-	<button class="regBT" id="AnlageHinzufuegenBT">Neue Anlageoption hinzufügen</button>
-	<button class="regBT" id="AnlageVerwaltenBT">Anlageoption bearbeiten</button>
+	<button class="regBT" id="AnlageHinzufuegenBT">Neue
+		Anlageoption hinzufügen</button>
+	<button class="regBT" id="AnlageVerwaltenBT">Anlageoption
+		bearbeiten</button>
 
 	<div class="divCenter">
 		<button class="admAbmBT" id="AbmeldenBT">Abmelden?</button>
 	</div>
-
-	<!-- Jonathan Vielwerth -->
-
 </body>
 </html>
+<!-- Jonathan Vielwerth -->

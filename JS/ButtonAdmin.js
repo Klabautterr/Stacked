@@ -1,3 +1,4 @@
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 function init(){
@@ -29,4 +30,4 @@ function AnlageHinzufuegenBTFunc(){
 function AnlageVerwaltenBTFunc(){
 	window.location.href = "../../AnlageoptionenVerwaltenServlet";
 }
-
+//Jonathan Vielwerth

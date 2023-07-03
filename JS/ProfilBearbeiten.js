@@ -1,4 +1,4 @@
-
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 function init(){
@@ -9,12 +9,4 @@ ProfiButton.addEventListener("click", alertProfi);
 function alertProfi(){
 	alert ("Profi Anfrage wurde erfolgreich verschickt");
 }
-
-
-
-
-
-
-
-
-
+//Jonathan Vielwerth

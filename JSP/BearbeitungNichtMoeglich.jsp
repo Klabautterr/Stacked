@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<!-- Jan Holtmann -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,74 +16,83 @@
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
 
-<p class="NameVersion">Stacked V0.8</p>
-<nav class="navList">
-<div>
+	<p class="NameVersion">Stacked V0.8</p>
+	<nav class="navList">
+		<div>
 
-<table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" alt="Profilbild" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
-</table>
-</div>
+			<table class="UserTopProfil">
+				<tr>
+					<th><img class="ProfilPicture" alt="Profilbild"
+						src="../../ProfilbildAuslesen?username=${Login.username}"></th>
+					<th><p class="ProfilLink">${Login.username}</p></th>
+				</tr>
+			</table>
+		</div>
 
-<div>
-<table class="Sidelinks">
+		<div>
+			<table class="Sidelinks">
 
-<tr><th><button class="FunctionLinks" id="ProfilBT">Profil</button></th></tr>
-<tr><th><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></th></tr>
-<tr><th><button class="FunctionLinks" id="FeedBT">Feed</button></th></tr>
-<tr><th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th></tr>
-<tr><th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th></tr>
+				<tr>
+					<th><button class="FunctionLinks" id="ProfilBT">Profil</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="editProfileBT">Profil
+							bearbeiten</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="FeedBT">Feed</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th>
+				</tr>
+				<tr>
+					<th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th>
+				</tr>
 
-</table>
-</div>
-</nav>
+			</table>
+		</div>
+	</nav>
 
-<aside class="SelectedContent">
-<div >
-<!-- HIER Referenzierter HTML-Code einfügen (zb. Post oder Feed oder Profil mit Investments) -->
-<!-- Jonathan Vielwerth -->
-	
-	<!-- <div class=TopTitle><p >Profil Bearbeiten</p></div> -->	
+	<aside class="SelectedContent">
+		<!-- Jan Holtmann -->
+		<!-- Jonathan Vielwerth -->
+		<div>
+			<form class="TopTitle" method="post"
+				action="../../ProfilBearbeitenServlet" enctype="multipart/form-data">
+				<fieldset>
+					<legend>Ihr neuer Nutzername ist leider schon vergeben</legend>
+					<br>
+					<div>
+						<label for="username">Neuer Nutzername:</label> <input type="text"
+							name="NeuerUsername" id="username" maxlength="30" />
+					</div>
+					<div>
+						<label for="passwort">Neues Passwort:</label> <input
+							type="password" name="passwort" id="passwort" maxlength="30" />
+					</div>
+					<div>
+						<label for="NewImage">Neues Bild:</label> <input type="file"
+							name="NewImage" id="NewImage" accept="images/*" />
+					</div>
+					<div>
+						<button class="classicBT" type="submit" id="AenderungSpeichern">Änderungen
+							speichern</button>
+					</div>
+				</fieldset>
 
+			</form>
 
-
-	<form class="TopTitle" method="post" action="../../ProfilBearbeitenServlet"
-		enctype="multipart/form-data">
-		<fieldset>
-			<legend>Ihr neuer Nutzername ist leider schon vergeben</legend>
-			<br>
-			<div>
-				<label for="username">Neuer Nutzername:</label> <input type="text"
-					name="NeuerUsername" id="username" maxlength="30" />
-			</div>
-			<div>
-				<label for="passwort">Neues Passwort:</label> <input type="password"
-					name="passwort" id="passwort" maxlength="30"/>
-			</div>
-			<div>
-				<label for="NewImage">Neues Bild:</label> <input type="file"
-					name="NewImage" id="NewImage" accept="images/*" />
-			</div>
-			<div>
-			<button class="classicBT" type="submit" id="AenderungSpeichern">Änderungen
-				speichern</button>
-			</div>
-		</fieldset>
-		
-	</form>
-
-	<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
-		<form method="post" action="../../ProfiAnfrageStellen" id="profiAnfragenStellen">
-				<div>
-					<button class="classicBT proRequestBT" type="submit" id="ProfiAnfrageButton">Profi Anfrage stellen</button>
-				</div>
-		</form>
-	</c:if>
-	<!-- Jonathan Vielwerth -->
-
-
-</div>
-</aside>
-
+			<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
+				<form method="post" action="../../ProfiAnfrageStellen"
+					id="profiAnfragenStellen">
+					<div>
+						<button class="classicBT proRequestBT" type="submit"
+							id="ProfiAnfrageButton">Profi Anfrage stellen</button>
+					</div>
+				</form>
+			</c:if>
+		</div>
+	</aside>
 </body>
 </html>
+<!-- Jonathan Vielwerth -->

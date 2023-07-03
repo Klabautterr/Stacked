@@ -1,3 +1,4 @@
+//Jonathan Vielwerth
 document.addEventListener("DOMContentLoaded", init)
 
 function init(){
@@ -36,3 +37,4 @@ function FreundeBTFunc(){
 function LogoutBTFunc(){
 	window.location.href = "./LogoutServlet";
 }
+//Jonathan Vielwerth
