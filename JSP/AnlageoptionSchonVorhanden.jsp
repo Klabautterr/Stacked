@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Anlageoption schon vorhanden</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="./Stacked/JS/ButtonIndex.js"></script>
@@ -21,14 +21,14 @@
 
 	<form class="textColor" method="post" action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
-			<legend>Neue Aktie hinzufügen</legend>
+			<legend>Neue Aktie hinzufÃ¼gen</legend>
 
-			<label for="land">Land:</label> <select multiple name="land" size="3"
+			<label>Land:</label> <select multiple name="land" size="3"
 				required>
 				<option value="Deutschland">Deutschland</option>
 				<option value="USA">USA</option>
 				<option value="China">China</option>
-			</select> <label for="branche">Branche:</label> <select multiple
+			</select> <label>Branche:</label> <select multiple
 				name="branche" size="5" required>
 				<option value="Technologie">Technologie</option>
 				<option value="Finanzen">Finanzen</option>
@@ -42,14 +42,14 @@
 
 			<div>
 				<button type="submit" id="aktieAnlegen" class="classicBT">Neue
-					Aktie hinzufügen</button>
+					Aktie hinzufÃ¼gen</button>
 			</div>
 		</fieldset>
 	</form>
 	<br>
 	<form class="textColor" method="post" action="../../AnlageoptionHinzufuegenServlet">
 		<fieldset>
-			<legend>Neuen ETF hinzufügen</legend>
+			<legend>Neuen ETF hinzufÃ¼gen</legend>
 
 			<label for="etfName">Name:</label> <input type="text" name="etfName"
 				id="etfName" maxlength="30" /> <label for="etfPreis">Preis:</label> <input
@@ -57,13 +57,13 @@
 				type="hidden" name="aktienBT" value="nichtgedrueckt">
 			<div>
 				<button type="submit" id="etfAnlegen" class="classicBT">Neuen
-					ETF hinzufügen</button>
+					ETF hinzufÃ¼gen</button>
 			</div>
 		</fieldset>
 	</form>
 
 	<div class="divCenter">
-		<button class="admAbmBT" id="ZurueckBT">Zurück</button>
+		<button class="admAbmBT" id="ZurueckBT">ZurÃ¼ck</button>
 	</div>
 	<!-- Jonathan Vielwerth -->
 

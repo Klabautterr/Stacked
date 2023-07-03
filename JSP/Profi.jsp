@@ -6,12 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LayoutCopy</title>
+<title>Profi</title>
 <link rel="stylesheet" type="text/css"
 	href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css"
 	href="./Stacked/CSS/ContentBox.css">
 	<script src="./Stacked/JS/ButtonInServlet.js"></script>
+	<script src="./Stacked/JS/ProfiButton.js"></script>
 	
 </head>
 <!-- Jan Holtmann -->
@@ -22,7 +23,7 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" alt="Profilbild" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
@@ -62,7 +63,7 @@
 		<fieldset class="InvestTable">
 			<legend>Deine Investments</legend>
 			<table class="InvestTable">
-				<tr><td>Stockname</td> <td>Anzahl</td> <td>letzter BuyIn</td>
+				<tr><td>Stockname</td> <td>Anzahl</td> <td>letzter BuyIn</td><td></td>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
@@ -78,17 +79,17 @@
 				</c:forEach>
 			</table>
 		</fieldset>
-	</div>
+	
 
 	<div class="divCenter">
-		<a href="Stacked/JSP/addInvestment.jsp"><button class="classicBT" id="addInvest">Aktien hinzufügen</button></a>
+		<button class="classicBT" id="addInvest">Aktien hinzufügen</button>
 	</div>
 
 <div class="divCenter">
-		<a href="Stacked/JSP/addETF.jsp"><button class="classicBT" id="addETF">ETF hinzufügen</button></a>
+		<button class="classicBT" id="addETF">ETF hinzufügen</button>
 	</div>
 
-		</div>
+		
 
 			<div>
 			<fieldset class= "InvestTable">

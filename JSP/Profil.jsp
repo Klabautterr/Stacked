@@ -6,10 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LayoutCopy</title>
+<title>Profil</title>
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 <script src="./Stacked/JS/ButtonInServlet.js"></script>
+<script src="./Stacked/JS/ProfilButton.js"></script>
 </head>
 <!-- Jan Holtmann -->
 <body class="bodyMargin">
@@ -19,7 +20,7 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" alt="Profilbild" src="./ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
@@ -55,7 +56,7 @@
 		<fieldset class="InvestTable">
 			<legend>Deine Investments</legend>
 			<table class="InvestTable">
-			<tr><td>Stockname</td> <td>Anzahl</td> <td>letzter BuyIn</td>
+			<tr><td>Stockname</td> <td>Anzahl</td> <td>letzter BuyIn</td><td></td>
 				<c:forEach var="asset" items="${AssetsAnzeigen}">
 					<tr>
 						<td>${asset.stockname}</td>
@@ -75,7 +76,7 @@
 	</div>
 
 	<div class="divCenter">
-		<a href="Stacked/JSP/addETF.jsp"><button class="classicBT" id="addInvest">Investment hinzufügen</button></a>
+		<button class="classicBT" id="addETF">Investment hinzufügen</button>
 	</div>
 
 

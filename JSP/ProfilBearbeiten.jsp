@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>LayoutCopy</title>
+<title>Profil bearbeiten</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ProfilBearbeiten.js"></script>
@@ -20,7 +20,7 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr></table>
+<tr><th><img class="ProfilPicture" alt="Profilbild" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr></table>
 </div>
 
 <div>
@@ -67,7 +67,9 @@
 				</fieldset>
 
 			</form>
-
+		<h1>${Login.isProfi}</h1>
+		<h1>${Login.offeneProfiAnfrage}</h1>
+		
 			<c:if test="${!Login.isProfi && !Login.offeneProfiAnfrage}">
 				<form method="post" action="../../ProfiAnfrageStellen"
 					id="profiAnfragenStellen">

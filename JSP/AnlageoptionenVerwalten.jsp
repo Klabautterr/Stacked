@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
@@ -8,10 +8,10 @@
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="./Stacked/CSS/ContentBox.css">
 <script src="./Stacked/JS/ButtonAdminServlet.js"></script>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <!-- Jonathan Vielwerth -->
 
-<title>Anlageoptionen</title>
+<title>Anlageoptionen verwalten</title>
 </head>
 <body class="outBG">
 
@@ -25,11 +25,11 @@
 	<table class="textColor tableBorder InvestTable">
 		<tr>
 			<th>Aktienname</th>
-			<th>Löschen</th>
+			<th>LÃ¶schen</th>
 		</tr>
 		<c:forEach var="Aktie" items="${Aktien}">
 			<tr>
-			<td>${Aktie.name}</a></td>
+			<td>${Aktie.name}</td>
 
 				<td>
 					<form method="post" action="./AnlageoptionLoeschen">
@@ -37,7 +37,7 @@
 							<div>
 								<input type="hidden" name="AktieLoeschen"
 									value="${Aktie.name}">
-								<button type="submit" id="button" class="classicBT">Löschen</button>
+								<button type="submit" id="button1" class="classicBT">LÃ¶schen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -62,7 +62,7 @@
 							<div>
 								<input type="hidden" name="ETFLoeschen"
 									value="${ETF.name}">
-								<button type="submit" id="button" class="classicBT">Löschen</button>
+								<button type="submit" id="button2" class="classicBT">LÃ¶schen</button>
 							</div>
 						</fieldset>
 					</form>
@@ -72,7 +72,7 @@
 	</table>
 	</div>	
 
-	<div><button class="admAbmBT" id="ZurueckBT">Zurück</button></div>
+	<div><button class="admAbmBT" id="ZurueckBT">ZurÃ¼ck</button></div>
 </div>
 </body>
 <!-- Jonathan Vielwerth -->

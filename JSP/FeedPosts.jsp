@@ -56,7 +56,7 @@ href="./Stacked/CSS/StandardLayout.css">
 						<textarea class="Postfeld" id="nachricht" name="nachricht"
 							maxlength="200" placeholder="irgendwas los in der Welt?" required></textarea>
 						<div class="button-container">
-							<label for="bild" class="picture-button">Bilder</label> <input
+							<label for="bild">Bilder</label> <input
 								class="image-input" type="file" name="bild" id="bild"
 								accept="image/*">
 							<button type="submit" class="classicBT">Posten</button>

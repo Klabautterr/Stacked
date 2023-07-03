@@ -5,8 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Startseite</title>
+<meta charset="UTF-8">
+<title>Passwort falsch</title>
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/ButtonEinlogenFehlgeschlagen.js"></script>
@@ -17,7 +17,7 @@
 	<p class="NameVersion">Stacked V0.8</p>
 
 	<br> 
-	<div align="center">
+	<div class="divCenter">
 		<img src="../images/Logo.jpg" width="200" height="200" alt="Logo">
 	</div>
 	<div class="divCenter textColor">Das eingegebene Passwort ist nicht korrekt</div>
