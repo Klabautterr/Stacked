@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<!-- Jan Holtmann -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,8 +12,8 @@
 <link rel="stylesheet" type="text/css" href="../CSS/StandardLayout.css">
 <link rel="stylesheet" type="text/css" href="../CSS/ContentBox.css">
 <script src="../JS/Comments.js"></script>
+<script src="../JS/ButtonInJSP.js"></script>
 </head>
-<!-- Jan Holtmann -->
 <body class="bodyMargin">
 
 <p class="NameVersion">Stacked V0.8</p>
@@ -19,18 +21,18 @@
 <div>
 
 <table class="UserTopProfil">
-<tr><th><img class="ProfilPicture" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
+<tr><th><img class="ProfilPicture" alt="Profilbild" src="../../ProfilbildAuslesen?username=${Login.username}"></th><th><p class="ProfilLink">${Login.username}</p></th></tr>
 </table>
 </div>
 
 <div>
 <table class="Sidelinks">
 
-<tr><th><a href="../../InvestmentsAnzeigenServlet"><button class="FunctionLinks">Profil</button></a></th></tr>
-<tr><th><a href="./ProfilBearbeiten.jsp"><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></a></th></tr>
-<tr><th><a href="../../AllePostsAusgeben"><button class="FunctionLinks">Feed</button></a></th></tr>
-<tr><th><a href="../../FollowsVerwalten"><button class="FunctionLinks">Freunde</button></a></th></tr>
-<tr><th><a href="../Index.html"><button class="FunctionLinks">Abmelden</button></a></th></tr>
+<tr><th><button class="FunctionLinks" id="ProfilBT">Profil</button></th></tr>
+<tr><th><button class="FunctionLinks" id="editProfileBT">Profil bearbeiten</button></th></tr>
+<tr><th><button class="FunctionLinks" id="FeedBT">Feed</button></th></tr>
+<tr><th><button class="FunctionLinks" id="FreundeBT">Freunde</button></th></tr>
+<tr><th><button class="FunctionLinks" id="LogoutBT">Abmelden</button></th></tr>
 
 </table>
 </div>
@@ -47,11 +49,11 @@
 					<a class="textColor mLeft" href="../../InvestmentsAnzeigenServlet?username=${post.username}">${post.username}</a>
 					<br>
 					<br>
-					<div class="message">${post.nachricht}</div></td>
+					<div class="message">${post.nachricht}</div>
 					<br>
 					<div class=divCenter>
 					<c:if test="${not empty post.bildname}">
-						<img class="postPicture" src="../../PostAuslesen?id=${post.id}">
+						<img alt="Post-Bild" class="postPicture" src="../../PostAuslesen?id=${post.id}">
 					</c:if>
 					</div>
 					
@@ -61,7 +63,7 @@
 						<textarea class="Commfeld" id="kommentar" name="kommentar"
 						maxlength="200" placeholder="Was möchtest du den Kommentieren?"></textarea>
 						<br>
-						<button class=classicBT id="sendComment" class="text-button">Posten</button>
+						<button class="classicBT text-button" id="sendComment">Posten</button>
 				</div>
 				<br>
 				

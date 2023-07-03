@@ -2,6 +2,8 @@
  * Buttons EventHandler
  * Function 1 -> Load 5 more Comments
  * Function 2 -> Insert own new Comment
+ *
+ * Jan Holtmann
  */
 
 document.addEventListener("DOMContentLoaded", init);
