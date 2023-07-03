@@ -66,7 +66,7 @@ function addTopComment() {
 			newCommHTML += '<div class="message">' + returnComment[0].kommentar + '</div>';
 			
 			newCommHTML += '<br>';
-   			newCommHTML += '<form class="divCenter" method="post" action="./CommentDelete">';
+   			newCommHTML += '<form class="divCenter" method="post" action="../../CommentDelete">';
     		newCommHTML += '<input id=commID type="hidden" name="id" value=' + returnComment[0].id + '>';
     		newCommHTML += '<button class="classicBT" type="submit">Löschen</button>';
     		newCommHTML += '</form>';
