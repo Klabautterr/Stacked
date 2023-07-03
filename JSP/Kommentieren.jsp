@@ -48,11 +48,13 @@
 					<br>
 					<br>
 					<div class="message">${post.nachricht}</div></td>
-					
-					
+					<br>
+					<div class=divCenter>
 					<c:if test="${not empty post.bildname}">
-						<img class="postPicture divCenter" src="../../PostAuslesen?id=${post.id}">
+						<img class="postPicture" src="../../PostAuslesen?id=${post.id}">
 					</c:if>
+					</div>
+					
 				</div>
 				
 				<div class=divCenter>
